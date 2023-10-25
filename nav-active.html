@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 10px;
+}
+.active{
+    background-color: blue;
+}
+.section {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="#section1">Sección 1</a></li>
+          <li><a href="#section2">Sección 2</a></li>
+          <li><a href="#section3">Sección 3</a></li>
+          <li><a href="#section4">Sección 4</a></li>
+          <li><a href="#section5">Sección 5</a></li>
+        </ul>
+      </nav>
+      <div id="section1" class="section">
+        <p>asd</p>
+        <p>asdasd</p>
+      </div>
+      <div id="section2" class="section">Contenido de la Sección 2</div>
+      <div id="section3" class="section">Contenido de la Sección 3</div>
+      <div id="section4" class="section">Contenido de la Sección 4</div>
+      <div id="section5" class="section">Contenido de la Sección 5</div>
+<script>
+    const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 5) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('active');
+    }
+  });
+});
+
+</script>    
+</body>
+</html>
