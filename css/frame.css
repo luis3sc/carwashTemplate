@@ -19,18 +19,18 @@
     --yape: #be00cf;
 
     /*fontsizes*/
-    --h1: font-size: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
-    --h2: font-size: clamp(1.25rem, 1.1346rem + 0.5128vw, 1.75rem);
-    --h3: font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
-    --p: font-size: clamp(0.875rem, 0.7596rem + 0.5128vw, 1.375rem);
-    --txtbtn: font-size: clamp(0.75rem, 0.6346rem + 0.5128vw, 1.25rem);
+    --h1: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
+    --h2:  clamp(1.25rem, 1.1346rem + 0.5128vw, 1.75rem);
+    --h3:  clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+    --p:  clamp(0.875rem, 0.7596rem + 0.5128vw, 1.375rem);
+    --txtbtn: clamp(0.75rem, 0.6346rem + 0.5128vw, 1.25rem);
     /*fontweight*/
     --wg-light: 200;
     --wg-regular: 400;
     --wg-bold: 600;
 
     /*typo*/
-    line-height: 1.5; 
+    --line-height: 1.5; 
 
     /*layout*/
     --desktop: 100vh; /* view height */
@@ -194,6 +194,12 @@ main,.main-p{
   background-color: var(--primario);
   color: var(--blanco);
 }
+.brdactive{
+  color: var(--primario);
+  border-color: var(--primario);
+  border-bottom: 1px solid;
+  font-weight: bold;
+}
 /*Color Bordes*/
 .brdclr-1{
     border-color: var(--primario) !important;
@@ -212,6 +218,9 @@ main,.main-p{
 }
 .brdclr-n{
     border-color: var(--negro) !important;
+}
+.brdclr-g3{
+  border-color: var(--gris3) !important;
 }
 /*FONTS*/
 /*FONTS*/
@@ -313,6 +322,9 @@ button,.txtbtn{
   .mw-380{
     max-width: 380px;
   }
+  .mw-250{
+    max-width: 250px;
+  }
   .mw-200{
     max-width: 200px;
   }
@@ -323,9 +335,20 @@ button,.txtbtn{
     max-width: 120px;
   }
 /* maxwidth icon */
+.mw-img-7{
+  max-width: 7em;
+}
   .mw-ico-1{
     max-width: 1.4em;
     max-height: 1.4em;
+  }
+  .mw-ico-r{
+    width: 2em;
+    height: 2em;
+  }
+  .mw-ico-5{
+    width: 5em;
+    height: 5em;
   }
   .mw-profile{
     width: 7em;
@@ -337,6 +360,14 @@ button,.txtbtn{
   .h-btn{
     height: 3em;
   }
+  .w-sello-1{
+    width: var(--sz1-5);
+    height: var(--sz1-5);
+  }
+/*Aspect Ratio*/
+.aspect-1{
+  aspect-ratio: 1;
+}
 /*Heights*/
 .hinh{
   height: inherit;
@@ -433,7 +464,7 @@ button,.txtbtn{
     display: block;
  }
 /*Grid*/
-.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2{
+.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty{
     display: grid;
 }
 .grid {
@@ -481,6 +512,9 @@ button,.txtbtn{
 }
 .gridbtn2{
   grid-template-columns: repeat(2,1fr);
+}
+.grid-loyalty {
+  grid-template-columns: repeat(auto-fit, minmax(1.5em, 1fr));
 }
 /* gaps */
   .gap5{
@@ -588,6 +622,12 @@ button,.txtbtn{
   }
   .padsup-1{
     padding: var(--sz1) 0;
+  }
+  .padsup-1_5{
+    padding: var(--sz1-5) 0;
+  }
+  .padsup-2{
+    padding: var(--sz2) 0;
   }
   .padsup-1-05{
     padding: 1em 0.5em;
@@ -726,7 +766,7 @@ button,.txtbtn{
     overflow-y: auto;
   }
 /* Borders */ 
-.border1px{
+  .border1px{
     border: 1px solid;
   }
   .border2px{
@@ -744,7 +784,14 @@ button,.txtbtn{
   .bordernorm{
     border: 3px solid;
   }
-
+/*border top*/
+  .bordertop1{
+    border-top: 1px solid;
+  }
+/*border bottom*/
+  .borderbottom1{
+    border-bottom: 1px solid;
+  }
 /* BOX-SHADOW */
 .bx{
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.089), 0 15px 12px rgba(0, 0, 0, 0.048);
