@@ -53,6 +53,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     padding:0px;
     line-height: normal;
+    overflow: hidden;
   }
   *,::before,::after {
     box-sizing: border-box;
@@ -73,9 +74,9 @@ ul,li{
   list-style: none;
 }
 /*Web App Layout*/
-body{
-    height: calc( var(--mobile) - var(--navbarmobile) );/* 100svh en mobile */
-}
+/*body{
+    height: calc( var(--mobile) - var(--navbarmobile) );/* 100svh en mobile 
+} */
 header{
     height: var(--header); 
 }
@@ -834,7 +835,55 @@ Max-witdh +usadas
 576px
 320px
 */
+/*COMPONENTES*/
+/*MODAL*/
+.nav{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.modal .backdrop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.1s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal .modal-content{
+  background: #fff;
+  width: 100%;
+  min-height: 95%;
+  position: absolute;
+  z-index: 2;
+  border-radius: 15px 15px 0 0;
+  transition: all 0.3s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -110%;
+}
+.modal.show-modal .backdrop{
+  opacity: 1;
+  pointer-events: all;
+}
 
+.modal.show-modal .modal-content{
+  bottom: 0px;  
+}
+.closeModalBtn{
+  padding: 10px;
+  border-radius: 100%;
+  position: absolute;
+  right: 1em;
+  font-size: 1em;
+  top: 1em;
+}
+.modalcontenido{
+  padding: 1em;
+}
 
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
