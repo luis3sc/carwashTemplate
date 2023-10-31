@@ -307,6 +307,9 @@ width: fit-content;
 .w50{
   width: 50%;
 }
+.w100cal-1_5{
+  width: calc(100% - var(--sz1-5));
+}
 /*Maxwidths*/
 .mw1280{
   max-width: 1280px;
@@ -322,6 +325,12 @@ width: fit-content;
 }
 .mw-380{
   max-width: 380px;
+}
+.mw-320{
+  max-width: 320px;
+}
+.mw-280{
+  max-width: 280px;
 }
 .mw-250{
   max-width: 250px;
@@ -340,7 +349,7 @@ width: fit-content;
 max-width: 7em;
 }
 .mw-ico-1{
-  max-width: 1.4em;
+  min-width: 1.4em;
   max-height: 1.4em;
 }
 .mw-ico-r{

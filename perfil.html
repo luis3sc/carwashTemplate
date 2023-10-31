@@ -23,7 +23,7 @@
             <div class="padsup-1 flex-colum gap1">
                 <div class="flex-spacebetween">
                 <h3>Mis Reservas</h3>
-                <a href="#">Ver reservas</a>
+                <a id="modalBtn5">Ver reservas</a>
                 </div>
                 <div class="grid-3-1 gap1 bg-b border20">
                     <div class="card-vert gap1 flex-row bg-b padding1 border20">
@@ -78,7 +78,7 @@
             <div class="padsup-1 flex-colum gap1">
                 <div class="flex-spacebetween">
                 <h3>Mi Tarjeta de Lealtad</h3>
-                <a href="#">Ver Historial</a>
+                <a id="modalBtn6">Ver Historial</a>
                 </div>
                 <div class="card-vert gap1 clr-b flex-row bg-2 padding1 border20">
                     <a href="#" class="flex-centro aspect-1">
@@ -88,7 +88,7 @@
                         <h2>0001 Puntos</h2>
                         <div class="flex gap-5">
                             <p class="txtlimit sinover">Expira en 06/10/2023</p>
-                            <a class="clr-1">Mas info</a>
+                            <a id="modalBtn4" class="clr-1">Mas info</a>
                         </div>
                         <a href="premios.html" class="bg-1 clr-b flex-centro w100 padding05 border05">Ganar Puntos</a>
                     </div>
@@ -158,38 +158,47 @@
         <div class="backdrop"></div>
         <div class="modal-content bg-1">
             <button class="closeModalBtn">X</button>
-            <div class="modalcontenido">
+            <div class="modalcontenido bg-g3">
                 <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
                     <div class="flex-colum gap-5 flex-a">
-                        <div class="mw-profile padding1 bg-b bordercircular">
-                            <img class="w100" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
+                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
                         </div>
-                        <h2>Muneco Auto Spa</h2>
+                        <h2>Tortaza</h2>
                     </div>
                     <div class="flex-colum flex-centro">
                         <p>¡Obtén 7 sellos y</p>
-                        <b>Gana 1 Lavado Rápido Gratis!</b> 
+                        <b>Gana 1 Torta Gratis!</b> 
                     </div>
                     
-                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-2">
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
-                        <div class="aspect-1 flex-centro w100 bg-1 bordercircular">x</div>
+                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
                     </div>
-                    <div class="flex-colum gap-5 w100 padding1 bg-1">
-                        <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>
-                        <p>Válido hasta el 20/11/2023</p>
+                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Válido hasta el 20/11/2023</p>
+                        </div> 
                     </div>
                     <div class="flex-a">
-                        
-                        <a href="" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
+                        <a id="modalBtn7" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
                             <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                            <p>Reservar Ahora</p>
+                            <p>Mostrar QR</p>
                         </a>
                     </div>
                 </div>
@@ -199,16 +208,74 @@
     </div>
     <div id="myModal4" class="modal">
         <div class="backdrop"></div>
-        <div class="modal-content">
-            <button class="closeModalBtn">Cerrar Modal</button>
-            <p>Contenido del Modal 4 aquí.</p>    
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g3">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a">
+                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
+                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
+                        </div>
+                        <h2>Tortaza</h2>
+                    </div>
+                    <div class="flex-colum flex-centro">
+                        <p>¡Obtén 7 sellos y</p>
+                        <b>Gana 1 Torta Gratis!</b> 
+                    </div>
+                    
+                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Válido hasta el 20/11/2023</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+               
         </div>
     </div>
     <div id="myModal5" class="modal">
         <div class="backdrop"></div>
-        <div class="modal-content">
-            <button class="closeModalBtn">Cerrar Modal</button>
-            <p>Contenido del Modal 5 aquí.</p>    
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g3">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a w100 padding1">
+                        <h2>Mi Código de Usuario</h2>
+                        <div class="w100 padding1 brdr2dash border5px bg-b">
+                            Código de Usuario
+                        </div>
+                    </div>
+                    
+                    <div class="bg-b border20 mw-280 padding1-5">
+                        <img class="w100" src="./img/yapefransa.webp" alt="">
+                    </div>
+                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
+                        <p>Presenta tu código de usuario o QR cada
+                            vez que realices una compra para obtener
+                            tu sello</p> 
+                    </div>
+                </div>
+            </div>
+               
         </div>
     </div>
     <div id="myModal6" class="modal">
@@ -220,9 +287,86 @@
     </div>
     <div id="myModal7" class="modal">
         <div class="backdrop"></div>
-        <div class="modal-content">
-            <button class="closeModalBtn">Cerrar Modal</button>
-            <p>Contenido del Modal 7 aquí.</p>    
+        <div class="modal-content bg-2">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g3">
+                <div class="flex-colum padsup-1_5 gap1-5" id="cartasello">
+                    
+                        <h2>Informacion</h2>
+                    
+                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
+                        <p>Cada vez que realizas misiones o cumples tareas que se publican periodicamente.</p> 
+                        <p>Al momento de recibir tu boleta o factura de pago viene un QR con la información de tu pago y unos puntos a reclamar de acuerdo al monto o producto / servicio.</p> 
+                    </div>
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>¿Cómo Gano Puntos?</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Cada vez que realizas misiones o cumples tareas que se publican periodicamente.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Escanea el Código QR de la boleta o factura de pago realizado en la tienda</p>
+                        </div> 
+                    </div>
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>Términos y Condiciones</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían tener una fecha de caducidad para incentivar a los clientes a utilizarlos dentro de un plazo específico, por ejemplo, un año desde la fecha de obtención.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían canjearse por descuentos, productos gratuitos o servicios adicionales, pero no podrían canjearse por efectivo.</p>
+                        </div> 
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Durante ciertos días de la semana o meses del año, los puntos podrían valer el doble para incentivar las visitas en momentos específicos.</p>
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Se pueden usar hasta 100 puntos por transacción para evitar el abuso del sistema.</p>
+                        </div>
+                    </div>
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>Términos y Condiciones</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían tener una fecha de caducidad para incentivar a los clientes a utilizarlos dentro de un plazo específico, por ejemplo, un año desde la fecha de obtención.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían canjearse por descuentos, productos gratuitos o servicios adicionales, pero no podrían canjearse por efectivo.</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal8" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g3">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a w100 padding1">
+                        <h2>Mi Código de Usuario</h2>
+                        <div class="w100 padding1 brdr2dash border5px bg-b">
+                            Código de Usuario
+                        </div>
+                    </div>
+                    
+                    <div class="bg-b border20 mw-280 padding1-5">
+                        <img class="w100" src="./img/yapefransa.webp" alt="">
+                    </div>
+                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
+                        <p>Presenta tu código de usuario o QR cada
+                            vez que realices una compra para obtener
+                            tu sello</p> 
+                    </div>
+                </div>
+            </div>
+               
         </div>
     </div>
     <script src="./js/modal.js"></script>

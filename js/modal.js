@@ -1,8 +1,13 @@
 const modalBtns = document.querySelectorAll('[id^="modalBtn"]');
 const modals = document.querySelectorAll('.modal');
-const closeModalBtns = document.querySelectorAll('.closeModalBtn');
+const closeModalBtns = document.querySelectorAll('.closeModalBtn, #entendido');
 
 function mostrarModal(nombreModal) {
+    // Oculta todos los modales antes de mostrar el modal específico
+    modals.forEach(modal => {
+        modal.classList.remove('show-modal');
+    });
+
     const modal = document.getElementById(nombreModal);
     modal.classList.add('show-modal');
 }
