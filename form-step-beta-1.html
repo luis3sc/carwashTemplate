@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+
+        .step {
+          display: none;
+        }
+
+        .step.active {
+          display: block;
+        }
+
+        .continue-btn {
+          margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="step active" id="step-1">
+          <h2>Paso 1 - Categoría del Auto</h2>
+          <label><input type="radio" name="car-category" value="sedan"> Sedán</label>
+          <label><input type="radio" name="car-category" value="suv"> SUV</label>
+          <!-- Agregar opciones para los demás tipos de autos -->
+          <button class="continue-btn" >Continuar</button>
+        </div>
+        
+        <div class="step" id="step-2">
+          <h2>Paso 2 - Seleccione su Servicio</h2>
+          <div id="service-options"></div>
+          <button class="continue-btn" >Continuar</button>
+        </div>
+        
+        <div class="step" id="step-3">
+          <h2>Paso 3 - Seleccione Fecha y Hora</h2>
+          <input type="date" id="date">
+          <input type="time" id="time">
+          <button class="continue-btn" >Continuar</button>
+        </div>
+        
+        <div class="step" id="step-4">
+          <h2>Paso 4 - Elija un Método de Pago</h2>
+          <label><input type="radio" name="payment-method" value="yape"> Pagar con Yape</label>
+          <label><input type="radio" name="payment-method" value="qr-code"> Pagar con Código QR</label>
+          <label><input type="radio" name="payment-method" value="credit-card"> Pagar con Tarjeta de Crédito</label>
+          <div id="reservation-summary"></div>
+          <button class="continue-btn" >Continuar</button>
+        </div>
+        
+        <div class="step" id="step-5">
+          <h2>Paso 5 - Pagar Reserva</h2>
+          <div id="payment-details"></div>
+          <button class="continue-btn">Continuar</button>
+        </div>
+        
+        <div class="step" id="step-6">
+          <h2>Paso 6 - Resumen de la Reserva</h2>
+          <p>¡Gracias por su reserva!</p>
+          <div id="confirmation-details"></div>
+          <button id="confirm-btn">Confirmar</button>
+        </div>
+      </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  const steps = document.querySelectorAll('.step');
+  const continueButtons = document.querySelectorAll('.continue-btn');
+  const serviceOptionsDiv = document.getElementById('service-options');
+  const reservationSummaryDiv = document.getElementById('reservation-summary');
+  const paymentDetailsDiv = document.getElementById('payment-details');
+  const confirmationDetailsDiv = document.getElementById('confirmation-details');
+  const confirmBtn = document.getElementById('confirm-btn');
+  const carCategoryInput = document.querySelector('input[name="car-category"]');
+  const paymentMethodInput = document.querySelector('input[name="payment-method"]');
+  const dateInput = document.getElementById('date');
+  const timeInput = document.getElementById('time');
+
+  let currentStep = 0;
+  let selectedService = '';
+  let selectedPrice = 0;
+
+  continueButtons.forEach((button, index) => {
+    button.addEventListener('click', function() {
+      steps[currentStep].classList.remove('active');
+      currentStep++;
+      steps[currentStep].classList.add('active');
+
+      if (currentStep === 2) {
+        selectedService = document.querySelector('input[name="service"]:checked').value;
+        selectedPrice = calculateServicePrice(selectedService);
+      }
+
+      if (currentStep === 4) {
+        displayReservationSummary(selectedService, selectedPrice);
+      }
+
+      if (currentStep === 5) {
+        displayPaymentDetails();
+      }
+    });
+  });
+
+  confirmBtn.addEventListener('click', function() {
+    // Guardar datos en Local Storage
+    localStorage.setItem('carCategory', carCategoryInput.value);
+    localStorage.setItem('selectedService', selectedService);
+    localStorage.setItem('selectedPrice', selectedPrice);
+    localStorage.setItem('date', dateInput.value);
+    localStorage.setItem('time', timeInput.value);
+    localStorage.setItem('paymentMethod', paymentMethodInput.value);
+
+    // Enviar datos por WhatsApp (simulado)
+    const whatsappNumber = '123456789'; // Reemplazar con el número de WhatsApp real
+    const message = `Reserva de Carwash\nCategoría del auto: ${carCategoryInput.value}\nServicio: ${selectedService}\nPrecio: ${selectedPrice}\nFecha: ${dateInput.value}\nHora: ${timeInput.value}\nMétodo de Pago: ${paymentMethodInput.value}`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+
+    // Cerrar formulario
+    steps[currentStep].classList.remove('active');
+    currentStep++;
+    steps[currentStep].classList.add('active');
+  });
+
+  function calculateServicePrice(service) {
+    // Lógica para calcular el precio del servicio según el tipo de auto y servicio seleccionado
+    let price = 0;
+    const carCategory = document.querySelector('input[name="car-category"]:checked').value;
+    
+    if (carCategory === 'sedan') {
+      if (service === 'basic') {
+        price = 30;
+      } else if (service === 'standard') {
+        price = 40;
+      } else if (service === 'premium') {
+        price = 50;
+      }
+    } else if (carCategory === 'suv') {
+      // Lógica para SUV
+    }
+    // Agregar lógica para otros tipos de autos y servicios según sea necesario
+
+    return price;
+  }
+
+  function displayReservationSummary(service, price) {
+    reservationSummaryDiv.innerHTML = `
+      <h3>Resumen de la Reserva</h3>
+      <p>Servicio: ${service}</p>
+      <p>Precio: S/ ${price}.00</p>
+      <p>Fecha: ${dateInput.value}</p>
+      <p>Hora: ${timeInput.value}</p>
+      <p>Comisión: S/ 3.00</p>
+      <hr>
+      <p>Total: S/ ${price + 3}.00</p>
+    `;
+  }
+
+  function displayPaymentDetails() {
+    const paymentMethod = paymentMethodInput.value;
+    let paymentDetails = '';
+
+    if (paymentMethod === 'yape') {
+      paymentDetails = '<div><p>Pague con Yape escaneando el código QR:</p><img src="yape-qr-code.jpg" alt="Yape QR Code"></div>';
+    } else if (paymentMethod === 'qr-code') {
+      paymentDetails = '<div><p>Escanee el siguiente código QR para pagar:</p><img src="payment-qr-code.jpg" alt="Payment QR Code"></div>';
+    } else if (paymentMethod === 'credit-card') {
+      paymentDetails = '<div><p>Ingrese los detalles de su tarjeta de crédito:</p><input type="text" placeholder="Número de Tarjeta"><input type="text" placeholder="Nombre en la Tarjeta"><input type="text" placeholder="Fecha de Vencimiento"><input type="text" placeholder="Código de Seguridad"></div>';
+    }
+
+    paymentDetailsDiv.innerHTML = paymentDetails;
+  }
+});
+
+
+    </script>
+</body>
+</html>

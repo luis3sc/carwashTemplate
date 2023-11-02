@@ -8,7 +8,10 @@
   /*Colores general*/
   --negro: #000;
   --blanco: #fff;
+  /*Color Status*/
   --rojo : #ff0000;
+  --amar : #ffd900;
+  --verd : #02ff0f;
   /*Grises*/
   --gris1: #e7e7e7;
   --gris2: #cecece;
@@ -128,6 +131,12 @@ main,.main-p{
 .bg-rojo{
   background-color: var(--rojo);
 }
+.bg-verd{
+  background-color: var(--verd);
+}
+.bg-ama{
+  background-color: var(--amar);
+}
 .bg-yape{
   background-color: var(--yape);
 }
@@ -165,11 +174,11 @@ main,.main-p{
 .clr-g3{
   color: var(--gris3);
 }
-.clr-b{
-  color: var(--blanco);
+.clr-verd{
+  color: var(--verd);
 }
-.clr-n{
-  color: var(--negro);
+.clr-verd-2{
+  color: #37bb02;
 }
 /*SVG Color*/
 .fill-1{
@@ -237,6 +246,9 @@ h3{
 }
 p{
   font-size: var(--p);
+}
+.ftsz-1_5{
+  font-size: var(--sz1-5);
 }
 
 button,.txtbtn{
@@ -474,7 +486,7 @@ align-items: flex-start;
   display: block;
 }
 /*Grid*/
-.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty{
+.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1{
   display: grid;
 }
 .grid {
@@ -525,6 +537,13 @@ grid-template-columns: repeat(2,1fr);
 }
 .grid-loyalty {
 grid-template-columns: repeat(auto-fit, minmax(1.5em, 1fr));
+}
+/*Grid Boleta*/
+.grid-boleta-1{
+  grid-template-columns: 3fr 2fr 1fr 2fr;
+}
+.grid-historial-1{
+  grid-template-columns: 1fr 3fr 1fr;
 }
 /* gaps */
 .gap5{
@@ -805,9 +824,13 @@ place-items: center;
 .bordertop1{
   border-top: 1px solid;
 }
+
 /*border bottom*/
 .borderbottom1{
   border-bottom: 1px solid;
+}
+.brdrbtmdash{
+  border-bottom: 2px dashed var(--gris2);
 }
 /* BOX-SHADOW */
 .bx{
@@ -902,7 +925,21 @@ padding: 1em;
 height: 95vh;
 overflow: auto;
 }
-
+/* otros */
+.circ-1{
+  width:2em;
+  height:2em;
+  background-color:#e9e9e9;
+}
+.circ-der{
+  left:-2em;
+  bottom:-1em;
+}
+.circ-izq{
+  right:-2em;
+  bottom:-1em;
+}
+/* otros */
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{
