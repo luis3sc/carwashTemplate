@@ -360,6 +360,9 @@ width: fit-content;
 .mw-img-7{
 max-width: 7em;
 }
+.mw-img-4{
+  max-width: 3em;
+}
 .mw-ico-1{
   min-width: 1.4em;
   max-height: 1.4em;
