@@ -1,188 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <title>Formulario de Reserva de Lavado de Autos</title>
     <style>
-        body {
-          font-family: Arial, sans-serif;
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    }
+
+    .form-container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-step {
+        display: block;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .service-option {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .form-container {
-          max-width: 400px;
-          margin: 0 auto;
-          padding: 20px;
+        .service-option:hover {
+            background-color: #f5f5f5;
         }
 
-        .step {
-          display: none;
+        .service-option input[type="radio"] {
+            margin-right: 10px;
+        }
+        .w100{
+          width: 100%;
+          max-width: 120px;
+        }
+        .service-name {
+            font-weight: bold;
         }
 
-        .step.active {
-          display: block;
+        .service-description {
+            color: #666;
         }
 
-        .continue-btn {
-          margin-top: 10px;
+        .service-price {
+            color: #ff5733; /* Color naranja para el precio */
         }
 
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <div class="step active" id="step-1">
-          <h2>Paso 1 - Categoría del Auto</h2>
-          <label><input type="radio" name="car-category" value="sedan"> Sedán</label>
-          <label><input type="radio" name="car-category" value="suv"> SUV</label>
-          <!-- Agregar opciones para los demás tipos de autos -->
-          <button class="continue-btn" >Continuar</button>
+  <div class="form-container">
+    <div id="step1" class="form-step">
+        <h2>Paso 1: Tipo de Vehículo</h2>
+        <input type="radio" name="vehicleType" value="car"> Auto
+        <input type="radio" name="vehicleType" value="motorcycle"> Motocicleta
+        <button onclick="nextStep(2)">Siguiente</button>
+    </div>
+    <div id="step2" class="form-step hidden">
+        <h2>Paso 2: Tipo de Servicio</h2>
+        <div id="services">
+            <!-- Las opciones de servicio se llenarán dinámicamente aquí -->
         </div>
+        <button onclick="nextStep(3)">Siguiente</button>
+    </div>
+    <div id="step3" class="form-step hidden">
+        <h2>Paso 3: Fecha y Hora de la Reserva</h2>
+        <label for="reservationDate">Selecciona la fecha de la reserva:</label>
+        <input type="date" id="reservationDate" name="reservationDate"><br>
+
+        <label for="reservationTime">Selecciona la hora de la reserva:</label>
+        <input type="time" id="reservationTime" name="reservationTime"><br>
+
+        <button onclick="nextStep(4); updateSummary()">Siguiente</button>
+    </div>
+    <div id="step4" class="form-step hidden">
+        <h2>Paso 4: Tipo de Pago</h2>
+        <label>Selecciona el tipo de pago:</label><br>
+        <input type="radio" name="paymentMethod" value="yape"> Yape<br>
+        <input type="radio" name="paymentMethod" value="plin"> Plin<br>
+        <input type="radio" name="paymentMethod" value="transferencia"> Transferencia vía depósito<br>
+
+        <h2>Resumen</h2>
+        <div id="summary">
+            <!-- Los detalles de la reserva se mostrarán aquí -->
+        </div>
+
+        <button onclick="nextStep(5)">Siguiente</button>
+    </div>
+    <div id="step5" class="form-step hidden">
+        <h2>Paso 5: Detalles del Pago</h2>
         
-        <div class="step" id="step-2">
-          <h2>Paso 2 - Seleccione su Servicio</h2>
-          <div id="service-options"></div>
-          <button class="continue-btn" >Continuar</button>
+        <div id="yapeDetailsSummary" class="payment-details hidden">
+            <!-- Resumen específico para Yape -->
+            <p>Yape</p>
+            <section>Yape-Numero</section>
         </div>
-        
-        <div class="step" id="step-3">
-          <h2>Paso 3 - Seleccione Fecha y Hora</h2>
-          <input type="date" id="date">
-          <input type="time" id="time">
-          <button class="continue-btn" >Continuar</button>
+        <div id="plinDetailsSummary" class="payment-details hidden">
+            <!-- Resumen específico para Plin -->
         </div>
-        
-        <div class="step" id="step-4">
-          <h2>Paso 4 - Elija un Método de Pago</h2>
-          <label><input type="radio" name="payment-method" value="yape"> Pagar con Yape</label>
-          <label><input type="radio" name="payment-method" value="qr-code"> Pagar con Código QR</label>
-          <label><input type="radio" name="payment-method" value="credit-card"> Pagar con Tarjeta de Crédito</label>
-          <div id="reservation-summary"></div>
-          <button class="continue-btn" >Continuar</button>
+        <div id="transferenciaDetailsSummary" class="payment-details hidden">
+            <!-- Resumen específico para Transferencia -->
         </div>
-        
-        <div class="step" id="step-5">
-          <h2>Paso 5 - Pagar Reserva</h2>
-          <div id="payment-details"></div>
-          <button class="continue-btn">Continuar</button>
-        </div>
-        
-        <div class="step" id="step-6">
-          <h2>Paso 6 - Resumen de la Reserva</h2>
-          <p>¡Gracias por su reserva!</p>
-          <div id="confirmation-details"></div>
-          <button id="confirm-btn">Confirmar</button>
-        </div>
-      </div>
+
+        <button onclick="nextStep(6)">Siguiente</button>
+    </div>
+    <div id="step6" class="form-step hidden">
+        <h2>Paso 6: Confirmación de Reserva</h2>
+        <button onclick="submitForm()">Confirmar Reserva y Pago</button>
+    </div>
+</div>
+<div id="congratulations" class="hidden">
+    <h2>¡Felicidades! Tu reserva ha sido confirmada</h2>
+    <!-- Mostrar detalles de la reserva aquí -->
+</div>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-  const steps = document.querySelectorAll('.step');
-  const continueButtons = document.querySelectorAll('.continue-btn');
-  const serviceOptionsDiv = document.getElementById('service-options');
-  const reservationSummaryDiv = document.getElementById('reservation-summary');
-  const paymentDetailsDiv = document.getElementById('payment-details');
-  const confirmationDetailsDiv = document.getElementById('confirmation-details');
-  const confirmBtn = document.getElementById('confirm-btn');
-  const carCategoryInput = document.querySelector('input[name="car-category"]');
-  const paymentMethodInput = document.querySelector('input[name="payment-method"]');
-  const dateInput = document.getElementById('date');
-  const timeInput = document.getElementById('time');
+const services = {
+    car: [
+        {
+            name: "Lavado Básico",
+            description: "Lavado exterior e interior",
+            price: 20,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            name: "Lavado Premium",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            name: "Lavado Ultra",
+            description: "Lavado con cera y pulido y detallado",
+            price: 50,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        }
+    ],
+    motorcycle: [
+        {
+            name: "Lavado Estándar",
+            description: "Lavado exterior",
+            price: 15,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            name: "Lavado Detallado",
+            description: "Lavado con atención a los detalles",
+            price: 25,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            name: "Lavado Rapido",
+            description: "Lavado rápido",
+            price: 10,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        }
+    ]
+};
 
-  let currentStep = 0;
-  let selectedService = '';
-  let selectedPrice = 0;
+const datosReserva = {};
 
-  continueButtons.forEach((button, index) => {
-    button.addEventListener('click', function() {
-      steps[currentStep].classList.remove('active');
-      currentStep++;
-      steps[currentStep].classList.add('active');
+function updateServices() {
+    const vehicleType = document.querySelector('input[name="vehicleType"]:checked').value;
+    const servicesContainer = document.getElementById('services');
+    servicesContainer.innerHTML = "";
 
-      if (currentStep === 2) {
-        selectedService = document.querySelector('input[name="service"]:checked').value;
-        selectedPrice = calculateServicePrice(selectedService);
-      }
-
-      if (currentStep === 4) {
-        displayReservationSummary(selectedService, selectedPrice);
-      }
-
-      if (currentStep === 5) {
-        displayPaymentDetails();
-      }
+    services[vehicleType].forEach(service => {
+        const serviceDiv = document.createElement('div');
+        serviceDiv.classList.add('service-option');
+        serviceDiv.innerHTML = `
+            <input type="radio" class="service-radio" name="serviceType" value="${service.name}">
+            <strong>${service.name}</strong><br>
+            <span>${service.description}</span><br>
+            <img class="w100" src="${service.imageURL}" alt="${service.name}">
+            <span>Precio: S/ ${service.price}</span><br><br>
+        `;
+        servicesContainer.appendChild(serviceDiv);
     });
-  });
+}
 
-  confirmBtn.addEventListener('click', function() {
-    // Guardar datos en Local Storage
-    localStorage.setItem('carCategory', carCategoryInput.value);
-    localStorage.setItem('selectedService', selectedService);
-    localStorage.setItem('selectedPrice', selectedPrice);
-    localStorage.setItem('date', dateInput.value);
-    localStorage.setItem('time', timeInput.value);
-    localStorage.setItem('paymentMethod', paymentMethodInput.value);
-
-    // Enviar datos por WhatsApp (simulado)
-    const whatsappNumber = '123456789'; // Reemplazar con el número de WhatsApp real
-    const message = `Reserva de Carwash\nCategoría del auto: ${carCategoryInput.value}\nServicio: ${selectedService}\nPrecio: ${selectedPrice}\nFecha: ${dateInput.value}\nHora: ${timeInput.value}\nMétodo de Pago: ${paymentMethodInput.value}`;
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
-
-    // Cerrar formulario
-    steps[currentStep].classList.remove('active');
-    currentStep++;
-    steps[currentStep].classList.add('active');
-  });
-
-  function calculateServicePrice(service) {
-    // Lógica para calcular el precio del servicio según el tipo de auto y servicio seleccionado
-    let price = 0;
-    const carCategory = document.querySelector('input[name="car-category"]:checked').value;
-    
-    if (carCategory === 'sedan') {
-      if (service === 'basic') {
-        price = 30;
-      } else if (service === 'standard') {
-        price = 40;
-      } else if (service === 'premium') {
-        price = 50;
-      }
-    } else if (carCategory === 'suv') {
-      // Lógica para SUV
+function showStep(stepNumber) {
+    const stepElement = document.getElementById(`step${stepNumber}`);
+    if (stepElement) {
+        document.querySelectorAll('.form-step').forEach(step => {
+            step.style.display = 'none';
+        });
+        stepElement.style.display = 'block';
+    } else {
+        console.error(`Elemento con ID 'step${stepNumber}' no encontrado.`);
     }
-    // Agregar lógica para otros tipos de autos y servicios según sea necesario
+}
 
-    return price;
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    const storedData = JSON.parse(localStorage.getItem('datosReserva'));
+    const storedService = JSON.parse(localStorage.getItem('selectedService'));
+    if (storedData) {
+        datosReserva.tipoVehiculo = storedData.tipoVehiculo;
+        datosReserva.servicio = storedData.servicio;
+        datosReserva.fechaReserva = storedData.fechaReserva;
+        datosReserva.horaReserva = storedData.horaReserva;
 
-  function displayReservationSummary(service, price) {
-    reservationSummaryDiv.innerHTML = `
-      <h3>Resumen de la Reserva</h3>
-      <p>Servicio: ${service}</p>
-      <p>Precio: S/ ${price}.00</p>
-      <p>Fecha: ${dateInput.value}</p>
-      <p>Hora: ${timeInput.value}</p>
-      <p>Comisión: S/ 3.00</p>
-      <hr>
-      <p>Total: S/ ${price + 3}.00</p>
-    `;
-  }
-
-  function displayPaymentDetails() {
-    const paymentMethod = paymentMethodInput.value;
-    let paymentDetails = '';
-
-    if (paymentMethod === 'yape') {
-      paymentDetails = '<div><p>Pague con Yape escaneando el código QR:</p><img src="yape-qr-code.jpg" alt="Yape QR Code"></div>';
-    } else if (paymentMethod === 'qr-code') {
-      paymentDetails = '<div><p>Escanee el siguiente código QR para pagar:</p><img src="payment-qr-code.jpg" alt="Payment QR Code"></div>';
-    } else if (paymentMethod === 'credit-card') {
-      paymentDetails = '<div><p>Ingrese los detalles de su tarjeta de crédito:</p><input type="text" placeholder="Número de Tarjeta"><input type="text" placeholder="Nombre en la Tarjeta"><input type="text" placeholder="Fecha de Vencimiento"><input type="text" placeholder="Código de Seguridad"></div>';
+        const summaryDiv = document.getElementById('summary');
+        summaryDiv.innerHTML = `
+            <p><strong>Tipo de Vehículo:</strong> ${datosReserva.tipoVehiculo}</p>
+            <p><strong>Tipo de Servicio:</strong> ${datosReserva.servicio}</p>
+            <p><strong>Fecha de Reserva:</strong> ${datosReserva.fechaReserva}</p>
+            <p><strong>Hora de Reserva:</strong> ${datosReserva.horaReserva}</p>
+            <p><strong>Nombre del Servicio:</strong> ${storedService ? storedService.name : 'Ninguno'}</p>
+            <p><strong>Precio del Servicio:</strong> ${storedService ? storedService.price : 'Ninguno'}</p>
+        `;
     }
-
-    paymentDetailsDiv.innerHTML = paymentDetails;
-  }
 });
 
+const paso3SiguienteButton = document.querySelector('#step3 button');
+paso3SiguienteButton.addEventListener('click', function() {
+    updateSummary();
+    nextStep(4);
+});
+
+function updateSummary() {
+    const vehicleType = document.querySelector('input[name="vehicleType"]:checked');
+    const selectedService = document.querySelector('input[name="serviceType"]:checked');
+
+    if (vehicleType && selectedService) {
+        const vehicleTypeValue = vehicleType.value;
+        const selectedServiceValue = selectedService.value;
+
+        const selectedServiceData = services[vehicleTypeValue].find(service => service.name === selectedServiceValue);
+
+        localStorage.setItem('selectedService', JSON.stringify({
+            name: selectedServiceData.name,
+            price: selectedServiceData.price
+        }));
+
+        datosReserva.tipoVehiculo = vehicleTypeValue;
+        datosReserva.servicio = selectedServiceValue;
+        datosReserva.fechaReserva = document.getElementById('reservationDate').value;
+        datosReserva.horaReserva = document.getElementById('reservationTime').value;
+
+        localStorage.setItem('datosReserva', JSON.stringify(datosReserva));
+
+        const summaryDiv = document.getElementById('summary');
+        summaryDiv.innerHTML = `
+            <p><strong>Tipo de Vehículo:</strong> ${datosReserva.tipoVehiculo}</p>
+            <p><strong>Tipo de Servicio:</strong> ${datosReserva.servicio}</p>
+            <p><strong>Fecha de Reserva:</strong> ${datosReserva.fechaReserva}</p>
+            <p><strong>Hora de Reserva:</strong> ${datosReserva.horaReserva}</p>
+            <p><strong>Nombre del Servicio:</strong> ${selectedServiceData.name}</p>
+            <p><strong>Precio del Servicio:</strong> ${selectedServiceData.price}</p>
+        `;
+    } else {
+        console.error('Por favor, selecciona un tipo de vehículo y servicio.');
+    }
+}
+
+function nextStep(nextStep) {
+    updateServices();
+    showStep(nextStep);
+}
+
+function submitForm() {
+    document.querySelector('.form-container').style.display = 'none';
+    document.getElementById('congratulations').style.display = 'block';
+}
 
     </script>
 </body>
