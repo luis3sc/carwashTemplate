@@ -10,7 +10,7 @@
     <!-- estrutctura general -->
     <header class="bg-b flex-spacebetween flex-a padhor-1">
         <div></div>
-        <a href="" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
+        <a id="modalBtn1" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
     </header>
     <main class="bg-g2 overf">
         <section class="padhor-1 bg-g1 mgauto">
@@ -86,5 +86,53 @@
         </div>
     </div>
     <!-- navegador mobil -->
+    <div id="myModal1" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Reservar</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-verd" alt="confirmado">Confirmado</div>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-ama" alt="porconfirmar">Por confirmar</div>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-rojo" alt="rechazado">Rechazado</div>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

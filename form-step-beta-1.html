@@ -180,7 +180,7 @@ function updateServices() {
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('service-option');
         serviceDiv.innerHTML = `
-            <input type="radio" class="service-radio" name="serviceType" value="${service.name}">
+            <input type="radio" class="service-radio" name="serviceType" id="serviceType" value="${service.name}">
             <strong>${service.name}</strong><br>
             <span>${service.description}</span><br>
             <img class="w100" src="${service.imageURL}" alt="${service.name}">

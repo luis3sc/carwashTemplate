@@ -10,16 +10,16 @@
     <!-- estrutctura general -->
     <header class="bg-b flex-spacebetween flex-a padhor-1">
         <div></div>
-        <a href="" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
+        <a id="modalBtn1" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
     </header>
     <main class="bg-g2 overf">
         <section class="padhor-1 bg-g1 mgauto">
             <div class="padsup-1 flex-colum gap1">
                 <div class="flex-spacebetween">
                 <h3>Mi Tarjeta de Lealtad</h3>
-                <a href="#">Ver Historial</a>
+                <a id="modalBtn2" href="#">Ver Historial</a>
                 </div>
-                <div class="card-vert gap1 clr-b flex-row bg-2 paddingprinc border20">
+                <div class="card-vert gap1 clr-b flex-row bg-2 paddingprinc border20 rel">
                     <div class="flex-colum flex-c w-wka gap1-5">
                         <div class="flex-colum gap5">
                             <p>Tus puntos</p>
@@ -39,16 +39,18 @@
                         
                         
                     </div>
-                    
+                    <a id="modalBtn3" class="padding05 bg-1 bordercircular flex-centro abs right1 top1">
+                        <img class="mw-ico-1 f-invcolor" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_info_outline_48px-512.png" alt="">
+                    </a>
                 </div>
             </div>
         </section>
         <div class="gridbtn2 place-item padhor-1 gap1">
-            <a href="" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+            <a id="modalBtn4" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
                 <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
                 <p>Escanear Voucher</p>
             </a>
-            <a href="" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+            <a id="modalBtn5" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
                 <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
                 <p>Mi Credencial</p>
             </a>
@@ -65,12 +67,12 @@
                 <div class="grid-3-1 gap1">
                     <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
                         <a href="#" class="flex-centro  aspect-1">
-                            <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
+                            <img class="mw-img-7 border20" src="https://cdn1.iconfinder.com/data/icons/video-game-33/64/mission-complete-trophy-winner-award-512.png" alt="">
                         </a>
                         <div class="flex-colum flex-c w-wka">
                             <p class="f-bold txtlimit sinover">Cupón de Descuento</p>
                             <p>Válido hasta el 05/10</p>
-                            <a href="" class="bg-n clr-b flex-centro w100 padding05 border05">Añadir al carrito</a>
+                            <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver misión</a>
                         </div>
                     </div>
                     <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
@@ -80,7 +82,7 @@
                         <div class="flex-colum flex-c w-wka">
                             <p class="f-bold txtlimit sinover">Lavado de Salón</p>
                             <b>S/ 50.00</b> 
-                            <a href="" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Añadir al carrito</a>
+                            <a id="modalBtn7" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Añadir al carrito</a>
                         </div>
                     </div>
                     <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
@@ -162,7 +164,310 @@
         </div>
     </div>
     <!-- navegador mobil -->
+    <div id="myModal1" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Reservar</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-verd" alt="confirmado">Confirmado</div>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-ama" alt="porconfirmar">Por confirmar</div>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-rojo" alt="rechazado">Rechazado</div>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Historial de Movimientos</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-verd" alt="misioncompletada">Mision Completada</div>
+                            </div>
+                            <div class="puntos ftsz-1_5 clr-verd-2 f-bold txt-centro">
+                                +10
+                            </div>
+                        </div>
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-1 clr-b" alt="premiocanjeado">Premio Canjeado</div>
+                            </div>
+                            <div class="puntos ftsz-1_5 clr-1 f-bold txt-centro">
+                                -10
+                            </div>
+                        </div>
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-ama" alt="puntosconfirmar">Puntos por Confirmar</div>
+                            </div>
+                            <div class="puntos ftsz-1_5 f-bold txt-centro">
+                                +10
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal3" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-2">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido">
+                <div class="flex-colum padsup-1_5 gap1-5" id="cartasello">
+                    
+                        <h2>Informacion</h2>
+                    
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>¿Cómo Gano Puntos?</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Cada vez que realizas misiones o cumples tareas que se publican periodicamente.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Escanea el Código QR de la boleta o factura de pago realizado en la tienda</p>
+                        </div> 
+                    </div>
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>Términos y Condiciones</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían tener una fecha de caducidad para incentivar a los clientes a utilizarlos dentro de un plazo específico, por ejemplo, un año desde la fecha de obtención.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían canjearse por descuentos, productos gratuitos o servicios adicionales, pero no podrían canjearse por efectivo.</p>
+                        </div> 
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Durante ciertos días de la semana o meses del año, los puntos podrían valer el doble para incentivar las visitas en momentos específicos.</p>
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Se pueden usar hasta 100 puntos por transacción para evitar el abuso del sistema.</p>
+                        </div>
+                    </div>
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>Cómo Reclamar Puntos</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Durante el proceso de compra en línea, los clientes pueden optar por utilizar sus puntos acumulados para aplicar descuentos directamente en el carrito de compras.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los clientes pueden acceder a un centro de canje en línea donde pueden ver las recompensas disponibles y canjear sus puntos por productos, descuentos o servicios adicionales.</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal4" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Escanear Voucher</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <p>K</p>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal5" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Mis Credenciales</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <p>K</p>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal6" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/discount-coupon-6914215-5668397.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            <h2>Código de Descuento</h2>
+                            <h3>10% en tu primer orden de Servicio</h3>
+                            <div class="w100 padsup-1">
+                                ¡Aprovecha esta oportunidad para mantener tu vehículo impecable a un precio exclusivo! Esperamos verte pronto en nuestro centro de carwash.
+                            </div>
+                        </div>
+                        <div class="padsup-1 overvis rel brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <h4>Código de Cupón</h4>
+                                <div class="w100 padding1 brdr2dash border5px bg-b">
+                                    CARWASH2023
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal7" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/discount-coupon-6914215-5668397.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            <h2>Misión a Cumplir</h2>
+                            <h3>10% en tu primer orden de Servicio</h3>
+                            <div class="w100 padsup-1">
+                                ¡Aprovecha esta oportunidad para mantener tu vehículo impecable a un precio exclusivo! Esperamos verte pronto en nuestro centro de carwash.
+                            </div>
+                        </div>
+                        <div class="padsup-1 overvis rel brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <h4>Código de Cupón</h4>
+                                <div class="w100 padding1 brdr2dash border5px bg-b">
+                                    CARWASH2023
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/modal.js"></script>
     <script>
         (function($) {
         // Menu filter

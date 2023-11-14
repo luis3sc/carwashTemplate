@@ -752,8 +752,20 @@ place-items: center;
 .top0{
   top: 0px;
 }
+.top0_5{
+  top: .5em;
+}
+.top1{
+  top: 1em;
+}
 .right0{
   right: 0;
+}
+.right0_5{
+  right: .5em;
+}
+.right1{
+  right: 1em;
 }
 /* zindex */
 .zindex0{
@@ -926,6 +938,8 @@ align-items: center;
 justify-content: center;
 font-size: 1em;
 top: 1em;
+background-color: var(--rojo);
+color: var(--blanco);
 }
 .modalcontenido{
 padding: 1em;
