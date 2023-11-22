@@ -290,7 +290,7 @@ font-size: var(--sz1-5);
 .txt-just{
   text-align: justify;
 }
-/*Pll*/
+/*Pll limitar texto*/
 .txtlimit{
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -551,6 +551,9 @@ grid-template-columns: repeat(auto-fit, minmax(1.5em, 1fr));
 /* gaps */
 .gap5{
   gap: 5px;
+}
+.gap-25{
+  gap: .25em;
 }
 .gap-5{
   gap: var(--sz0-5);
@@ -961,6 +964,26 @@ overflow: auto;
   bottom:-1em;
 }
 /* otros */
+/*progress bar*/
+.progress,
+progress[value] {
+  width: 100%;
+  border: none;
+  margin: 5px 0;
+  height: 5px;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.progress::-webkit-progress-bar,
+progress[value]::-webkit-progress-bar {
+  background-color: #cecece;
+}
+.progress::-webkit-progress-value,
+progress[value]::-webkit-progress-value {
+  background-color: #48f538;
+}
+/*progress bar*/
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress,
+progress[value] {
+  width: 100%;
+  border: none;
+  margin: 5px 0;
+  height: 5px;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.progress::-webkit-progress-bar,
+progress[value]::-webkit-progress-bar {
+  background-color: #cecece;
+}
+.progress::-webkit-progress-value,
+progress[value]::-webkit-progress-value {
+  background-color: #48f538;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-container {
+  width: 100%;
+  padding:  0 2em;
+}
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <progress class="progress" max="100" value="10">
+        </progress>
+    </div>
+      
+</body>
+</html>
