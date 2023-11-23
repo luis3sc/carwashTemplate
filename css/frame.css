@@ -913,7 +913,7 @@ pointer-events: none;
 .modal .modal-content{
 background: #fff;
 width: 100%;
-min-height: 95%;
+height: 95%;
 position: absolute;
 z-index: 2;
 border-radius: 15px 15px 0 0;
