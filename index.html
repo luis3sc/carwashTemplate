@@ -10,7 +10,7 @@
     <!-- estrutctura general -->
     <header class="bg-b flex-spacebetween flex-a padhor-1">
         <div></div>
-        <a href="" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
+        <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
     </header>
     <main class="bg-g2 overf">
         <div class="main-p">
@@ -31,8 +31,8 @@
                 <div class="padhor-1">
                     <div class="flex-colum gap-75 padsup-1">
                         <div class="flex-a gap-5">
-                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                            <p>Av. Larcomar Jiron 982 - Surquillo - mas direcciones para completar <a href="#" class="clr-1">mostrar en el mapa</a></p>
+                            <img class="mw-ico-1" src="./img/iconos-menu/marcador-de-posicion.png" alt="">
+                            <p>Av. Larcomar Jiron 982 - Surquillo - mas direcciones para completar <a id="modalBtn2" href="#" class="clr-1">mostrar en el mapa</a></p>
                         </div>
                         <div class="flex-a gap-5">
                             <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
@@ -48,16 +48,16 @@
                         </div>
                         <div class="flex-a gap-5">
                             <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                            <p>4.5 Agradable servicio <a href="#" class="clr-1">Ver comentarios</a></p>
+                            <p>4.5 Agradable servicio <a id="modalBtn2" href="#" class="clr-1">Ver comentarios</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="gridbtn2 place-item padhor-1 gap1">
-                    <a href="" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+                    <a id="modalBtn3" href="#" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
                         <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
                         <p>Ganar Sellos</p>
                     </a>
-                    <a href="" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+                    <a id="modalBtn4" href="#" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
                         <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
                         <p>Reservar Ahora</p>
                     </a>
@@ -142,5 +142,310 @@
         </div>
     </div>
     <!-- navegador mobil -->
+    <!-- modals -->
+    <div id="myModal1" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Reservar</h3> 
+                    
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-b">
+                <div class="flex-colum padsup-1_5 h-hka gap1">
+                    <h3>Ubicación</h3> 
+                    <div class="flex-a gap-5">
+                        <img class="mw-ico-1 f-invcolor" src="./img/iconos-menu/marcador-de-posicion.png" alt="">
+                        <p>Av. Larcomar Jiron 982 - Surquillo - mas direcciones para completar</p>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.858134381993!2d-77.11543020070431!3d-11.99937014467788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cd3fc348fd23%3A0x27860fe0d30eb925!2sMu%C3%B1eco%20Auto%20Spa!5e0!3m2!1ses-419!2spe!4v1689020855239!5m2!1ses-419!2spe" class="h-hka w100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal3" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-2">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido">
+                <div class="flex-colum padsup-1_5 gap1-5" id="cartasello">
+                    
+                        <h2>18 Reseñas</h2>
+                    
+                    <div class="flex-colum gap1 w100 bg-b">
+                        <div class="flex-colum gap-5 border1px padding1" alt="comentario-card">
+                            <div class="flex-colum gap1" alt="comentario-header">
+                                <div alt="comentario-user-header" class="flex-row gap1 flex-a">
+                                    <div class="mw-ico-3 bordercircular bg-2" alt="comentario-user-photo"></div>
+                                    <div alt="comentario-user-header-info">
+                                        <div alt="comentario-user-nombre">Nombre</div>
+                                        <div alt="comentario-user-nivel">Nuevo usuario</div>
+                                    </div>
+                                </div>
+                                <div class="flex-row gap1 comentario-header-r">
+                                    <div alt="cometario-rating">-</div>
+                                    <div alt="comentario-fecha">Hace 6 días</div>
+                                </div>
+                            </div>
+                            <div alt="comentario-content">Buena atención, rápida y seguro. Me Encanto!</div>
+                        </div>
+
+                        <div class="flex-colum gap-5 border1px padding1" alt="comentario-card">
+                            <div class="flex-colum gap1" alt="comentario-header">
+                                <div alt="comentario-user-header" class="flex-row gap1 flex-a">
+                                    <div class="mw-ico-3 bordercircular bg-2" alt="comentario-user-photo"></div>
+                                    <div alt="comentario-user-header-info">
+                                        <div alt="comentario-user-nombre">Nombre</div>
+                                        <div alt="comentario-user-nivel">Nuevo usuario</div>
+                                    </div>
+                                </div>
+                                <div class="flex-row gap1 comentario-header-r">
+                                    <div alt="cometario-rating">-</div>
+                                    <div alt="comentario-fecha">Hace 6 días</div>
+                                </div>
+                            </div>
+                            <div alt="comentario-content">Buena atención, rápida y seguro. Me Encanto!</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal4" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a w100 padding1">
+                        <h2>Mi Código de Usuario</h2>
+                        <div class="w100 padding1 brdr2dash border5px bg-b">
+                            Código de Usuario
+                        </div>
+                    </div>
+                    
+                    <div class="bg-b border20 mw-280 padding1-5">
+                        <img class="w100" src="./img/yapefransa.webp" alt="">
+                    </div>
+                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
+                        <p>Presenta tu código de usuario o QR cada
+                            vez que realices una compra para obtener
+                            tu sello</p> 
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal5" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Mis Credenciales</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <p>K</p>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal6" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/trophy-4069157-3364095@0.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <h2>Misión del Explorador Limpio</h2>
+                            <div class="w100 padsup-1">
+                                Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.
+                            </div>
+                            
+                            <div class="flex gap1">
+                                <progress class="progress" max="100" value="0">
+                                </progress>
+                                <p>0/1</p>
+                            </div>
+                        </div>
+                        <div class="padsup-1 rel overvis brdrbtmdash">
+                            <div class="flex-spacebetween">
+                                <h3>Recompensa</h3>
+                                <b>+100 pts</b>  
+                            </div>
+                            <div class="w100 padsup-1">
+                                Descuento exclusivo en el próximo lavado y una insignia de "Explorador Limpio".
+                            </div>
+                            <div class="w100 bg-b">
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Reclamar premio</a>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal7" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/give-gift-6256713-5121265.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            
+                            <h2>Descuento Exclusivo</h2>
+                            <h3>10% en tu primer orden de Servicio</h3>
+                            <div class="w100 padsup-1">
+                                ¡Aprovecha esta oportunidad para mantener tu vehículo impecable a un precio exclusivo! Esperamos verte pronto en nuestro centro de carwash.
+                            </div>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <b>Precio: 300 pts</b>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Reclamar</a>
+                            
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal8" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/discount-coupon-6914215-5668397.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            <h2>Código de Descuento</h2>
+                            <h3>10% en tu primer orden de Servicio</h3>
+                            <div class="w100 padsup-1">
+                                ¡Aprovecha esta oportunidad para mantener tu vehículo impecable a un precio exclusivo! Esperamos verte pronto en nuestro centro de carwash.
+                            </div>
+                        </div>
+                        <div class="padsup-1 overvis rel brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <h4>Código de Cupón</h4>
+                                <div class="w100 padding1 flex-row flex-spacebetween brdr2dash border5px bg-b">
+                                    <p>Código</p>
+                                    <b>CARWASH2023</b>    
+                                    <p class="clr-verd-2">Copiar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
