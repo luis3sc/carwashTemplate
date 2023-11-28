@@ -113,10 +113,14 @@
             <!-- Resumen específico para Transferencia -->
         </div>
 
+        <div id="detallePago">   <!--Aqui se pone el resumen de pago-->         
+        </div>
+
         <button onclick="nextStep(6)">Siguiente</button>
     </div>
     <div id="step6" class="form-step hidden">
         <h2>Paso 6: Confirmación de Reserva</h2>
+        <div id="confirmPago"></div>
         <button onclick="submitForm()">Confirmar Reserva y Pago</button>
     </div>
 </div>
@@ -168,14 +172,21 @@ const services = {
         }
     ]
 };
+let vehicleType;
+let servicesContainer;
+let selectedServiceData;
+let pagoType;
+
+const dcomision = 2.5;
+let subtotal = 0;
+let total = 0;
 
 const datosReserva = {};
 
 function updateServices() {
-    const vehicleType = document.querySelector('input[name="vehicleType"]:checked').value;
-    const servicesContainer = document.getElementById('services');
+    vehicleType = document.querySelector('input[name="vehicleType"]:checked').value;
+    servicesContainer = document.getElementById('services');
     servicesContainer.innerHTML = "";
-
     services[vehicleType].forEach(service => {
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('service-option');
@@ -203,24 +214,7 @@ function showStep(stepNumber) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const storedData = JSON.parse(localStorage.getItem('datosReserva'));
-    const storedService = JSON.parse(localStorage.getItem('selectedService'));
-    if (storedData) {
-        datosReserva.tipoVehiculo = storedData.tipoVehiculo;
-        datosReserva.servicio = storedData.servicio;
-        datosReserva.fechaReserva = storedData.fechaReserva;
-        datosReserva.horaReserva = storedData.horaReserva;
-
-        const summaryDiv = document.getElementById('summary');
-        summaryDiv.innerHTML = `
-            <p><strong>Tipo de Vehículo:</strong> ${datosReserva.tipoVehiculo}</p>
-            <p><strong>Tipo de Servicio:</strong> ${datosReserva.servicio}</p>
-            <p><strong>Fecha de Reserva:</strong> ${datosReserva.fechaReserva}</p>
-            <p><strong>Hora de Reserva:</strong> ${datosReserva.horaReserva}</p>
-            <p><strong>Nombre del Servicio:</strong> ${storedService ? storedService.name : 'Ninguno'}</p>
-            <p><strong>Precio del Servicio:</strong> ${storedService ? storedService.price : 'Ninguno'}</p>
-        `;
-    }
+    
 });
 
 const paso3SiguienteButton = document.querySelector('#step3 button');
@@ -230,22 +224,21 @@ paso3SiguienteButton.addEventListener('click', function() {
 });
 
 function updateSummary() {
-    const vehicleType = document.querySelector('input[name="vehicleType"]:checked');
-    const selectedService = document.querySelector('input[name="serviceType"]:checked');
-
+    //const vehicleType = document.querySelector('#vehicleType');
+    let selectedService = document.querySelector('#serviceType');
     if (vehicleType && selectedService) {
-        const vehicleTypeValue = vehicleType.value;
-        const selectedServiceValue = selectedService.value;
+        //const vehicleTypeValue = vehicleType.value;
+        //const selectedServiceValue = selectedService.value;
 
-        const selectedServiceData = services[vehicleTypeValue].find(service => service.name === selectedServiceValue);
+        selectedServiceData = services[vehicleType].find(service => service.name === selectedService.value);
 
         localStorage.setItem('selectedService', JSON.stringify({
             name: selectedServiceData.name,
             price: selectedServiceData.price
         }));
 
-        datosReserva.tipoVehiculo = vehicleTypeValue;
-        datosReserva.servicio = selectedServiceValue;
+        datosReserva.tipoVehiculo = vehicleType;
+        datosReserva.servicio = selectedService.value;
         datosReserva.fechaReserva = document.getElementById('reservationDate').value;
         datosReserva.horaReserva = document.getElementById('reservationTime').value;
 
@@ -275,6 +268,43 @@ function submitForm() {
     document.getElementById('congratulations').style.display = 'block';
 }
 
+const paso4SiguienteButton = document.querySelector('#step4 button');
+paso4SiguienteButton.addEventListener('click', function() {
+    pagoResumen();
+    nextStep(5);
+});
+
+function pagoResumen(){
+    pagoType = document.querySelector('input[name="paymentMethod"]:checked').value;
+    
+    let summaryDiv = document.querySelector('#detallePago');
+    subtotal = selectedServiceData.price;
+    total = subtotal + dcomision;
+    summaryDiv.innerHTML = `
+            <p><strong>Tipo de Pago:</strong> ${pagoType}</p>
+            <p><strong>Tipo de Servicio:</strong> ${datosReserva.servicio}</p>
+            <p><strong>Subtotal:</strong> ${subtotal}</p>
+            <p><strong>Comisión:</strong> ${dcomision}</p>
+            <p><strong>Pago Total:</strong> ${total}</p>
+        `;
+    
+}
+
+const paso5SiguienteButton = document.querySelector('#step5 button');
+paso5SiguienteButton.addEventListener('click', function() {
+    pagoConfirm();
+    nextStep(6);
+});
+
+function pagoConfirm(){
+    let summaryDiv = document.querySelector('#confirmPago');
+
+    summaryDiv.innerHTML = `
+            <p><strong>Pago:</strong> ${pagoType}</p>
+            <p><strong>Pago Total:</strong> ${total}</p>
+            <p><strong>Tipo de Servicio:</strong> ${datosReserva.servicio}</p>
+        `;    
+}
     </script>
 </body>
 </html>

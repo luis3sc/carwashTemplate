@@ -5,84 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-  font-family: Arial, sans-serif;
+body {
+  box-sizing: border-box;
+  padding: 0px;
   margin: 0;
-  padding: 0;
+  font-family: sans-serif;
 }
 
-nav {
-  background-color: #333;
-  color: white;
+.scratch-card {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2,
+h3 {
   text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
+  color: #5a2ff5;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
+h2 {
+  font-size: 64px;
 }
 
-nav ul li {
-  display: inline;
-  margin: 10px;
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
-.active{
-    background-color: blue;
+
+p {
+    text-align: center;
+  font-weight: 600;
 }
-.section {
-  height: auto;
+
+button{
+  width: 300px;
+  height: 50px;
+  background-color: #5a2ff5;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  margin: 0 auto;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.scratch-container {
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em;
+}
+
+.scratch-canvas {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.code {
+  position: relative;
+  visibility: hidden;
+  margin: 0 auto;
+  text-align: center;
+  color: #5a2ff5;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.fade-out {
+  -webkit-animation: fade-out 0.8s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
 }
 
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-          <li><a href="#section1">Sección 1</a></li>
-          <li><a href="#section2">Sección 2</a></li>
-          <li><a href="#section3">Sección 3</a></li>
-          <li><a href="#section4">Sección 4</a></li>
-          <li><a href="#section5">Sección 5</a></li>
-        </ul>
-      </nav>
-      <div id="section1" class="section">
-        <p>asd</p>
-        <p>asdasd</p>
-      </div>
-      <div id="section2" class="section">Contenido de la Sección 2</div>
-      <div id="section3" class="section">Contenido de la Sección 3</div>
-      <div id="section4" class="section">Contenido de la Sección 4</div>
-      <div id="section5" class="section">Contenido de la Sección 5</div>
-<script>
-    const sections = document.querySelectorAll('.section');
-const navLinks = document.querySelectorAll('nav ul li a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 5) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href').includes(current)) {
-      link.classList.add('active');
-    }
-  });
-});
-
-</script>    
+  <div class="scratch-card">
+    <h2>Get 30% </h2>
+    <h3>On Your Next Purchase</h3>
+    <p>Scratch & Get Your Coupon Code</p>
+    <div id="scratch-container" class="scratch-container">
+      <canvas class="scratch-canvas" id="scratch-canvas" width="300" height="60"></canvas>
+      <p id="code" class="code">
+          SE345dEf67   
+      </p>
+    </div>
+    <button>Use Coupon</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/raspaygana.js"></script>
 </body>
 </html>

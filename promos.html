@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Promos</title>
     <link rel="stylesheet" href="./css/frame.css">
+    <style>#timer {
+        /* font-weight: bold; */
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        padding: var(--base-padding);
+        margin-left: 1rem;
+        width: 150px;
+        text-align: center;
+        border: 1px dashed var(--secondary-color);
+        margin-right: 2.5rem;
+        line-height: 1.3;
+    }
+/* Helpers */
+.is-hidden {
+	display: none !important;
+}
+
+.is-desktop {
+	display: block;
+}
+
+@media (max-width: 768px) {
+	.is-desktop {
+		display: none !important;
+	}
+}
+
+.is-mobile {
+	display: none !important;
+}
+
+@media (max-width: 768px) {
+	.is-mobile {
+		display: block !important;
+	}
+}
+
+    </style>
 </head>
 <body class="bg-g4">
     <!-- estrutctura general -->
@@ -18,13 +56,18 @@
                 <h2>Promos</h2>
                 <div class="grid-3-1 gap1">
                     <div class="card-vert gap1 flex-row bg-b padding1 border20">
-                        <a href="#" class="flex-centro  aspect-1">
+                        <a href="#" class="flex-centro  flex-ini">
                             <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
                         </a>
-                        <div class="flex-colum flex-c w-wka">
-                            <p class="f-bold txtlimit sinover">Cupón de Descuento</p>
-                            <p>Válido hasta el 05/10</p>
-                            <a href="" class="bg-n clr-b flex-centro w100 padding05 border05">Añadir al carrito</a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover clr-2">Promo Verano</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            <b>Descuento por Tiempo Limitado</b>
+                            <b class="clr-1">Dscto de 50%</b>
+                            <span id="timer" class="is-desktop">
+                                s
+                            </span>
+                            <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver promo</a>
                         </div>
                     </div>
                     <div class="card-vert gap1 flex-row bg-b padding1 border20">
@@ -134,5 +177,50 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script>
+        // CAMBIAR MOBILE X DESKTOP
+        function countDown(x) {
+	if (x.matches) {
+		console.log('Mobile');
+	} else {
+		// If media query matches
+		console.log('Desktop');
+		// Set the date we're counting down to
+		var countDownDate = new Date('Dec 1, 2023 00:00:00').getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function () {
+			// Get today's date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now and the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor(
+				(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+			);
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Output the result in an element with id="demo"
+			document.getElementById('timer').innerHTML =
+				days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+
+			// If the count down is over, write some text
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById('timer').innerHTML = 'EXPIRED';
+			}
+		}, 1000);
+	}
+}
+
+var x = window.matchMedia('(max-width: 10px)');
+countDown(x); // Call listener function at run time
+x.addListener(countDown); // Attach listener function on state changes
+
+    </script>
 </body>
 </html>

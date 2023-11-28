@@ -4,50 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/frame.css">
     <style>
-        .progress,
-progress[value] {
-  width: 100%;
-  border: none;
-  margin: 5px 0;
-  height: 5px;
-  display: block;
-  appearance: none;
-  -webkit-appearance: none;
-}
-.progress::-webkit-progress-bar,
-progress[value]::-webkit-progress-bar {
-  background-color: #cecece;
-}
-.progress::-webkit-progress-value,
-progress[value]::-webkit-progress-value {
-  background-color: #48f538;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-html,
-body {
+.container {
+  width: 100%;
   height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.progress-container {
+.card {
   width: 100%;
-  padding:  0 2em;
+  border-radius: 5px;
+}
+
+.main,
+.copy-button {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10px;
+  align-items: center;
+}
+.card::after {
+  position: absolute;
+  content: "";
+  height: 40px;
+  right: -20px;
+  border-radius: 40px;
+  z-index: 1;
+  top: 70px;
+  background-color: #dc143c;
+  width: 40px;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  left: -20px;
+  border-radius: 40px;
+  z-index: 1;
+  top: 70px;
+  background-color: #dc143c;
+  width: 40px;
+}
+
+.co-img img {
+  width: 100px;
+  height: 100px;
+}
+.vertical {
+  border-left: 5px dotted black;
+  height: 100px;
+  left: 40%;
+}
+
+.copy-button {
+  margin: 12px 0 -5px 0;
+  height: 45px;
+  border-radius: 4px;
+  padding: 0 5px;
+  border: 1px solid #e1e1e1;
+}
+
+.copy-button input {
+  width: 100%;
+  height: 100%;
+}
+
+.copy-button button {
+  padding: 5px 20px;
+  color: #fff;
+  border: 1px solid transparent;
 }
     </style>
 </head>
 <body>
-    <div class="progress-container">
-        <progress class="progress" max="100" value="10">
-        </progress>
+  <div class="container padding1 bg-rojo flex-centro flex-colum gap1">
+    <div class="card rel padding1 bg-b">
+      <div class="main">
+        <div class="co-img">
+          <img
+            src="https://i.pinimg.com/originals/c7/84/67/c78467db9ff497393cb548a48f02d451.png"
+            alt=""
+          />
+        </div>
+        <div class="vertical abs"></div>
+        <div class="content">
+          <h2>Mcdonalds</h2>
+          <h1>10% <span>Coupon</span></h1>
+          <p>Valid till 30 April 2021</p>
+        </div>
+      </div>
+      <div class="copy-button">
+        <input id="copyvalue" type="text" readonly value="GOFREE" />
+        <button onclick="copyIt()" class="copybtn bg-rojo">COPY</button>
+      </div>
     </div>
-      
+    <div class="card rel padding1 bg-b">
+      <div class="main">
+        <div class="co-img">
+          <img
+            src="https://i.pinimg.com/originals/c7/84/67/c78467db9ff497393cb548a48f02d451.png"
+            alt=""
+          />
+        </div>
+        <div class="vertical abs"></div>
+        <div class="content">
+          <h2>Mcdonalds</h2>
+          <h1>10% <span>Coupon</span></h1>
+          <p>Valid till 30 April 2021</p>
+        </div>
+      </div>
+      <div class="copy-button">
+        <input id="copyvalue" type="text" readonly value="GOFREE" />
+        <button onclick="copyIt()" class="copybtn bg-rojo">COPY</button>
+      </div>
+    </div>
+    <div class="card rel padding1 bg-b">
+      <div class="main">
+        <div class="co-img">
+          <img
+            src="https://i.pinimg.com/originals/c7/84/67/c78467db9ff497393cb548a48f02d451.png"
+            alt=""
+          />
+        </div>
+        <div class="vertical abs"></div>
+        <div class="content">
+          <h2>Mcdonalds</h2>
+          <h1>10% <span>Coupon</span></h1>
+          <p>Valid till 30 April 2021</p>
+        </div>
+      </div>
+      <div class="copy-button">
+        <input id="copyvalue" type="text" readonly value="GOFREE" />
+        <button onclick="copyIt()" class="copybtn bg-rojo">COPY</button>
+      </div>
+    </div>
+  </div>
+
+
+      <script>
+        
+let copybtn = document.querySelector(".copybtn");
+
+
+function copyIt(){
+  let copyInput = document.querySelector('#copyvalue');
+
+  copyInput.select();
+
+  document.execCommand("copy");
+
+  copybtn.textContent = "COPIED";
+}
+
+
+      </script>
 </body>
 </html>
