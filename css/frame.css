@@ -988,6 +988,31 @@ progress[value]::-webkit-progress-value {
   background-color: #48f538;
 }
 /*progress bar*/
+/* TICKET CSS*/
+
+.card::after {
+  position: absolute;
+  content: "";
+  height: 25px;
+  right: -15px;
+  border-radius: 40px;
+  z-index: 1;
+  background-color: var(--gris1);
+  width: 25px;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  left: -15px;
+  border-radius: 40px;
+  z-index: 1;
+  background-color: var(--gris1);
+  width: 25px;
+}
+
+/* TICKET CSS*/
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{
