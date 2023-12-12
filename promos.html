@@ -26,30 +26,40 @@
                             <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
                             
                             <b class="clr-1">Dscto de 50%</b>
-                            <span id="timer" class="block">
+                            <span id="timer1" class="block">
                                 
                             </span>
                             <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver promo</a>
                         </div>
                     </div>
                     <div class="card-vert card rel flex-a gap1 flex-row bg-b padding1 border20">
-                        <a href="#" class="flex-centro aspect-1">
+                        <a href="#" class="h100 flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
                         </a>
-                        <div class="flex-colum flex-c w-wka">
-                            <p class="f-bold txtlimit sinover">Lavado de Salón</p>
-                            <b>S/ 50.00</b> 
-                            <a href="" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Añadir al carrito</a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover clr-2">Promo Verano</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            
+                            <b class="clr-1">Dscto de 50%</b>
+                            <span id="timer2" class="block">
+                                
+                            </span>
+                            <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver promo</a>
                         </div>
                     </div>
-                    <div class="card-vert gap1 flex-row bg-b padding1 border20">
-                        <a href="#" class="flex-centro aspect-1">
+                    <div class="card-vert card rel flex-a gap1 flex-row bg-b padding1 border20">
+                        <a href="#" class="h100 flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://images.91wheels.com/assets/b_images/main/models/profile/profile1660726719.png" alt="">
                         </a>
-                        <div class="flex-colum flex-c w-wka">
-                            <p class="f-bold txtlimit sinover">Encerado</p>
-                            <b>S/ 50.00</b> 
-                            <a href="" class="bg-n clr-b flex-centro w100 padding05 border05">Añadir al carrito</a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover clr-2">Promo Verano</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            
+                            <b class="clr-1">Dscto de 50%</b>
+                            <span id="timer3" class="block">
+                                
+                            </span>
+                            <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver promo</a>
                         </div>
                     </div>
                 </div>
@@ -141,9 +151,9 @@
     <script src="./js/modal.js"></script>
     <script>
         // CAMBIAR MOBILE X DESKTOP
-function countDown() {
+function countDown(id, targetDate) {
     // Set the date we're counting down to
-    var countDownDate = new Date('Nov 30, 2023 11:30:00').getTime();
+    var countDownDate = new Date(targetDate).getTime();
 
     // Función para actualizar el contador
     function updateCountdown() {
@@ -161,14 +171,14 @@ function countDown() {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="timer"
-        document.getElementById('timer').innerHTML =
+        // Output the result in an element with the specified ID
+        document.getElementById(id).innerHTML =
             days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
         // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(intervalId);
-            document.getElementById('timer').innerHTML = 'Expirado';
+            document.getElementById(id).innerHTML = 'Expirado';
         }
     }
 
@@ -179,8 +189,15 @@ function countDown() {
     var intervalId = setInterval(updateCountdown, 1000);
 }
 
-// Llamar a la función countDown al cargar la página
-countDown();
+// Llamar a la función countDown para el primer contador
+countDown('timer1', 'Nov 30, 2023 11:30:00');
+
+// Llamar a la función countDown para el segundo contador
+countDown('timer2', 'Dec 01, 2023 00:00:00');
+
+// Llamar a la función countDown para el segundo contador
+countDown('timer3', 'Dec 01, 2023 14:00:00');
+
 
     </script>
 </body>

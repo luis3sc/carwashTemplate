@@ -4,162 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/frame.css">
     <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
-.container {
-  width: 100%;
-  height: 100vh;
-}
-
-.card {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.main,
-.copy-button {
-  display: flex;
-  justify-content: space-around;
-  padding: 0 10px;
-  align-items: center;
-}
-.card::after {
-  position: absolute;
-  content: "";
-  height: 40px;
-  right: -20px;
-  border-radius: 40px;
-  z-index: 1;
-  top: 70px;
-  background-color: #dc143c;
-  width: 40px;
-}
-
-.card::before {
-  position: absolute;
-  content: "";
-  height: 40px;
-  left: -20px;
-  border-radius: 40px;
-  z-index: 1;
-  top: 70px;
-  background-color: #dc143c;
-  width: 40px;
-}
-
-.co-img img {
-  width: 100px;
-  height: 100px;
-}
-.vertical {
-  border-left: 5px dotted black;
-  height: 100px;
-  left: 40%;
-}
-
-.copy-button {
-  margin: 12px 0 -5px 0;
-  height: 45px;
-  border-radius: 4px;
-  padding: 0 5px;
-  border: 1px solid #e1e1e1;
-}
-
-.copy-button input {
-  width: 100%;
-  height: 100%;
-}
-
-.copy-button button {
-  padding: 5px 20px;
-  color: #fff;
-  border: 1px solid transparent;
-}
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+  
+      .section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  
+      #section2 {
+        position: relative;
+      }
+  
+      #navbar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 15px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        transition: top 0.3s;
+        z-index: 1000;
+      }
+  
+      #navbar.fixed {
+        position: fixed;
+        top: 0;
+      }
+  
+      /* Agrega estilos según tus preferencias */
+      .content {
+        padding: 20px;
+      }
     </style>
 </head>
 <body>
-  <div class="container padding1 bg-rojo flex-centro flex-colum gap1">
-    <div class="card rel padding1 bg-b">
-      <div class="main">
-        <div class="co-img">
-          <img
-            src="https://i.pinimg.com/originals/c7/84/67/c78467db9ff497393cb548a48f02d451.png"
-            alt=""
-          />
-        </div>
-        <div class="vertical abs"></div>
-        <div class="content">
-          <h2>Mcdonalds</h2>
-          <h1>10% <span>Coupon</span></h1>
-          <p>Valid till 30 April 2021</p>
-        </div>
-      </div>
-      <div class="copy-button">
-        <input id="copyvalue" type="text" readonly value="GOFREE" />
-        <button onclick="copyIt()" class="copybtn bg-rojo">COPY</button>
-      </div>
-    </div>
-    <div class="card rel padding1 bg-b">
-      <div class="main">
-        <div class="co-img">
-          <img
-            src="https://i.pinimg.com/originals/c7/84/67/c78467db9ff497393cb548a48f02d451.png"
-            alt=""
-          />
-        </div>
-        <div class="vertical abs"></div>
-        <div class="content">
-          <h2>Mcdonalds</h2>
-          <h1>10% <span>Coupon</span></h1>
-          <p>Valid till 30 April 2021</p>
-        </div>
-      </div>
-      <div class="copy-button">
-        <input id="copyvalue" type="text" readonly value="GOFREE" />
-        <button onclick="copyIt()" class="copybtn bg-rojo">COPY</button>
-      </div>
-    </div>
-    <div class="card rel padding1 bg-b">
-      <div class="main">
-        <div class="co-img">
-          <img
-            src="https://i.pinimg.com/originals/c7/84/67/c78467db9ff497393cb548a48f02d451.png"
-            alt=""
-          />
-        </div>
-        <div class="vertical abs"></div>
-        <div class="content">
-          <h2>Mcdonalds</h2>
-          <h1>10% <span>Coupon</span></h1>
-          <p>Valid till 30 April 2021</p>
-        </div>
-      </div>
-      <div class="copy-button">
-        <input id="copyvalue" type="text" readonly value="GOFREE" />
-        <button onclick="copyIt()" class="copybtn bg-rojo">COPY</button>
-      </div>
+  <div class="section">
+    <div class="content">
+      <h2>Section 1</h2>
+      <!-- Contenido de la sección 1 -->
     </div>
   </div>
 
+  <div id="section2" class="section">
+    <div class="content">
+      <h2>Section 2</h2>
+      <!-- Contenido de la sección 2 -->
+    </div>
+    <div id="navbar">Navbar</div>
+  </div>
 
-      <script>
-        
-let copybtn = document.querySelector(".copybtn");
+  <div class="section">
+    <div class="content">
+      <h2>Section 3</h2>
+      <!-- Contenido de la sección 3 -->
+    </div>
+  </div>
 
+  <script>
+    const navbar = document.getElementById('navbar');
+    const section2 = document.getElementById('section2');
+    const section2OffsetTop = section2.offsetTop;
+    let lastScroll = window.scrollY;
 
-function copyIt(){
-  let copyInput = document.querySelector('#copyvalue');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
 
-  copyInput.select();
+      if (currentScroll > lastScroll && currentScroll > section2OffsetTop) {
+        // Scroll hacia abajo y después de la sección 2
+        navbar.classList.add('fixed');
+      } else {
+        // Scroll hacia arriba o antes de la sección 2
+        navbar.classList.remove('fixed');
+      }
 
-  document.execCommand("copy");
-
-  copybtn.textContent = "COPIED";
-}
-
-
-      </script>
+      lastScroll = currentScroll;
+    });
+  </script>
 </body>
 </html>
