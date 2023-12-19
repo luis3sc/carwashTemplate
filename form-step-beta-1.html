@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Formulario de Reserva de Lavado de Autos</title>
+    <link rel="stylesheet" href="./css/frame.css">
     <style>
       body {
     font-family: Arial, sans-serif;
@@ -60,75 +61,91 @@
     </style>
 </head>
 <body>
-  <div class="form-container">
-    <div id="step1" class="form-step">
-        <h2>Paso 1: Tipo de Vehículo</h2>
-        <input type="radio" name="vehicleType" value="car"> Auto
-        <input type="radio" name="vehicleType" value="motorcycle"> Motocicleta
-        <button onclick="nextStep(2)">Siguiente</button>
-    </div>
-    <div id="step2" class="form-step hidden">
-        <h2>Paso 2: Tipo de Servicio</h2>
-        <div id="services">
-            <!-- Las opciones de servicio se llenarán dinámicamente aquí -->
+    <header class="bg-b flex-spacebetween flex-a padhor-1">
+        <div></div>
+        <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
+    </header>
+    <div id="myModal1" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="form-container">
+                    <div id="step1" class="form-step">
+                        <h2>Paso 1: Tipo de Vehículo</h2>
+                        <input type="radio" name="vehicleType" value="car"> Auto
+                        <input type="radio" name="vehicleType" value="motorcycle"> Motocicleta
+                        <button onclick="nextStep(2)">Siguiente</button>
+                    </div>
+                    <div id="step2" class="form-step hidden">
+                        <h2>Paso 2: Tipo de Servicio</h2>
+                        <div id="services">
+                            <!-- Las opciones de servicio se llenarán dinámicamente aquí -->
+                        </div>
+                        <button onclick="nextStep(3)">Siguiente</button>
+                    </div>
+                    <div id="step3" class="form-step hidden">
+                        <h2>Paso 3: Fecha y Hora de la Reserva</h2>
+                        <label for="reservationDate">Selecciona la fecha de la reserva:</label>
+                        <input type="date" id="reservationDate" name="reservationDate"><br>
+                
+                        <label for="reservationTime">Selecciona la hora de la reserva:</label>
+                        <input type="time" id="reservationTime" name="reservationTime"><br>
+                
+                        <button onclick="nextStep(4); updateSummary()">Siguiente</button>
+                    </div>
+                    <div id="step4" class="form-step hidden">
+                        <h2>Paso 4: Tipo de Pago</h2>
+                        <label>Selecciona el tipo de pago:</label><br>
+                        <input type="radio" name="paymentMethod" value="yape"> Yape<br>
+                        <input type="radio" name="paymentMethod" value="plin"> Plin<br>
+                        <input type="radio" name="paymentMethod" value="transferencia"> Transferencia vía depósito<br>
+                
+                        <h2>Resumen</h2>
+                        <div id="summary">
+                            <!-- Los detalles de la reserva se mostrarán aquí -->
+                        </div>
+                
+                        <button onclick="nextStep(5)">Siguiente</button>
+                    </div>
+                    <div id="step5" class="form-step hidden">
+                        <h2>Paso 5: Detalles del Pago</h2>
+                        
+                        <div id="yapeDetailsSummary" class="payment-details hidden">
+                            <!-- Resumen específico para Yape -->
+                            <p>Yape</p>
+                            <section>Yape-Numero</section>
+                        </div>
+                        <div id="plinDetailsSummary" class="payment-details hidden">
+                            <!-- Resumen específico para Plin -->
+                        </div>
+                        <div id="transferenciaDetailsSummary" class="payment-details hidden">
+                            <!-- Resumen específico para Transferencia -->
+                        </div>
+                
+                        <div id="detallePago">   <!--Aqui se pone el resumen de pago-->         
+                        </div>
+                
+                        <button onclick="nextStep(6)">Siguiente</button>
+                    </div>
+                    <div id="step6" class="form-step hidden">
+                        <h2>Paso 6: Confirmación de Reserva</h2>
+                        <div id="confirmPago"></div>
+                        <button onclick="submitForm()">Confirmar Reserva y Pago</button>
+                    </div>
+                    </div>
+                    <div id="congratulations" class="hidden">
+                    <h2>¡Felicidades! Tu reserva ha sido confirmada</h2>
+                    <!-- Mostrar detalles de la reserva aquí -->
+                    </div>
+            </div>
+               
         </div>
-        <button onclick="nextStep(3)">Siguiente</button>
     </div>
-    <div id="step3" class="form-step hidden">
-        <h2>Paso 3: Fecha y Hora de la Reserva</h2>
-        <label for="reservationDate">Selecciona la fecha de la reserva:</label>
-        <input type="date" id="reservationDate" name="reservationDate"><br>
-
-        <label for="reservationTime">Selecciona la hora de la reserva:</label>
-        <input type="time" id="reservationTime" name="reservationTime"><br>
-
-        <button onclick="nextStep(4); updateSummary()">Siguiente</button>
-    </div>
-    <div id="step4" class="form-step hidden">
-        <h2>Paso 4: Tipo de Pago</h2>
-        <label>Selecciona el tipo de pago:</label><br>
-        <input type="radio" name="paymentMethod" value="yape"> Yape<br>
-        <input type="radio" name="paymentMethod" value="plin"> Plin<br>
-        <input type="radio" name="paymentMethod" value="transferencia"> Transferencia vía depósito<br>
-
-        <h2>Resumen</h2>
-        <div id="summary">
-            <!-- Los detalles de la reserva se mostrarán aquí -->
-        </div>
-
-        <button onclick="nextStep(5)">Siguiente</button>
-    </div>
-    <div id="step5" class="form-step hidden">
-        <h2>Paso 5: Detalles del Pago</h2>
-        
-        <div id="yapeDetailsSummary" class="payment-details hidden">
-            <!-- Resumen específico para Yape -->
-            <p>Yape</p>
-            <section>Yape-Numero</section>
-        </div>
-        <div id="plinDetailsSummary" class="payment-details hidden">
-            <!-- Resumen específico para Plin -->
-        </div>
-        <div id="transferenciaDetailsSummary" class="payment-details hidden">
-            <!-- Resumen específico para Transferencia -->
-        </div>
-
-        <div id="detallePago">   <!--Aqui se pone el resumen de pago-->         
-        </div>
-
-        <button onclick="nextStep(6)">Siguiente</button>
-    </div>
-    <div id="step6" class="form-step hidden">
-        <h2>Paso 6: Confirmación de Reserva</h2>
-        <div id="confirmPago"></div>
-        <button onclick="submitForm()">Confirmar Reserva y Pago</button>
-    </div>
-</div>
-<div id="congratulations" class="hidden">
-    <h2>¡Felicidades! Tu reserva ha sido confirmada</h2>
-    <!-- Mostrar detalles de la reserva aquí -->
-</div>
-
+    
+<!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/modal.js"></script>
     <script>
 const services = {
     car: [
