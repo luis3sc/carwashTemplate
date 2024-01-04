@@ -1013,6 +1013,25 @@ progress[value]::-webkit-progress-value {
 }
 
 /* TICKET CSS*/
+/* RADIO BUTTON CUSTOM*/
+.radio-item [type="radio"] {
+	display: none;
+}
+.radio-item label {
+	display: block;
+	background: #ffffff;
+	border: 2px solid rgb(189 189 189);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: 0.4s ease-in-out 0s;
+}
+
+.radio-item [type="radio"]:checked ~ label {
+	border-color: #d0ff00;
+}
+
+/* RADIO BUTOTN CUSTOM*/
+
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{

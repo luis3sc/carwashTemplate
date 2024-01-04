@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/frame.css">
     <style>
         body {
       font-family: Arial, sans-serif;
@@ -30,161 +31,16 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
-      <div class="step active" id="step-1">
-        <h2>Paso 1 - Categoría del Auto</h2>
-        <label><input type="radio" name="car-category" value="sedan"> Sedán</label>
-        <label><input type="radio" name="car-category" value="suv"> SUV</label>
-        <!-- Agregar opciones para los demás tipos de autos -->
-        <button class="continue-btn">Continuar</button>
+  <section class="radio-section">
+    <div class="radio-list" style="padding: 0em 2em;">
+      <h1>Which Social Media you Often use?</h1>
+      <div class="radio-item">
+        <input name="radio" id="radio1" type="radio">
+        <label for="radio1">INSTAGRAM</label>
       </div>
-    
-      <div class="step" id="step-2">
-        <h2>Paso 2 - Seleccione su Servicio</h2>
-        <div id="service-options">
-          <div id="sedan-services" class="car-services">
-            <label><input type="radio" name="service" value="basic" data-price-sedan="30.00"> Básico - $30.00</label>
-            <label><input type="radio" name="service" value="standard" data-price-sedan="40.00"> Estándar - $40.00</label>
-            <label><input type="radio" name="service" value="premium" data-price-sedan="50.00"> Premium - $50.00</label>
-          </div>
-          
-          <div id="suv-services" class="car-services" style="display: none;">
-            <label><input type="radio" name="service" value="basic" data-price-suv="35.00"> Básico - $35.00</label>
-            <label><input type="radio" name="service" value="standard" data-price-suv="45.00"> Estándar - $45.00</label>
-            <label><input type="radio" name="service" value="premium" data-price-suv="55.00"> Premium - $55.00</label>
-          </div>
-          <!-- Agregar más contenedores de servicio para otros tipos de automóviles según sea necesario -->
-        </div>
-        <button class="continue-btn">Continuar</button>
-      </div>
-    
-      <div class="step" id="step-3">
-        <h2>Paso 3 - Seleccione Fecha y Hora</h2>
-        <input type="date" id="date">
-        <input type="time" id="time">
-        <button class="continue-btn">Continuar</button>
-      </div>
-    
-      <div class="step" id="step-4">
-        <h2>Paso 4 - Elija un Método de Pago</h2>
-        <label><input type="radio" name="payment-method" value="yape"> Pagar con Yape</label>
-        <label><input type="radio" name="payment-method" value="qr-code"> Pagar con Código QR</label>
-        <label><input type="radio" name="payment-method" value="credit-card"> Pagar con Tarjeta de Crédito</label>
-        <div id="reservation-summary"></div>
-        <button class="continue-btn">Continuar</button>
-      </div>
-    
-      <div class="step" id="step-5">
-        <h2>Paso 5 - Pagar Reserva</h2>
-        <div id="payment-details"></div>
-        <button class="continue-btn">Continuar</button>
-      </div>
-    
-      <div class="step" id="step-6">
-        <h2>Paso 6 - Resumen de la Reserva</h2>
-        <p>¡Gracias por su reserva!</p>
-        <div id="confirmation-details"></div>
-        <button id="confirm-btn">Confirmar</button>
-      </div>
+      <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">TWITTER</label></div>
+      <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">LINKEDIN</label></div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const steps = document.querySelectorAll('.step');
-  const continueButtons = document.querySelectorAll('.continue-btn');
-  const carCategoryInput = document.querySelector('input[name="car-category"]');
-  const serviceOptionsDiv = document.getElementById('service-options');
-  const reservationSummaryDiv = document.getElementById('reservation-summary');
-  const paymentDetailsDiv = document.getElementById('payment-details');
-  const confirmationDetailsDiv = document.getElementById('confirmation-details');
-  const confirmBtn = document.getElementById('confirm-btn');
-  const dateInput = document.getElementById('date');
-  const timeInput = document.getElementById('time');
-  const sedanServicesDiv = document.getElementById('sedan-services');
-  const suvServicesDiv = document.getElementById('suv-services');
-
-  let currentStep = 0;
-  let selectedService = '';
-  let selectedPrice = 0;
-
-  carCategoryInput.addEventListener('click', function() {
-    const selectedCarCategory = carCategoryInput.value;
-
-    if (selectedCarCategory === 'sedan') {
-      sedanServicesDiv.style.display = 'block';
-      suvServicesDiv.style.display = 'none';
-    } else if (selectedCarCategory === 'suv') {
-      sedanServicesDiv.style.display = 'none';
-      suvServicesDiv.style.display = 'block';
-    }
-  });
-
-  continueButtons.forEach((button, index) => {
-    button.addEventListener('click', function() {
-      steps[currentStep].classList.remove('active');
-      currentStep++;
-      steps[currentStep].classList.add('active');
-
-      if (currentStep === 2) {
-        const selectedCarCategory = carCategoryInput.value;
-        const selectedServiceInput = document.querySelector('input[name="service"]:checked');
-        selectedService = selectedServiceInput.value;
-        selectedPrice = parseFloat(selectedServiceInput.getAttribute(`data-price-${selectedCarCategory}`));
-      }
-
-      if (currentStep === 4) {
-        displayReservationSummary(selectedService, selectedPrice);
-      }
-
-      if (currentStep === 5) {
-        displayPaymentDetails();
-      }
-    });
-  });
-
-  confirmBtn.addEventListener('click', function() {
-    // Guardar datos en Local Storage
-    localStorage.setItem('carCategory', carCategoryInput.value);
-    localStorage.setItem('selectedService', selectedService);
-    localStorage.setItem('selectedPrice', selectedPrice);
-    localStorage.setItem('date', dateInput.value);
-    localStorage.setItem('time', timeInput.value);
-
-    // Enviar datos por WhatsApp (simulado)
-    const whatsappNumber = '123456789'; // Reemplazar con el número de WhatsApp real
-    const message = `Reserva de Carwash\nCategoría del auto: ${carCategoryInput.value}\nServicio: ${selectedService}\nPrecio: ${selectedPrice}\nFecha: ${dateInput.value}\nHora: ${timeInput.value}`;
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
-
-    // Cerrar formulario
-    steps[currentStep].classList.remove('active');
-    currentStep++;
-    steps[currentStep].classList.add('active');
-  });
-
-  function displayReservationSummary(service, price) {
-    reservationSummaryDiv.innerHTML = `
-      <h3>Resumen de la Reserva</h3>
-      <p>Servicio: ${service}</p>
-      <p>Precio: $${price.toFixed(2)}</p>
-      <p>Fecha: ${dateInput.value}</p>
-      <p>Hora: ${timeInput.value}</p>
-    `;
-  }
-
-  function displayPaymentDetails() {
-    const paymentMethodInput = document.querySelector('input[name="payment-method"]:checked');
-    let paymentMethod = 'No especificado';
-    if (paymentMethodInput) {
-      paymentMethod = paymentMethodInput.value;
-    }
-
-    paymentDetailsDiv.innerHTML = `
-      <h3>Detalles del Pago</h3>
-      <p>Método de Pago: ${paymentMethod}</p>
-    `;
-  }
-});
-
-
-    </script>
+  </section>
 </body>
 </html>
