@@ -199,6 +199,9 @@ main,.main-p{
 .fill-n{
   fill: var(--negro);
 }
+.fill-g1{
+  fill: var(--gris1);
+}
 /*Degradados*/
 .active{
 background-color: var(--primario);
@@ -357,6 +360,7 @@ width: fit-content;
   max-width: 120px;
 }
 /* maxwidth icon */
+
 .mw-img-7{
 max-width: 7em;
 }
@@ -367,9 +371,17 @@ max-width: 7em;
   min-width: 1.4em;
   max-height: 1.4em;
 }
+.mw-stars{
+  width: 9px;
+  height: 9px;
+}
 .mw-ico-r{
   width: 2em;
   height: 2em;
+}
+.mw-ico-2_5{
+  width: 2.5em;
+  height: 2.5em;
 }
 .mw-ico-3{
   width: 3em;
