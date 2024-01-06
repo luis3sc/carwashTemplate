@@ -21,9 +21,6 @@
         display: block;
     }
 
-    .hidden {
-        display: none;
-    }
     .service-option {
             margin-bottom: 20px;
             padding: 10px;
@@ -37,9 +34,6 @@
 
         .service-option input[type="radio"] {
             margin-right: 10px;
-        }
-        .w100{
-          width: 100%;
         }
         .service-name {
             font-weight: bold;
@@ -355,7 +349,7 @@ function updateServices() {
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('service-option');
         serviceDiv.innerHTML = `
-            <label class="flex-row gap1 rel">
+            <label class="servicio-op flex-row gap1 rel">
             <input type="radio" class="service-radio abs" name="serviceType" id="serviceType" value="${service.name}">
             <div class="flex-centro">
                 <img class="mw-img-7 border20" src="${service.imageURL}" alt="${service.name}">

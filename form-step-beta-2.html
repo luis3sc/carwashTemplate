@@ -332,9 +332,9 @@ let vehicleType;
 let servicesContainer;
 let selectedServiceData;
 let pagoType;
-let servicioSelect; //servicio seleccionado
-let vehiculoSelect; //vehiculo seleccionado
-
+let servicioSelect; //servicio seleccionado :(
+//let vehiculoSelect; vehiculo seleccionado
+let precioServicio;
 
 const dcomision = 2.5;
 let subtotal = 0;
@@ -350,9 +350,9 @@ function updateServices() {
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('service-option');
         serviceDiv.innerHTML = `
-                <label class=" padding1 rel">
-                    <input class="abs" type="radio" name="serviceType" id="serviceType" value="${service.name}">
-                    <div class="flex-row flex-a gap1">
+                <label class="rel flex">
+                    <input class="" type="radio" name="serviceType" id="serviceType" value="${service.name}" precio="${service.price}">
+                    <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
                         <div class="flex-centro">
                         <img class="mw-img-7 border20" src="${service.imageURL}" alt="${service.name}">
                         </div>
@@ -388,14 +388,18 @@ const paso1a2 = document.querySelector('#step1 button');
 paso1a2.addEventListener('click', function() {
     updateServices();
     console.log(document.querySelector('input[name="vehicleType"]:checked').value);
-    console.log(document.querySelector("#services"));
-    vehiculoSelect = document.querySelector('input[name="vehicleType"]:checked').value; // asignar valor seleccionado
+    //vehicleType = document.querySelector('input[name="vehicleType"]:checked').value;  asignar valor seleccionado
     nextStep(2);
 });
 //paso 2 a 3
 const paso25SiguienteButton = document.querySelector('#step2 button');
 paso25SiguienteButton.addEventListener('click', function() {
     console.log(document.querySelector('input[name="serviceType"]:checked').value);
+    var inputElement = document.querySelector('input[name="serviceType"]:checked');
+    // Obtener el valor del atributo "precio"
+    precioServicio = inputElement.getAttribute('precio');
+    // Mostrar el valor en la consola
+    console.log(precioServicio);
     // Obtener el precio del servicio seleccionado
     nextStep(3);
     servicioSelect = document.querySelector('input[name="serviceType"]:checked').value; // asignar valor seleccionado
@@ -421,12 +425,12 @@ function updateSummary() {
         //const vehicleTypeValue = vehicleType.value;
         //const selectedServiceValue = selectedService.value;
 
-        selectedServiceData = services[vehicleType].find(service => service.name === selectedService.value);
+        // selectedServiceData = services[vehicleType].find(service => service.name === selectedService.value);
 
-        localStorage.setItem('selectedService', JSON.stringify({
-            name: selectedServiceData.name,
-            price: selectedServiceData.price
-        }));
+        // localStorage.setItem('selectedService', JSON.stringify({
+        //     name: selectedServiceData.name,
+        //     price: selectedServiceData.price
+        // }));
 
         datosReserva.tipoVehiculo = vehicleType;
         datosReserva.servicio = selectedService.value;
@@ -437,12 +441,12 @@ function updateSummary() {
 
         const summaryDiv = document.getElementById('summary');
         summaryDiv.innerHTML = `
-            <p><strong>Tipo de Vehículo:</strong> ${vehiculoSelect}</p>
+            <p><strong>Tipo de Vehículo:</strong> ${vehicleType}</p>
             <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
             <p><strong>Fecha de Reserva:</strong> ${datosReserva.fechaReserva}</p>
             <p><strong>Hora de Reserva:</strong> ${datosReserva.horaReserva}</p>
             <p><strong>Nombre del Servicio:</strong> ${servicioSelect}</p>
-            <p><strong>Precio del Servicio:</strong> ${selectedServiceData.price}</p>
+            <p><strong>Precio del Servicio:</strong> ${precioServicio}</p>
         `;
     } else {
         console.error('Por favor, selecciona un tipo de vehículo y servicio.');
@@ -464,11 +468,11 @@ function pagoResumen(){
     pagoType = document.querySelector('input[name="paymentMethod"]:checked').value;
     
     let summaryDiv = document.querySelector('#detallePago');
-    subtotal = selectedServiceData.price;
-    total = subtotal + dcomision;
+    subtotal = precioServicio;
+    total = parseFloat(subtotal) + parseFloat(dcomision);
     summaryDiv.innerHTML = `
             <p><strong>Tipo de Pago:</strong> ${pagoType}</p>
-            <p><strong>Tipo de Servicio:</strong> ${datosReserva.servicio}</p>
+            <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
             <p><strong>Subtotal:</strong> ${subtotal}</p>
             <p><strong>Comisión:</strong> ${dcomision}</p>
             <p><strong>Pago Total:</strong> ${total}</p>
@@ -488,7 +492,7 @@ function pagoConfirm(){
     summaryDiv.innerHTML = `
             <p><strong>Pago:</strong> ${pagoType}</p>
             <p><strong>Pago Total:</strong> ${total}</p>
-            <p><strong>Tipo de Servicio:</strong> ${datosReserva.servicio}</p>
+            <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
         `;    
 }
     </script>
