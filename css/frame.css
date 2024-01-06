@@ -233,7 +233,10 @@ font-weight: bold;
   border-color: var(--negro) !important;
 }
 .brdclr-g3{
-border-color: var(--gris3) !important;
+border-color: var(--gris3);
+}
+.brdr-g3{
+  border: 1px solid var(--gris3);
 }
 /*FONTS*/
 /*FONTS*/
@@ -1039,7 +1042,18 @@ progress[value]::-webkit-progress-value {
 }
 
 .radio-item [type="radio"]:checked ~ label {
-	border-color: #d0ff00;
+	border-color: var(--primario);
+}
+
+/* label */
+/* Oculta los radios cuando están seleccionados */
+.service-option label input[type="radio"], .service-option label input[type="radio"]:checked {
+  display: none;
+}
+
+/* Estilo del borde cuando el radio está seleccionado */
+.service-option input[type="radio"]:checked + .flex-row {
+  border: 1px solid var(--primario);
 }
 
 /* RADIO BUTOTN CUSTOM*/
