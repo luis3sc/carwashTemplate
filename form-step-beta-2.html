@@ -6,6 +6,9 @@
     
     <title>Formulario de Reserva de Lavado de Autos</title>
     <link rel="stylesheet" href="./css/frame.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./js/flatpickr-fecha.js"></script>
     <style>
     .form-step {
         display: block;
@@ -33,10 +36,9 @@
         <div class="backdrop"></div>
         <div class="modal-content">
             <button class="closeModalBtn">X</button>
-            <div class="modalcontenido bg-b">
+            <div class="modalcontenido bg-g1">
                 <div class="form-container padsup-1">
                     <div id="step1" class="form-step">
-
                         <h2>Elige el Tipo de Vehículo</h2>
                         <!-- OPCIONES DE TIPOS DE VEHICULO -->
                         <div class="flex-colum gap1 mgtp">
@@ -125,13 +127,80 @@
                         <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="nextStep(3)">Siguiente</button>
                     </div>
                     <div id="step3" class="form-step hidden">
-                        <h2>Paso 3: Fecha y Hora de la Reserva</h2>
+                        <h2>Selecciona la Fecha y Hora</h2>
 
-                        <label for="reservationDate">Selecciona la fecha de la reserva:</label>
-                        <input type="date" id="reservationDate" name="reservationDate"><br>
-                
-                        <label for="reservationTime">Selecciona la hora de la reserva:</label>
-                        <input type="time" id="reservationTime" name="reservationTime"><br>
+                        <div class="flex-colum padding1 bg-b">
+                            <label for="fechaSeleccionada" class="f-bold">Elige la fecha</label>
+                            <div id="datepicker"></div>
+                            <input type="text" id="fechaSeleccionada" class="border1px padding1 border05 brdclr-g3 mgtp">  
+                            
+                        </div>
+
+
+                        <!-- <label for="reservationDate">Selecciona la fecha de la reserva:</label>
+                        <input type="date" id="reservationDate" name="reservationDate"><br> -->
+                        <div class="mgtp">
+                            <label for="reservationTime" class="mgtp">Selecciona la hora de la reserva:</label>
+                            <input type="time" id="reservationTime" name="reservationTime">
+                        </div>
+                        
+                        <div class="flex-colum padding1 bg-b mgtp">
+                            <h3>Selecciona el Turno</h3>
+                            <div class="grid">
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="9am"> 9AM
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="9:30am"> 9:30AM
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="10am"> 10AM
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="10:30am"> 10:30AM
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="11am"> 11AM
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="11:30am"> 11:30AM
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="12pm"> 12PM
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="12:30pm"> 
+                                        <div class="padding1 w100 border20 brdr-g3">
+                                            12:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                            
+                        </div>    
                 
                         <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="nextStep(4); updateSummary()">Siguiente</button>
                     </div>
@@ -187,6 +256,7 @@
 <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/modal.js"></script>
+    
     <script>
 const services = {
     sedan: [
@@ -407,7 +477,7 @@ paso25SiguienteButton.addEventListener('click', function() {
 //paso 3 a 4
 const paso3SiguienteButton = document.querySelector('#step3 button');
 paso3SiguienteButton.addEventListener('click', function() {
-    console.log(document.getElementById('reservationDate').value);
+    console.log(document.getElementById('fechaSeleccionada').value);
     console.log(document.getElementById('reservationTime').value);
     updateSummary();
     nextStep(4);
@@ -434,7 +504,7 @@ function updateSummary() {
 
         datosReserva.tipoVehiculo = vehicleType;
         datosReserva.servicio = selectedService.value;
-        datosReserva.fechaReserva = document.getElementById('reservationDate').value;
+        datosReserva.fechaReserva = document.getElementById('fechaSeleccionada').value;
         datosReserva.horaReserva = document.getElementById('reservationTime').value;
 
         localStorage.setItem('datosReserva', JSON.stringify(datosReserva));

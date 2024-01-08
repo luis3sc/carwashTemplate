@@ -465,7 +465,7 @@ border-radius: .8em .8em 0 0;
 /*LAYOUT*/
 /*FlexBox*/
 /* flex */
-.flex, .flex-c, .flex-a,.flex-colum,.flex-row, .flex-centro,.flex-spacebetween,.flex-colum-r,.flex-spacearound,.flex-end,.flex-spaceevenly,.flex-c-resp,.flex-colum-rev-resp,.flex-none,.flex-w,.flex-colum-row-resp,.flex-jend{
+.flex, .flex-c, .flex-a,.flex-colum,.flex-row, .flex-centro,.flex-spacebetween,.flex-colum-r,.flex-spacearound,.flex-end,.flex-spaceevenly,.flex-c-resp,.flex-colum-rev-resp,.flex-w,.flex-colum-row-resp,.flex-jend{
   display: flex;
 }
 .flex-c, .flex-centro{
@@ -838,6 +838,9 @@ place-items: center;
 .overvis{
   overflow: visible;
 }
+.sinvisi{
+  visibility: hidden;
+}
 /* Borders */ 
 .border1px{
   border: 1px solid;
@@ -1029,7 +1032,7 @@ progress[value]::-webkit-progress-value {
 
 /* TICKET CSS*/
 /* RADIO BUTTON CUSTOM*/
-.radio-item [type="radio"] {
+.radio-item [type="radio"],.time-item [name="time"] {
 	display: none;
 }
 .radio-item label {
@@ -1047,17 +1050,36 @@ progress[value]::-webkit-progress-value {
 
 /* label */
 /* Oculta los radios cuando están seleccionados */
-.service-option label input[type="radio"], .service-option label input[type="radio"]:checked {
+.service-option label input[type="radio"], .service-option label input[type="radio"]:checked,.time-item label input[type="radio"], .time-item label input[type="radio"]:checked {
   display: none;
 }
 
 /* Estilo del borde cuando el radio está seleccionado */
-.service-option input[type="radio"]:checked + .flex-row {
+.service-option input[type="radio"]:checked + .flex-row,.time-item input[type="radio"]:checked + .padding1 {
   border: 1px solid var(--primario);
 }
 
 /* RADIO BUTOTN CUSTOM*/
-
+/* FLATPICKR CALENDARIO*/
+.flatpickr-calendar{
+  margin: auto;
+  margin-top: 1em;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  border-radius: 0px !important;
+}
+.flatpickr-calendar.inline{
+  top: 0px !important;
+  width: 100%;
+}
+.flatpickr-innerContainer{
+  justify-content: center;
+}
+.flatpickr-current-month{
+  display: flex;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+}
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{
@@ -1112,7 +1134,7 @@ progress[value]::-webkit-progress-value {
     bottom: 0;
   }
   .fxd-resp,.flex-none,.d-resp{
-    display: none;
+    display: none ;
   }
   /*GRID*/
   /*3columnas*/
