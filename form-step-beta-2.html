@@ -35,13 +35,13 @@
     <div id="myModal1" class="modal">
         <div class="backdrop"></div>
         <div class="modal-content">
-            <button class="closeModalBtn">X</button>
+            <button class="closeModalBtn flex-centro">X</button>
             <div class="modalcontenido bg-g1">
-                <div class="form-container padsup-1">
-                    <div id="step1" class="form-step">
+                <div class="form-container h100">
+                    <div id="step1" class="form-step rel h100">
                         <h2>Elige el Tipo de Vehículo</h2>
                         <!-- OPCIONES DE TIPOS DE VEHICULO -->
-                        <div class="flex-colum gap1 mgtp">
+                        <div class="grid gap1 mgtp h85 overf">
                             <div class="radio-item">
                                 <input type="radio" name="vehicleType" value="sedan" id="sedan"> 
                                 <label for="sedan" class="padding1">
@@ -115,112 +115,211 @@
                                 </label>
                             </div>
                         </div>
-
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="nextStep(2)">Siguiente</button>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(2)">Siguiente</button>
                     </div>
                     <!-- PASO2 -->
-                    <div id="step2" class="form-step hidden">
+                    <div id="step2" class="form-step rel h100 hidden">
                         <h2>Opciones de Servicio</h2>
-                        <div id="services" class="flex-colum gap1 mgtp">
+                        <div id="services" class="grid-servicios-1 gap1 mgtp h85 overf">
                             <!-- Las opciones de servicio se llenarán dinámicamente aquí -->
                         </div>
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="nextStep(3)">Siguiente</button>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(3)">Siguiente</button>
                     </div>
-                    <div id="step3" class="form-step hidden">
+                    <div id="step3" class="form-step rel h100 hidden">
                         <h2>Selecciona la Fecha y Hora</h2>
-
-                        <div class="flex-colum padding1 bg-b">
+                        <div class="mgtp h85 overf">
+                            <div class="padding1 bg-b">
                             <label for="fechaSeleccionada" class="f-bold">Elige la fecha</label>
                             <div id="datepicker"></div>
-                            <input type="text" id="fechaSeleccionada" class="border1px padding1 border05 brdclr-g3 mgtp">  
-                            
-                        </div>
-
-
-                        <!-- <label for="reservationDate">Selecciona la fecha de la reserva:</label>
-                        <input type="date" id="reservationDate" name="reservationDate"><br> -->
+                            <input type="text" id="fechaSeleccionada" class="border1px padding1 border05 brdclr-g3 mgtp ftsz-1 w100" readonly>
+                            </div>
+                            <!-- <label for="reservationDate">Selecciona la fecha de la reserva:</label>
+                        <input type="date" id="reservationDate" name="reservationDate"><br>
                         <div class="mgtp">
                             <label for="reservationTime" class="mgtp">Selecciona la hora de la reserva:</label>
                             <input type="time" id="reservationTime" name="reservationTime">
-                        </div>
-                        
-                        <div class="flex-colum padding1 bg-b mgtp">
+                        </div> -->
+                            <div class="flex-colum padding1 bg-b mgtp">
                             <h3>Selecciona el Turno</h3>
-                            <div class="grid">
+                            <div class="grid3icon gap-5 mgtp">
                                 <div class="time-item">
                                     <label>
-                                        <input type="radio" name="time" value="9am"> 9AM
+                                        <input type="radio" name="time" value="9am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            9AM
+                                        </div>
                                     </label>
                                 </div>
                                 <div class="time-item">
                                     <label>
-                                        <input type="radio" name="time" value="9:30am"> 9:30AM
+                                        <input type="radio" name="time" value="9:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            9:30AM
+                                        </div>
                                     </label>
                                 </div>
                                 <div class="time-item">
                                     <label>
-                                        <input type="radio" name="time" value="10am"> 10AM
+                                        <input type="radio" name="time" value="10am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            10AM
+                                        </div>
                                     </label>
                                 </div>
                                 <div class="time-item">
                                     <label>
-                                        <input type="radio" name="time" value="10:30am"> 10:30AM
+                                        <input type="radio" name="time" value="10:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            10:30AM
+                                        </div>
                                     </label>
                                 </div>
                                 <div class="time-item">
                                     <label>
-                                        <input type="radio" name="time" value="11am"> 11AM
+                                        <input type="radio" name="time" value="11am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            11AM
+                                        </div>
                                     </label>
                                 </div>
                                 <div class="time-item">
                                     <label>
-                                        <input type="radio" name="time" value="11:30am"> 11:30AM
+                                        <input type="radio" name="time" value="11:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            11:30AM
+                                        </div>
                                     </label>
                                 </div>
                                 <div class="time-item">
                                     <label>
-                                        <input type="radio" name="time" value="12pm"> 12PM
+                                        <input type="radio" name="time" value="12pm">
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            12PM
+                                        </div>
                                     </label>
                                 </div>
                                 <div class="time-item">
                                     <label>
                                         <input type="radio" name="time" value="12:30pm"> 
-                                        <div class="padding1 w100 border20 brdr-g3">
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
                                             12:30PM
                                         </div>
                                     </label>
                                 </div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
+
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="2pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            2PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="2:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            2:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="3pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            3PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="3:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            3:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="4pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            4PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="4:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            4:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="5pm">
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            5PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="5:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            5:30PM
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
-                            
-                        </div>    
-                
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="nextStep(4); updateSummary()">Siguiente</button>
+                            </div>
+                        </div>     
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(4); updateSummary()">Siguiente</button>
                     </div>
-                    <div id="step4" class="form-step hidden">
-                        <h2>Paso 4: Tipo de Pago</h2>
-                        <label>Selecciona el tipo de pago:</label><br>
-                        <input type="radio" name="paymentMethod" value="yape"> Yape<br>
-                        <input type="radio" name="paymentMethod" value="plin"> Plin<br>
-                        <input type="radio" name="paymentMethod" value="transferencia"> Transferencia vía depósito<br>
-                
-                        <h2>Resumen</h2>
-                        <div id="summary">
-                            <!-- Los detalles de la reserva se mostrarán aquí -->
+                    <div id="step4" class="form-step rel h100 hidden">
+                        <h2>Método de Pago</h2>
+                        <div class="padding1 bg-b mgtp">
+                            <label class="f-bold">Selecciona el tipo de pago:</label>
+                            <div class="flex-colum gap-5 mgtp">
+                                <div class="pago-item">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="yape" id="yape"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/yape.webp" alt="">
+                                            <p>Pagar con Yape</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pago-item">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="plin" id="plin"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/plin.webp" alt="">
+                                            <p>Pagar con Plin</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pago-item">    
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="transferencia" id="transferencia"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://cdn-icons-png.flaticon.com/512/1019/1019607.png" alt="">
+                                            <p>Pagar Transferencia vía depósito</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="nextStep(5)">Siguiente</button>
+                        <div class="padding1 bg-b mgtp">
+                            <h2>Resumen</h2>
+                            <div id="summary">
+                                <!-- Los detalles de la reserva se mostrarán aquí -->
+                            </div>    
+                        </div>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(5)">Siguiente</button>
                     </div>
-                    <div id="step5" class="form-step hidden">
+                    <div id="step5" class="form-step rel h100 hidden">
                         <h2>Paso 5: Detalles del Pago</h2>
-                        
                         <div id="yapeDetailsSummary" class="payment-details hidden">
                             <!-- Resumen específico para Yape -->
                             <p>Yape</p>
@@ -232,16 +331,14 @@
                         <div id="transferenciaDetailsSummary" class="payment-details hidden">
                             <!-- Resumen específico para Transferencia -->
                         </div>
-                
                         <div id="detallePago">   <!--Aqui se pone el resumen de pago-->         
                         </div>
-                
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="nextStep(6)">Siguiente</button>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(6)">Siguiente</button>
                     </div>
-                    <div id="step6" class="form-step hidden">
+                    <div id="step6" class="form-step rel h100 hidden">
                         <h2>Paso 6: Confirmación de Reserva</h2>
                         <div id="confirmPago"></div>
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn" onclick="submitForm()">Confirmar Reserva y Pago</button>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="submitForm()">Confirmar Reserva y Pago</button>
                     </div>
                     </div>
                     <div id="congratulations" class="hidden">
@@ -276,6 +373,34 @@ const services = {
         },
         {
             codigo: 3,    
+            name: "Encerado EN",
+            description: "Lavado con cera y pulido y detallado",
+            price: 35,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {   
+            codigo: 40,
+            name: "Aspirado Interior ID",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {
+            codigo: 41,    
+            name: "Encerado EN",
+            description: "Lavado con cera y pulido y detallado",
+            price: 35,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {   
+            codigo: 40,
+            name: "Aspirado Interior ID",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {
+            codigo: 41,    
             name: "Encerado EN",
             description: "Lavado con cera y pulido y detallado",
             price: 35,
@@ -420,7 +545,7 @@ function updateServices() {
         const serviceDiv = document.createElement('div');
         serviceDiv.classList.add('service-option');
         serviceDiv.innerHTML = `
-                <label class="rel flex">
+                <label class="rel flex h100">
                     <input class="" type="radio" name="serviceType" id="serviceType" value="${service.name}" precio="${service.price}">
                     <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
                         <div class="flex-centro">
@@ -478,7 +603,7 @@ paso25SiguienteButton.addEventListener('click', function() {
 const paso3SiguienteButton = document.querySelector('#step3 button');
 paso3SiguienteButton.addEventListener('click', function() {
     console.log(document.getElementById('fechaSeleccionada').value);
-    console.log(document.getElementById('reservationTime').value);
+    console.log(document.querySelector('input[name="time"]:checked').value);
     updateSummary();
     nextStep(4);
 });
@@ -505,7 +630,7 @@ function updateSummary() {
         datosReserva.tipoVehiculo = vehicleType;
         datosReserva.servicio = selectedService.value;
         datosReserva.fechaReserva = document.getElementById('fechaSeleccionada').value;
-        datosReserva.horaReserva = document.getElementById('reservationTime').value;
+        horaReserva = document.querySelector('input[name="time"]:checked').value;//hora radio
 
         localStorage.setItem('datosReserva', JSON.stringify(datosReserva));
 
@@ -514,7 +639,7 @@ function updateSummary() {
             <p><strong>Tipo de Vehículo:</strong> ${vehicleType}</p>
             <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
             <p><strong>Fecha de Reserva:</strong> ${datosReserva.fechaReserva}</p>
-            <p><strong>Hora de Reserva:</strong> ${datosReserva.horaReserva}</p>
+            <p><strong>Hora de Reserva:</strong> ${horaReserva}</p>
             <p><strong>Nombre del Servicio:</strong> ${servicioSelect}</p>
             <p><strong>Precio del Servicio:</strong> ${precioServicio}</p>
         `;
@@ -535,7 +660,7 @@ function submitForm() {
 
 
 function pagoResumen(){
-    pagoType = document.querySelector('input[name="paymentMethod"]:checked').value;
+    pagoType = document.querySelector('input[name="paymentMethod"]:checked').value; //tipo de pago
     
     let summaryDiv = document.querySelector('#detallePago');
     subtotal = precioServicio;

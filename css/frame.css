@@ -253,6 +253,9 @@ h3{
 p{
   font-size: var(--p);
 }
+.ftsz-1{
+  font-size: var(--sz1);
+}
 .ftsz-1_5{
   font-size: var(--sz1-5);
 }
@@ -419,11 +422,20 @@ height: inherit;
 .h-hka{
 height: -webkit-fill-available;
 }
+.h-min,.radio-item,.service-option{
+  height: -webkit-fill-available;
+}
+.service-option, .radio-item{
+  overflow: visible;
+}
 .h-maxc{
 height: max-content;
 }
 .h100{
 height: 100%;
+}
+.h85{
+  height: 85%;
 }
 .h70{
 height: 70%;
@@ -508,7 +520,7 @@ align-items: flex-start;
   display: block;
 }
 /*Grid*/
-.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1{
+.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-servicios-1{
   display: grid;
 }
 .grid {
@@ -542,6 +554,10 @@ grid-gap: .1em;
 /*Mobil 1 columna*/
 .grid-3-1 {
 grid-template-columns: repeat(auto-fill, minmax(min(22rem,100%), 1fr));
+}
+.grid-servicios-1{
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
 }
 /* grid tarjeta fid */
 .grid3icon {
@@ -677,6 +693,9 @@ place-items: center;
 }
 .padsup5px{
   padding: 5px 0;
+}
+.padsup-0_5{
+  padding: var(--sz0-5);
 }
 .padsup-1{
   padding: var(--sz1) 0;
@@ -955,12 +974,10 @@ bottom: 0px;
 .closeModalBtn{
 padding: 10px;
 border-radius: 100%;
+z-index: 2;
 position: absolute;
 right: 1em;
 aspect-ratio: 1;
-display: flex;
-align-items: center;
-justify-content: center;
 font-size: 1em;
 top: 1em;
 background-color: var(--rojo);
@@ -1050,12 +1067,12 @@ progress[value]::-webkit-progress-value {
 
 /* label */
 /* Oculta los radios cuando están seleccionados */
-.service-option label input[type="radio"], .service-option label input[type="radio"]:checked,.time-item label input[type="radio"], .time-item label input[type="radio"]:checked {
+.service-option label input[type="radio"], .service-option label input[type="radio"]:checked,.time-item label input[type="radio"], .time-item label input[type="radio"]:checked,.pago-item label input[type="radio"],.pago-item label input[type="radio"]:checked {
   display: none;
 }
 
 /* Estilo del borde cuando el radio está seleccionado */
-.service-option input[type="radio"]:checked + .flex-row,.time-item input[type="radio"]:checked + .padding1 {
+.service-option input[type="radio"]:checked + .flex-row,.time-item input[type="radio"]:checked + .w100,.pago-item input[type="radio"]:checked + .w100 {
   border: 1px solid var(--primario);
 }
 
@@ -1079,6 +1096,14 @@ progress[value]::-webkit-progress-value {
   display: flex;
   justify-content: space-evenly !important;
   align-items: center !important;
+}
+.flatpickr-days{
+  height: 90px;
+  overflow: auto !important;
+}
+.flatpickr-day.selected{
+  background: var(--primario) !important;
+  border-color: var(--primario) !important;
 }
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
