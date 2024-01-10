@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formulario de Reserva de Lavado de Autos</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./js/flatpickr-fecha.js"></script>
+    <style>
+    .form-step {
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+    .service-name {
+        font-weight: bold;
+    }
+    .service-description {
+        color: #666;
+    }
+    .service-price {
+        color: #ff5733; /* Color naranja para el precio */
+    }
+    </style>
+</head>
+<body>
+    <header class="bg-b flex-spacebetween flex-a padhor-1">
+        <div></div>
+        <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
+    </header>
+    <div id="myModal1" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn flex-centro">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="form-container h100">
+                    <div id="step1" class="form-step rel h100">
+                        <h2>Elige el Tipo de Vehículo</h2>
+                        <!-- OPCIONES DE TIPOS DE VEHICULO -->
+                        <div class="grid gap1 mgtp h85 overf">
+                            <div class="radio-item">
+                                <input type="radio" name="vehicleType" value="sedan" id="sedan"> 
+                                <label for="sedan" class="padding1">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/7281/7281752.png" alt="">
+                                        <div>
+                                            <b>Sedan</b> 
+                                            <p>coupé, sport, mini o similar</p>
+                                        </div>
+                                    </div>
+                                </label> 
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="suv" id="suv">
+                                <label class="padding1" for="suv">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/2736/2736781.png" alt="">
+                                        <div>
+                                            <b>SUV</b> 
+                                            <p>Tu auto listo para la aventura.</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="hatchback" id="hatchback"> 
+                                <label class="padding1" for="hatchback">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/7455/7455453.png" alt="">
+                                        <div>
+                                            <b>Hatchback</b> 
+                                            <p>Maximiza tu espacio, minimiza la suciedad.</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="pickup" id="pickup">
+                                <label class="padding1" for="pickup">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/5814/5814855.png" alt="">
+                                        <div>
+                                            <b>Pickup</b> 
+                                            <p>Tu aliado para el trabajo.</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="convertible" id="convertible">
+                                <label class="padding1" for="convertible">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/2736/2736840.png" alt="">
+                                        <div>
+                                            <b>Convertible</b> 
+                                            <p>El lujo al aire libre</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="motorcycle" id="motorcycle"> 
+                                <label class="padding1" for="motorcycle">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/5125/5125679.png" alt="">
+                                        <div>
+                                            <b>Motocicleta</b> 
+                                            <p>Tu libertad, limpia.</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(2)">Siguiente</button>
+                    </div>
+                    <!-- PASO2 -->
+                    <div id="step2" class="form-step rel h100 hidden">
+                        <h2>Opciones de Servicio</h2>
+                        <div id="services" class="grid-servicios-1 gap1 mgtp h85 overf">
+                            <!-- Las opciones de servicio se llenarán dinámicamente aquí -->
+                        </div>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(3)">Siguiente</button>
+                    </div>
+                    <div id="step3" class="form-step rel h100 hidden">
+                        <h2>Selecciona la Fecha y Hora</h2>
+                        <div class="mgtp h85 overf">
+                            <div class="padding1 bg-b">
+                            <label for="fechaSeleccionada" class="f-bold">Elige la fecha</label>
+                            <div id="datepicker"></div>
+                            <input type="text" id="fechaSeleccionada" class="border1px padding1 border05 brdclr-g3 mgtp ftsz-1 w100" readonly>
+                            </div>
+                            <!-- <label for="reservationDate">Selecciona la fecha de la reserva:</label>
+                        <input type="date" id="reservationDate" name="reservationDate"><br>
+                        <div class="mgtp">
+                            <label for="reservationTime" class="mgtp">Selecciona la hora de la reserva:</label>
+                            <input type="time" id="reservationTime" name="reservationTime">
+                        </div> -->
+                            <div class="flex-colum padding1 bg-b mgtp">
+                            <h3>Selecciona el Turno</h3>
+                            <div class="grid3icon gap-5 mgtp">
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="9am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            9AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="9:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            9:30AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="10am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            10AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="10:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            10:30AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="11am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            11AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="11:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            11:30AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="12pm">
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            12PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="12:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            12:30PM
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="2pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            2PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="2:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            2:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="3pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            3PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="3:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            3:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="4pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            4PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="4:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            4:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="5pm">
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            5PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="5:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            5:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            </div>
+                        </div>     
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(4); updateSummary()">Siguiente</button>
+                    </div>
+                    <div id="step4" class="form-step rel h100 hidden">
+                        <h2>Método de Pago</h2>
+                        <div class="padding1 bg-b mgtp">
+                            <label class="f-bold">Selecciona el tipo de pago:</label>
+                            <div class="flex-colum gap-5 mgtp">
+                                <div class="pago-item">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="yape" id="yape"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/yape.webp" alt="">
+                                            <p>Pagar con Yape</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pago-item">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="plin" id="plin"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/plin.webp" alt="">
+                                            <p>Pagar con Plin</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="pago-item">    
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="transferencia" id="transferencia"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://cdn-icons-png.flaticon.com/512/1019/1019607.png" alt="">
+                                            <p>Pagar Transferencia vía depósito</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padding1 bg-b mgtp">
+                            <h2>Resumen</h2>
+                            <div id="summary">
+                                <!-- Los detalles de la reserva se mostrarán aquí -->
+                            </div>    
+                        </div>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(5)">Siguiente</button>
+                    </div>
+                    <div id="step5" class="form-step rel h100 hidden">
+                        <h2>Paso 5: Detalles del Pago</h2>
+                        <div id="yapeDetailsSummary" class="payment-details hidden">
+                            <!-- Resumen específico para Yape -->
+                            <p>Yape</p>
+                            <section>Yape-Numero</section>
+                        </div>
+                        <div id="plinDetailsSummary" class="payment-details hidden">
+                            <!-- Resumen específico para Plin -->
+                        </div>
+                        <div id="transferenciaDetailsSummary" class="payment-details hidden">
+                            <!-- Resumen específico para Transferencia -->
+                        </div>
+                        <div id="detallePago">   <!--Aqui se pone el resumen de pago-->         
+                        </div>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(6)">Siguiente</button>
+                    </div>
+                    <div id="step6" class="form-step rel h100 hidden">
+                        <h2>Paso 6: Confirmación de Reserva</h2>
+                        <div id="confirmPago"></div>
+                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="submitForm()">Confirmar Reserva y Pago</button>
+                    </div>
+                    </div>
+                    <div id="congratulations" class="hidden">
+                    <h2>¡Felicidades! Tu reserva ha sido confirmada</h2>
+                    <!-- Mostrar detalles de la reserva aquí -->
+                    </div>
+            </div>
+               
+        </div>
+    </div>
+    
+<!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/modal.js"></script>
+    
+    <script>
+const services = {
+    sedan: [
+        {
+            codigo: 1,
+            name: "Lavado Exterior",
+            description: "Lavado exterior e interior",
+            price: 25,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {   
+            codigo: 2,
+            name: "Aspirado Interior ID",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {
+            codigo: 3,    
+            name: "Encerado EN",
+            description: "Lavado con cera y pulido y detallado",
+            price: 35,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {   
+            codigo: 40,
+            name: "Aspirado Interior ID",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {
+            codigo: 41,    
+            name: "Encerado EN",
+            description: "Lavado con cera y pulido y detallado",
+            price: 35,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {   
+            codigo: 40,
+            name: "Aspirado Interior ID",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        },
+        {
+            codigo: 41,    
+            name: "Encerado EN",
+            description: "Lavado con cera y pulido y detallado",
+            price: 35,
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+        }
+    ],
+    suv: [
+        {
+            codigo: 4,
+            name: "Lavado Básico",
+            description: "Lavado exterior e interior",
+            price: 20,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 5,
+            name: "Lavado Premium",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 6,
+            name: "Lavado Ultra",
+            description: "Lavado con cera y pulido y detallado",
+            price: 50,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        }
+    ],
+    hatchback: [
+        {
+            codigo: 7,
+            name: "Lavado Básico",
+            description: "Lavado exterior e interior",
+            price: 20,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 8,
+            name: "Lavado Premium",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 9,
+            name: "Lavado Ultra",
+            description: "Lavado con cera y pulido y detallado",
+            price: 50,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        }
+    ],
+    pickup: [
+        {
+            codigo: 10,
+            name: "Lavado Básico",
+            description: "Lavado exterior e interior",
+            price: 20,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 11,
+            name: "Lavado Premium",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 12,
+            name: "Lavado Ultra",
+            description: "Lavado con cera y pulido y detallado",
+            price: 50,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        }
+    ],
+    convertible: [
+        {
+            codigo: 13,
+            name: "Lavado Básico",
+            description: "Lavado exterior e interior",
+            price: 20,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 14,
+            name: "Lavado Premium",
+            description: "Lavado con cera y pulido",
+            price: 30,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 15,
+            name: "Lavado Ultra",
+            description: "Lavado con cera y pulido y detallado",
+            price: 50,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        }
+    ],
+    motorcycle: [
+        {
+            codigo: 16,
+            name: "Lavado Estándar",
+            description: "Lavado exterior",
+            price: 15,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 17,
+            name: "Lavado Detallado",
+            description: "Lavado con atención a los detalles",
+            price: 25,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        },
+        {
+            codigo: 18,
+            name: "Lavado Rapido",
+            description: "Lavado rápido",
+            price: 10,
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+        }
+    ]
+};
+let vehicleType;
+let servicesContainer;
+let selectedServiceData;
+let pagoType;
+let servicioSelect; //servicio seleccionado :(
+//let vehiculoSelect; vehiculo seleccionado
+let precioServicio;
+
+const dcomision = 2.5;
+let subtotal = 0;
+let total = 0;
+
+const datosReserva = {};
+
+function updateServices() {
+    vehicleType = document.querySelector('.radio-item input[name="vehicleType"]:checked').value;
+    servicesContainer = document.getElementById('services');
+    servicesContainer.innerHTML = "";
+    services[vehicleType].forEach(service => {
+        const serviceDiv = document.createElement('div');
+        serviceDiv.classList.add('service-option');
+        serviceDiv.innerHTML = `
+                <label class="rel flex h100">
+                    <input class="" type="radio" name="serviceType" id="serviceType" value="${service.name}" precio="${service.price}">
+                    <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                        <div class="flex-centro">
+                        <img class="mw-img-7 border20" src="${service.imageURL}" alt="${service.name}">
+                        </div>
+                        <div class="flex-colum flex-c w-wka">
+                            <strong>${service.name}</strong>
+                            <span>${service.description}</span>
+                            <span>Precio: S/ ${service.price}</span>
+                        </div>
+                    </div>
+                </label>
+        `;
+        servicesContainer.appendChild(serviceDiv);
+    });
+}
+function showStep(stepNumber) {
+    const stepElement = document.getElementById(`step${stepNumber}`);
+    if (stepElement) {
+        document.querySelectorAll('.form-step').forEach(step => {
+            step.style.display = 'none';
+        });
+        stepElement.style.display = 'block';
+    } else {
+        console.error(`Elemento con ID 'step${stepNumber}' no encontrado.`);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+});
+
+//paso 1 a 2
+const paso1a2 = document.querySelector('#step1 button');
+paso1a2.addEventListener('click', function() {
+    updateServices();
+    console.log(document.querySelector('input[name="vehicleType"]:checked').value);
+    //vehicleType = document.querySelector('input[name="vehicleType"]:checked').value;  asignar valor seleccionado
+    nextStep(2);
+});
+//paso 2 a 3
+const paso25SiguienteButton = document.querySelector('#step2 button');
+paso25SiguienteButton.addEventListener('click', function() {
+    console.log(document.querySelector('input[name="serviceType"]:checked').value);
+    var inputElement = document.querySelector('input[name="serviceType"]:checked');
+    // Obtener el valor del atributo "precio"
+    precioServicio = inputElement.getAttribute('precio');
+    // Mostrar el valor en la consola
+    console.log(precioServicio);
+    // Obtener el precio del servicio seleccionado
+    nextStep(3);
+    servicioSelect = document.querySelector('input[name="serviceType"]:checked').value; // asignar valor seleccionado
+});
+//paso 3 a 4
+const paso3SiguienteButton = document.querySelector('#step3 button');
+paso3SiguienteButton.addEventListener('click', function() {
+    console.log(document.getElementById('fechaSeleccionada').value);
+    console.log(document.querySelector('input[name="time"]:checked').value);
+    updateSummary();
+    nextStep(4);
+});
+//paso 4 a 5
+const paso4SiguienteButton = document.querySelector('#step4 button');
+paso4SiguienteButton.addEventListener('click', function() {
+    pagoResumen();
+    nextStep(5);
+});
+function updateSummary() {
+    //const vehicleType = document.querySelector('#vehicleType');
+    let selectedService = document.querySelector('#serviceType');
+    if (vehicleType && selectedService) {
+        //const vehicleTypeValue = vehicleType.value;
+        //const selectedServiceValue = selectedService.value;
+
+        // selectedServiceData = services[vehicleType].find(service => service.name === selectedService.value);
+
+        // localStorage.setItem('selectedService', JSON.stringify({
+        //     name: selectedServiceData.name,
+        //     price: selectedServiceData.price
+        // }));
+
+        datosReserva.tipoVehiculo = vehicleType;
+        datosReserva.servicio = selectedService.value;
+        datosReserva.fechaReserva = document.getElementById('fechaSeleccionada').value;
+        horaReserva = document.querySelector('input[name="time"]:checked').value;//hora radio
+
+        localStorage.setItem('datosReserva', JSON.stringify(datosReserva));
+
+        const summaryDiv = document.getElementById('summary');
+        summaryDiv.innerHTML = `
+            <p><strong>Tipo de Vehículo:</strong> ${vehicleType}</p>
+            <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
+            <p><strong>Fecha de Reserva:</strong> ${datosReserva.fechaReserva}</p>
+            <p><strong>Hora de Reserva:</strong> ${horaReserva}</p>
+            <p><strong>Nombre del Servicio:</strong> ${servicioSelect}</p>
+            <p><strong>Precio del Servicio:</strong> ${precioServicio}</p>
+        `;
+    } else {
+        console.error('Por favor, selecciona un tipo de vehículo y servicio.');
+    }
+}
+
+function nextStep(nextStep) {
+    showStep(nextStep);
+}
+
+function submitForm() {
+    document.querySelector('.form-container').style.display = 'none';
+    document.getElementById('congratulations').style.display = 'block';
+}
+
+
+
+function pagoResumen(){
+    pagoType = document.querySelector('input[name="paymentMethod"]:checked').value; //tipo de pago
+    
+    let summaryDiv = document.querySelector('#detallePago');
+    subtotal = precioServicio;
+    total = parseFloat(subtotal) + parseFloat(dcomision);
+    summaryDiv.innerHTML = `
+            <p><strong>Tipo de Pago:</strong> ${pagoType}</p>
+            <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
+            <p><strong>Subtotal:</strong> ${subtotal}</p>
+            <p><strong>Comisión:</strong> ${dcomision}</p>
+            <p><strong>Pago Total:</strong> ${total}</p>
+        `;
+    
+}
+
+const paso5SiguienteButton = document.querySelector('#step5 button');
+paso5SiguienteButton.addEventListener('click', function() {
+    pagoConfirm();
+    nextStep(6);
+});
+
+function pagoConfirm(){
+    let summaryDiv = document.querySelector('#confirmPago');
+
+    summaryDiv.innerHTML = `
+            <p><strong>Pago:</strong> ${pagoType}</p>
+            <p><strong>Pago Total:</strong> ${total}</p>
+            <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
+        `;    
+}
+    </script>
+</body>
+</html>

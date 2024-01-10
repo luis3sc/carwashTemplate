@@ -1,148 +1,541 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premio</title>
+    <title>premios</title>
     <link rel="stylesheet" href="./css/frame.css">
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
-<body>
-    <header class="bg-g1  w100">
-        <div class="container padhor-1 w100 mgauto">
-            <nav class="gap1">
-                <div class="menu-icons">
-                    <i class="icon ion-md-menu clr-n"></i>
-                    <i class="icon ion-md-close"></i>
-                </div>
-                <a href="index.html" class="logo padding05 flex">
-                    <img src="./img/LOGO.png" alt="">
-                </a>
-                <ul class="nav-list w100 flex-spacebetween mayus f-bold">
-                    <div class="flex-c-resp gap1 flex-a clr-n">
-                        <li class="rel">
-                            <a href="index.html">Inicio</a>
-                        </li>
-                        <!-- <li>
-                        <a href="#">Menu
-                            <ion-icon name="caret-down-outline"></ion-icon>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Breakfast</a></li>
-                            <li>
-                                <a href="#">Lunch
-                                    <ion-icon name="caret-down-outline"></ion-icon>
-                                </a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Food</a></li>
-                                    <li><a href="#">Food</a></li>
-                                    <li>
-                                        <a href="#">More...
-                                            <ion-icon name="caret-down-outline"></ion-icon>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Food</a></li>
-                                            <li><a href="#">Food</a></li>
-                                            <li><a href="#">Food</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Dinner</a></li>
-                        </ul>
-                    </li> -->
-                        <li class="rel">
-                            <a href="premios.html">Premios</a>
-                        </li>
-                        <li class="rel">
-                            <a href="beneficios.html">Beneficios</a>
-                        </li>
-                        <li class="rel">
-                            <a href="ganadores.html">Ganadores</a>
-                        </li>
-                    </div>
-                    <div class="flex-c-resp gap1"> 
-                        <li class="move-right btn flex-centro border3px brdclr-n f-bold w-maxc padhor-1-2 border20">
-                            <a href="login.html">Iniciar Sesión</a>
-                            
-                        </li>
-                        <li class="move-right btn flex-centro border3px bg-verd  brdclr-n f-bold w-maxc padhor-1-2 border20">
-                            <a href="#suscripcion">Suscribete</a>
-                        </li>
-                    </div>
-                </ul>
-                
-            </nav>
-        </div>
+<body class="bg-g4">
+    <!-- estrutctura general -->
+    <header class="bg-b flex-spacebetween flex-a padhor-1">
+        <div></div>
+        <a id="modalBtn1" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
     </header>
-    <main class="h-maxc bg-g2">
-        <section class="padsup-2 mgauto bg-2">
-            <div class="padhor-1 ">
-                <!-- contenido -->
-                <div class="w100 padding1 txt-centro flex-colum flex-centro gap1">
-                    <!-- contenido Banner -->
-                    <h2 class="clr-b">Nuestros Premios</h2>
-                    <p class="clr-b">Cada me ofrecemos los mejores premios que tenemos para ti</p>
-                    <div class="grid mw-72 w100 place-content place-item gap1-5 mgauto mgtp2">
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1 bg-g2 border20">
-                                  <img class="mh-12em"  src="./img/iphone-12-azul.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 12</p> 
-                                </div>
+    <main class="bg-g2 overf">
+        <section class="padhor-1 bg-g1 mgauto">
+            <div class="padsup-1 flex-colum gap1">
+                <div class="flex-spacebetween">
+                <h3>Mi Tarjeta de Lealtad</h3>
+                <a id="modalBtn2" href="#">Ver Historial</a>
+                </div>
+                <div class="card-vert gap1 clr-b flex-row bg-2 paddingprinc border20 rel">
+                    <div class="flex-colum flex-c w-wka gap1-5">
+                        <div class="flex-colum gap5">
+                            <p>Tus puntos</p>
+                            <h2>0001</h2>
+                        </div>
+                        <div class="flex-spacebetween">
+                            <div class="flex-colum gap5">
+                                <p>Armando Paredes</p>
+                                <h2>COD-USER-0000</h2>
+                            </div>
+                            <div class="flex-colum gap5">
+                                <p class="txtlimit sinover">Expira en </p>
+                                <h2>06/10/2023</h2>  
                             </div>
                         </div>
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1 bg-g2 border20">
-                                  <img class="mh-12em"  src="./img/iphone-13-pro-max-3.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 13 pro max</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1">
-                                  <img class="mh-12em"  src="./img/iPhone_14_Pro_Max_Space_Black_Pure_Front.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 14 pro max</p> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1 bg-g2 border20">
-                                  <img class="mh-12em"  src="./img/iphone-13-pro-max-3.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 13 pro max</p>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
-                    <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+                    <a id="modalBtn3" class="padding05 bg-1 bordercircular flex-centro abs right1 top1">
+                        <img class="mw-ico-1 f-invcolor" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_info_outline_48px-512.png" alt="">
+                    </a>
                 </div>
             </div>
         </section>
+        <div class="gridbtn2 place-item padhor-1 gap1">
+            <a id="modalBtn4" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+                <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                <p>Escanear Voucher</p>
+            </a>
+            <a id="modalBtn5" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+                <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                <p>Mi Credencial</p>
+            </a>
+        </div>       
+        <section class="padhor-1 bg-g1 mgauto">
+            <div class="padsup-1_5 flex-colum gap1">
+                <div>
+                    <div class="flex-row gap1" id="filter-premios">
+                        <a class="filter padop1 brdactive" data-filter=".todo">Todo</a>
+                        <a class="filter padop1" data-filter=".misiones">Misiones</a>
+                        <a class="filter padop1" data-filter=".premios">Premios</a>
+                    </div>
+                </div>
+                <div class="grid-3-1 gap1">
+                    <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
+                        <a href="#" class="flex-centro flex-ini">
+                            <img class="mw-img-7 border20" src="https://cdn1.iconfinder.com/data/icons/video-game-33/64/mission-complete-trophy-winner-award-512.png" alt="">
+                        </a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover">Misión del Explorador Limpio</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            <b>+100 pts</b>
+                            <div class="flex gap1">
+                                <progress class="progress" max="100" value="0">
+                                </progress>
+                                <p>0/1</p>
+                            </div>
+                            <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver misión</a>
+                        </div>
+                    </div>
+                    <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
+                        <a href="#" class="flex-centro flex-ini">
+                            <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
+                        </a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover">Desafío de la Selfie Brillante</p>
+                            <p class="txtlimit">Pide a los clientes que compartan selfies mientras esperan que sus autos sean lavados.</p>
+                            <b>+100 pts</b>
+                            <div class="flex gap1">
+                                <progress class="progress" max="100" value="50">
+                                </progress>
+                                <p>1/2</p>
+                            </div>
+                            <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver misión</a>
+                        </div>
+                    </div>
+                    <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
+                        <a href="#" class="flex-centro flex-ini">
+                            <img class="mw-img-7 border20" src="https://images.91wheels.com/assets/b_images/main/models/profile/profile1660726719.png" alt="">
+                        </a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover">Misión del Explorador Limpio</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            <b>+100 pts</b>
+                            <div class="flex gap1">
+                                <progress class="progress" max="100" value="100">
+                                </progress>
+                                <p>1/1</p>
+                            </div>
+                            <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver misión</a>
+                        </div>
+                    </div>
+                    <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
+                        <a href="#" class="flex-centro flex-ini">
+                            <img class="mw-img-7 border20" src="https://images.91wheels.com/assets/b_images/main/models/profile/profile1660726719.png" alt="">
+                        </a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover">Misión del Explorador Limpio</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            <b>100 pts</b>
+                            <a id="modalBtn6" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Reclamar</a>
+                        </div>
+                    </div>
+                    <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
+                        <a href="#" class="flex-centro flex-ini">
+                            <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
+                        </a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover">Cupón de Descuento</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            <b>100 pts</b>
+                            <a href="" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Reclamar</a>
+                        </div>
+                    </div>
+                    <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
+                        <a href="#" class="flex-centro flex-ini">
+                            <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
+                        </a>
+                        <div class="flex-colum flex-c w-wka gap-25">
+                            <p class="f-bold txtlimit sinover">Lavado de Salón</p>
+                            <p class="txtlimit">Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.</p>
+                            <b>100 pts</b>
+                            <a href="" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Reclamar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Columna 5 - 2 Columna -->
+        
+        <section class="padhor-1 bg-g1 clr-n mgauto bordertop1 brdclr-g3">
+            <div class="padsup-1 flex-row flex-c gap1 txt-centro">
+                <p>Desarrollado por</p>
+                <a class="f-bold" href="#">Vlink</a>
+            </div>
+        </section>
     </main>
-
+    <!-- estrutctura general -->
+    <!-- navegador mobil -->
+    <div class="nav-mobile d-resp bg-b">
+        <div class="gridnav5 h100 place-item">
+            <a href="index.html" class="flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                <p class="fs-p-nav-1">Inicio</p>
+            </a>
+            <a href="servicios.html" class="flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1 f-invcolor" src="./img/iconos-menu/servicios.png" alt="">
+                <p class="fs-p-nav-1">Servicios</p>
+            </a>
+            <a href="promos.html" class=" flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1 " src="https://cdn-icons-png.flaticon.com/512/3450/3450142.png" alt="">
+                <p class="fs-p-nav-1">Promos</p>
+            </a>
+            <a href="premios.html" class="active flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1 f-invcolor" src="./img/iconos-menu/trophy.png" alt="">
+                <p class="fs-p-nav-1">Premios</p>
+            </a>
+            <a href="perfil.html" class="flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/512/2207/2207595.png" alt="">
+                <p class="fs-p-nav-1">Mi Perfil</p>
+            </a>
+        </div>
+    </div>
+    <!-- navegador mobil -->
+    <div id="myModal1" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Reservar</h3> 
+                    
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Historial de Movimientos</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-verd" alt="misioncompletada">Mision Completada</div>
+                            </div>
+                            <div class="puntos ftsz-1_5 clr-verd-2 f-bold txt-centro">
+                                +10
+                            </div>
+                        </div>
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-1 clr-b" alt="premiocanjeado">Premio Canjeado</div>
+                            </div>
+                            <div class="puntos ftsz-1_5 clr-1 f-bold txt-centro">
+                                -10
+                            </div>
+                        </div>
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                <b>Sábado 12 de Noviembre</b> 
+                                <div class="padding03 wifc bg-ama" alt="puntosconfirmar">Puntos por Confirmar</div>
+                            </div>
+                            <div class="puntos ftsz-1_5 f-bold txt-centro">
+                                +10
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal3" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-2">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido">
+                <div class="flex-colum padsup-1_5 gap1-5" id="cartasello">
+                    
+                        <h2>Informacion</h2>
+                    
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>¿Cómo Gano Puntos?</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Cada vez que realizas misiones o cumples tareas que se publican periodicamente.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Escanea el Código QR de la boleta o factura de pago realizado en la tienda</p>
+                        </div> 
+                    </div>
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>Términos y Condiciones</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían tener una fecha de caducidad para incentivar a los clientes a utilizarlos dentro de un plazo específico, por ejemplo, un año desde la fecha de obtención.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los puntos podrían canjearse por descuentos, productos gratuitos o servicios adicionales, pero no podrían canjearse por efectivo.</p>
+                        </div> 
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Durante ciertos días de la semana o meses del año, los puntos podrían valer el doble para incentivar las visitas en momentos específicos.</p>
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Se pueden usar hasta 100 puntos por transacción para evitar el abuso del sistema.</p>
+                        </div>
+                    </div>
+                    <div class="flex-colum gap1 w100 padding1 bg-b border20">
+                        <h3>Cómo Reclamar Puntos</h3>
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Durante el proceso de compra en línea, los clientes pueden optar por utilizar sus puntos acumulados para aplicar descuentos directamente en el carrito de compras.</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Los clientes pueden acceder a un centro de canje en línea donde pueden ver las recompensas disponibles y canjear sus puntos por productos, descuentos o servicios adicionales.</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal4" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Escanear Voucher</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <p>K</p>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal5" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Mis Credenciales</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <p>K</p>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal6" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/trophy-4069157-3364095@0.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <h2>Misión del Explorador Limpio</h2>
+                            <div class="w100 padsup-1">
+                                Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.
+                            </div>
+                            
+                            <div class="flex gap1">
+                                <progress class="progress" max="100" value="0">
+                                </progress>
+                                <p>0/1</p>
+                            </div>
+                        </div>
+                        <div class="padsup-1 rel overvis brdrbtmdash">
+                            <div class="flex-spacebetween">
+                                <h3>Recompensa</h3>
+                                <b>+100 pts</b>  
+                            </div>
+                            <div class="w100 padsup-1">
+                                Descuento exclusivo en el próximo lavado y una insignia de "Explorador Limpio".
+                            </div>
+                            <div class="w100 bg-b">
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Reclamar premio</a>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal7" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/give-gift-6256713-5121265.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            
+                            <h2>Descuento Exclusivo</h2>
+                            <h3>10% en tu primer orden de Servicio</h3>
+                            <div class="w100 padsup-1">
+                                ¡Aprovecha esta oportunidad para mantener tu vehículo impecable a un precio exclusivo! Esperamos verte pronto en nuestro centro de carwash.
+                            </div>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <b>Precio: 300 pts</b>
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Reclamar</a>
+                            
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal8" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn">X</button>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/discount-coupon-6914215-5668397.png" alt="">
+                        
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            <h2>Código de Descuento</h2>
+                            <h3>10% en tu primer orden de Servicio</h3>
+                            <div class="w100 padsup-1">
+                                ¡Aprovecha esta oportunidad para mantener tu vehículo impecable a un precio exclusivo! Esperamos verte pronto en nuestro centro de carwash.
+                            </div>
+                        </div>
+                        <div class="padsup-1 overvis rel brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <h4>Código de Cupón</h4>
+                                <div class="w100 padding1 flex-row flex-spacebetween brdr2dash border5px bg-b">
+                                    <p>Código</p>
+                                    <b>CARWASH2023</b>    
+                                    <p class="clr-verd-2">Copiar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/modal.js"></script>
     <script>
-        //Create function to select elements
-        //Open and close nav on click
-        const menuIcon = document.querySelector(".menu-icons");
-        menuIcon.addEventListener("click", () => {
-            console.log("OK");
-            const nav = document.getElementsByTagName("nav")[0];
-            nav.classList.toggle("active");
+        (function($) {
+        // Menu filter
+        $("#filter-premios a").click(function(event) {
+            event.preventDefault(); // Esto previene el comportamiento predeterminado del enlace
+
+            $("#filter-premios a").removeClass('brdactive');
+            $(this).addClass('brdactive');
+
+            var selectedFilter = $(this).data("filter");
+
+            $(".todo").fadeOut();
+
+            setTimeout(function() {
+                $(selectedFilter).fadeIn();
+            }, 100);
         });
-    </script>
+    })(jQuery);
+
+
+
+    </script> 
 </body>
 </html>
