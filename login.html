@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premio</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/frame.css">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
-<body>
-    <header class="bg-g1  w100">
+<body class="bg-g4 overf">
+    <header class="bg-g1 w100">
         <div class="container padhor-1 w100 mgauto">
             <nav class="gap1">
                 <div class="menu-icons">
@@ -75,65 +75,37 @@
             </nav>
         </div>
     </header>
-    <main class="h-maxc bg-g2">
-        <section class="padsup-2 mgauto bg-2">
-            <div class="padhor-1 ">
-                <!-- contenido -->
-                <div class="w100 padding1 txt-centro flex-colum flex-centro gap1">
-                    <!-- contenido Banner -->
-                    <h2 class="clr-b">Nuestros Premios</h2>
-                    <p class="clr-b">Cada me ofrecemos los mejores premios que tenemos para ti</p>
-                    <div class="grid mw-72 w100 place-content place-item gap1-5 mgauto mgtp2">
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1 bg-g2 border20">
-                                  <img class="mh-12em"  src="./img/iphone-12-azul.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 12</p> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1 bg-g2 border20">
-                                  <img class="mh-12em"  src="./img/iphone-13-pro-max-3.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 13 pro max</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1">
-                                  <img class="mh-12em"  src="./img/iPhone_14_Pro_Max_Space_Black_Pure_Front.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 14 pro max</p> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w100 bg-3 aspect-1 padsup-1 border20">
-                            <div class="w100 padhor-1 flex-centro gap1-5 flex-colum ">
-                                <div class="w100 flex-centro aspect-1 bg-g2 border20">
-                                  <img class="mh-12em"  src="./img/iphone-13-pro-max-3.png" alt="">  
-                                </div>
-                                <div class="padop1 w-maxc border20 brdclr-n border2px f-bold">
-                                    <p>Iphone 13 pro max</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="padhor-1-2 border20 mgtp2 bg-verd border3px f-bold w-maxc" href="#suscripcion">Suscríbete Ahora</a>
+    <main class="main-header flex-row w100">
+        <div class="flex-colum bg-2 flex-2 flex-centro">
+            <div class="p-login w100 flex-a flex-colum">
+                <div class="logo">
+                    <img class="mw-ico-5" src="./img/LOGO.png" alt="">
                 </div>
+                <form class="w80 flex-colum gap1 mgtp" action="">
+                    <div class="flex-colum gap-5">
+                        <label for="email">Email</label>
+                        <input class="padding1" type="text" placeholder="Ingresa tu e-mail aquí" id="email" autocomplete="email">
+                    </div>
+                    <div class="flex-colum gap-5">
+                        <label for="email">Contraseña</label>
+                        <input class="padding1" type="password" placeholder="Ingresa tu contraseña aquí" id="password">
+                    </div>
+                    <button type="submit" class="padding1 w100 bg-1 mgtp">Iniciar Sesión</button>
+                </form>
+                <div class="mgtp2">
+                    <a href="">Olvidaste tu contraseña</a>
+                </div>
+                <div class="mgtp">
+                    o
+                </div>
+                <a href="#" class="padding1 border1px brdclr-b w50 txt-centro clr-b mgtp">Crea tu cuenta</a>
             </div>
-        </section>
-    </main>
+        </div>
+        <div class="bg-3 flex-4">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        </div>
+    </main>
+    <!-- SCRIPTS -->
     <script>
         //Create function to select elements
         //Open and close nav on click
@@ -143,6 +115,7 @@
             const nav = document.getElementsByTagName("nav")[0];
             nav.classList.toggle("active");
         });
+        
     </script>
 </body>
 </html>
