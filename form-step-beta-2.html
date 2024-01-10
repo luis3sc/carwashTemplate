@@ -43,7 +43,7 @@
                         <!-- OPCIONES DE TIPOS DE VEHICULO -->
                         <div class="grid gap1 mgtp h85 overf">
                             <div class="radio-item">
-                                <input type="radio" name="vehicleType" value="sedan" id="sedan"> 
+                                <input type="radio" name="vehicleType" value="Sedan" id="sedan"> 
                                 <label for="sedan" class="padding1">
                                     <div class="flex-row flex-a gap1">
                                         <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/7281/7281752.png" alt="">
@@ -55,7 +55,7 @@
                                 </label> 
                             </div>
                             <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="suv" id="suv">
+                                <input class="" type="radio" name="vehicleType" value="Suv" id="suv">
                                 <label class="padding1" for="suv">
                                     <div class="flex-row flex-a gap1">
                                         <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/2736/2736781.png" alt="">
@@ -67,7 +67,7 @@
                                 </label>
                             </div>
                             <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="hatchback" id="hatchback"> 
+                                <input class="" type="radio" name="vehicleType" value="Hatchback" id="hatchback"> 
                                 <label class="padding1" for="hatchback">
                                     <div class="flex-row flex-a gap1">
                                         <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/7455/7455453.png" alt="">
@@ -79,7 +79,7 @@
                                 </label>
                             </div>
                             <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="pickup" id="pickup">
+                                <input class="" type="radio" name="vehicleType" value="Pickup" id="pickup">
                                 <label class="padding1" for="pickup">
                                     <div class="flex-row flex-a gap1">
                                         <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/5814/5814855.png" alt="">
@@ -91,7 +91,7 @@
                                 </label>
                             </div>
                             <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="convertible" id="convertible">
+                                <input class="" type="radio" name="vehicleType" value="Convertible" id="convertible">
                                 <label class="padding1" for="convertible">
                                     <div class="flex-row flex-a gap1">
                                         <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/2736/2736840.png" alt="">
@@ -103,7 +103,7 @@
                                 </label>
                             </div>
                             <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="motorcycle" id="motorcycle"> 
+                                <input class="" type="radio" name="vehicleType" value="Motorcicleta" id="motorcycle"> 
                                 <label class="padding1" for="motorcycle">
                                     <div class="flex-row flex-a gap1">
                                         <img class="mw-img-4" src="https://cdn-icons-png.flaticon.com/512/5125/5125679.png" alt="">
@@ -278,14 +278,14 @@
                     </div>
                     <div id="step4" class="form-step rel h100 hidden">
                         <h2>Método de Pago</h2>
-                        <div class="padding1 bg-b mgtp">
+                        <div class="padding1 bg-b mgtp border05">
                             <label class="f-bold">Selecciona el tipo de pago:</label>
                             <div class="flex-colum gap-5 mgtp">
                                 <div class="pago-item">
                                     <label>
                                         <input type="radio" name="paymentMethod" value="yape" id="yape"> 
                                         <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
-                                            <img class="mw-ico-r" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/yape.webp" alt="">
+                                            <img class="mw-ico-r border05" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/yape.webp" alt="">
                                             <p>Pagar con Yape</p>
                                         </div>
                                     </label>
@@ -310,9 +310,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="padding1 bg-b mgtp">
-                            <h2>Resumen</h2>
-                            <div id="summary">
+                        <div class="padding1 bg-b mgtp border05">
+                            <label class="f-bold">Detalles de tu Reserva</label>
+                            <div id="summary" class="mayusc mgtp flex-colum ">
                                 <!-- Los detalles de la reserva se mostrarán aquí -->
                             </div>    
                         </div>
@@ -320,19 +320,28 @@
                     </div>
                     <div id="step5" class="form-step rel h100 hidden">
                         <h2>Paso 5: Detalles del Pago</h2>
-                        <div id="yapeDetailsSummary" class="payment-details hidden">
-                            <!-- Resumen específico para Yape -->
-                            <p>Yape</p>
-                            <section>Yape-Numero</section>
+                        <div class="mw-420 w100 rel padding1 h85 overf mgtp" id="fondocambio">
+                            <div class="w80 clr-b mgauto" id="detallePago">  
+                                <!--Aqui se pone el resumen de pago-->         
+                            </div>
+                            <div class="flex-centro w100 gap1 flex-colum mgtp" id="pagoconqr">
+                                <div class="flex-colum flex-a w100 gap1" id="metodopago">
+                                    
+                                </div>
+                                <img class="mw-200" src="" id="qrimage" alt="">
+                                <div class="flex-colum flex-a w100" id="numeropago">
+                                </div>
+                                <div class="w90 flex tac">
+                                    <div id="numpago" class="num colnegro copy bblanco"></div>
+                                    <button class="icon-copy rel" id="copia">copiar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="confirmation abs">
+                                <span class="icon-checkmark"></span> Copied to clipboard
+                            </div>
                         </div>
-                        <div id="plinDetailsSummary" class="payment-details hidden">
-                            <!-- Resumen específico para Plin -->
-                        </div>
-                        <div id="transferenciaDetailsSummary" class="payment-details hidden">
-                            <!-- Resumen específico para Transferencia -->
-                        </div>
-                        <div id="detallePago">   <!--Aqui se pone el resumen de pago-->         
-                        </div>
+                        
                         <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(6)">Siguiente</button>
                     </div>
                     <div id="step6" class="form-step rel h100 hidden">
@@ -356,7 +365,7 @@
     
     <script>
 const services = {
-    sedan: [
+    Sedan: [
         {
             codigo: 1,
             name: "Lavado Exterior",
@@ -407,7 +416,7 @@ const services = {
             imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
         }
     ],
-    suv: [
+    Suv: [
         {
             codigo: 4,
             name: "Lavado Básico",
@@ -430,7 +439,7 @@ const services = {
             imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
         }
     ],
-    hatchback: [
+    Hatchback: [
         {
             codigo: 7,
             name: "Lavado Básico",
@@ -453,7 +462,7 @@ const services = {
             imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
         }
     ],
-    pickup: [
+    Pickup: [
         {
             codigo: 10,
             name: "Lavado Básico",
@@ -476,7 +485,7 @@ const services = {
             imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
         }
     ],
-    convertible: [
+    Convertible: [
         {
             codigo: 13,
             name: "Lavado Básico",
@@ -499,7 +508,7 @@ const services = {
             imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
         }
     ],
-    motorcycle: [
+    Motocicleta: [
         {
             codigo: 16,
             name: "Lavado Estándar",
@@ -636,13 +645,12 @@ function updateSummary() {
 
         const summaryDiv = document.getElementById('summary');
         summaryDiv.innerHTML = `
-            <p><strong>Tipo de Vehículo:</strong> ${vehicleType}</p>
-            <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
-            <p><strong>Fecha de Reserva:</strong> ${datosReserva.fechaReserva}</p>
-            <p><strong>Hora de Reserva:</strong> ${horaReserva}</p>
-            <p><strong>Nombre del Servicio:</strong> ${servicioSelect}</p>
-            <p><strong>Precio del Servicio:</strong> ${precioServicio}</p>
-        `;
+            <p>- Tipo de Vehículo: <b>${vehicleType}</b></p>
+            <p>- Tipo de Servicio: <b>${servicioSelect}</b></p>
+            
+            <p>- Fecha y Hora : <b>${datosReserva.fechaReserva} - ${horaReserva}</b></p>
+            
+        `; // <p>- Precio del Servicio: <b>${precioServicio}</b></p>
     } else {
         console.error('Por favor, selecciona un tipo de vehículo y servicio.');
     }
@@ -661,16 +669,62 @@ function submitForm() {
 
 function pagoResumen(){
     pagoType = document.querySelector('input[name="paymentMethod"]:checked').value; //tipo de pago
-    
+    let elemento = document.querySelector("#fondocambio");        
+                if(pagoType == 'yape'){					
+					elemento.classList.add("yape");
+					document.querySelector("#qrimage").src = `https://tortaza.com.pe/Assets/tienda/images/qr/pago/998881052.png`;
+					document.querySelector("#metodopago").innerHTML =  `
+					<img class="icon-circ" src="https://www.tortaza.com.pe/Assets/web/img/yape-logo.png" alt="">
+					<p class="normal tac">
+                        <b>Pedido N°: 000050</b>
+                        <br>
+                        Ingresa a Yape desde tu celular y </br>escanéa este código QR
+                    </p>`;
+					document.querySelector("#numeropago").innerHTML =  `<p class="normal tac">ó ingresa este número</p>`;
+					document.querySelector("#numpago").innerHTML = "980852322";
+				}else if(pagoType == 'plin'){
+					elemento.classList.add("plin");
+					document.querySelector("#qrimage").src = `https://tortaza.com.pe/Assets/tienda/images/qr/pago/998881052.png`;
+					document.querySelector("#metodopago").innerHTML =  `
+					<img class="icon-circ" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/plin.webp" alt="">
+					<p class="normal tac">
+                        <b>Pedido N°: 000050</b>
+                        <br>
+                        Ingresa a Yape desde tu celular y </br>escanéa este código QR
+                    </p>`;
+					document.querySelector("#numeropago").innerHTML =  `<p class="normal tac">ó ingresa este número</p>`;
+					document.querySelector("#numpago").innerHTML = "980852322";
+				}else if(pagoType == 'transferencia'){//Deposito-Transferencia
+					elemento.classList.add("transferencia");
+					document.querySelector("#qrimage").src = `https://tortaza.com.pe/Assets/tienda/images/qr/pago/998881052.png`;
+					document.querySelector("#metodopago").innerHTML =  `
+					<img class="icon-circ" src="https://cdn-icons-png.flaticon.com/512/1019/1019607.png" alt="">
+					<p class="normal tac">
+                        Ingresa a Yape desde tu celular y </br>escanéa este código QR
+                    </p>`;
+					document.querySelector("#numeropago").innerHTML =  `<p class="normal tac">ó ingresa este número</p>`;
+					document.querySelector("#numpago").innerHTML = "980852322";
+				}
+
     let summaryDiv = document.querySelector('#detallePago');
     subtotal = precioServicio;
     total = parseFloat(subtotal) + parseFloat(dcomision);
+    //<p><strong>Tipo de Pago:</strong> ${pagoType}</p>
     summaryDiv.innerHTML = `
-            <p><strong>Tipo de Pago:</strong> ${pagoType}</p>
-            <p><strong>Tipo de Servicio:</strong> ${servicioSelect}</p>
-            <p><strong>Subtotal:</strong> ${subtotal}</p>
-            <p><strong>Comisión:</strong> ${dcomision}</p>
-            <p><strong>Pago Total:</strong> ${total}</p>
+            <b>Pedido N°: 000050</b>
+            <div class="flex-spacebetween">
+                <div>${servicioSelect}</div>
+                <div>s/. ${subtotal}</div>
+            </div>
+            <div class="flex-spacebetween">
+                <div>Comisión</div>
+                <div>s/. ${dcomision}</div>
+            </div> 
+            <div class="flex-spacebetween">
+                <div>Total a Pagar</div>
+                <div class="f-bold">s/. ${total}</div>
+            </div>   
+            
         `;
     
 }

@@ -19,7 +19,7 @@
   --gris4: #666666;
   /* Color especiales*/
   --wsp: #2ea100;
-  --yape: #be00cf;
+  --yape: #8121A0;
 
   /*fontsizes*/
   --h1: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
@@ -137,7 +137,7 @@ main,.main-p{
 .bg-ama{
   background-color: var(--amar);
 }
-.bg-yape{
+.bg-yape,.yape{
   background-color: var(--yape);
 }
 .bg-wsp{
@@ -324,6 +324,9 @@ width: fit-content;
 }
 .w100{
   width: 100%;
+}
+.w80{
+  width: 80%;
 }
 .w50{
   width: 50%;
