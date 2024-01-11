@@ -20,6 +20,7 @@
   /* Color especiales*/
   --wsp: #2ea100;
   --yape: #8121A0;
+  --yape2: #00d0b4;
 
   /*fontsizes*/
   --h1: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
@@ -146,6 +147,9 @@ main,.main-p{
 .bg-none{
   background-color: none;
 }
+.bg-transp{
+  background-color: #ffffff00;
+}
 /*Color Fuentes*/
 .clr-b{
   color: var(--blanco);
@@ -179,6 +183,9 @@ main,.main-p{
 }
 .clr-verd-2{
   color: #37bb02;
+}
+.clr-yape-2{
+  color: var(--yape2);
 }
 /*SVG Color*/
 .fill-1{
@@ -324,6 +331,9 @@ width: fit-content;
 }
 .w100{
   width: 100%;
+}
+.w90{
+  width: 90%;
 }
 .w80{
   width: 80%;
@@ -698,7 +708,7 @@ place-items: center;
   padding: 5px 0;
 }
 .padsup-0_5{
-  padding: var(--sz0-5);
+  padding: var(--sz0-5) 0;
 }
 .padsup-1{
   padding: var(--sz1) 0;
@@ -955,7 +965,6 @@ opacity: 0;
 pointer-events: none;
 }
 .modal .modal-content{
-background: #fff;
 width: 100%;
 height: 95%;
 position: absolute;
@@ -1108,6 +1117,39 @@ progress[value]::-webkit-progress-value {
   background: var(--primario) !important;
   border-color: var(--primario) !important;
 }
+/* COPY TO CLIPBOARD, BOTON COPIAR*/
+.num{
+  font-size: 1.5em;
+  }
+  .icon-copy{
+    background-color: #ffffff00;
+  }
+
+.confirmation{
+  background:#feba01;
+  color:#383838;
+  padding:10px 15px;
+  border-radius:3px;
+  display:none;
+  bottom:15px;
+  left:20px;
+  z-index:9999999999999999;
+}  
+/*BOLETA ADDS*/
+.circ-1{
+  width:2em;
+  height:2em;
+  background-color:#e9e9e9;
+}
+.circ-der{
+  left:-2em;
+  bottom:-1em;
+}
+.circ-izq{
+  right:-2em;
+  bottom:-1em;
+}
+/*BOLETA ADDS*/
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{
