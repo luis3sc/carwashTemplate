@@ -13,7 +13,7 @@
   --amar : #ffd900;
   --verd : #02ff0f;
   /*Grises*/
-  --gris1: #e7e7e7;
+  --gris1: #f7f7f7;
   --gris2: #cecece;
   --gris3: #a1a1a1;
   --gris4: #666666;
@@ -384,6 +384,9 @@ width: fit-content;
 max-width: 7em;
 }
 .mw-img-4{
+  max-width: 4em;
+}
+.mw-img-3{
   max-width: 3em;
 }
 .mw-ico-1{
@@ -431,6 +434,9 @@ aspect-ratio: 1;
 /*Heights*/
 .hinh{
 height: inherit;
+}
+.hfit{
+  height: fit-content;
 }
 .h-hka{
 height: -webkit-fill-available;
@@ -675,6 +681,9 @@ place-items: center;
   padding: .7em;
 }
 /* paddings horizontales */
+.padhor_5{
+  padding: 0 var(--sz0-5);
+}
 .padlat{
   padding: 0 1.3em;
 }
@@ -810,7 +819,7 @@ place-items: center;
   top: .5em;
 }
 .top1{
-  top: 1em;
+  top: var(--sz1);
 }
 .right0{
   right: 0;
@@ -819,7 +828,7 @@ place-items: center;
   right: .5em;
 }
 .right1{
-  right: 1em;
+  right: var(--sz1);
 }
 /* zindex */
 .zindex0{
@@ -985,15 +994,6 @@ bottom: 0px;
 }
 .closeModalBtn{
 padding: 10px;
-border-radius: 100%;
-z-index: 2;
-position: absolute;
-right: 1em;
-aspect-ratio: 1;
-font-size: 1em;
-top: 1em;
-background-color: var(--rojo);
-color: var(--blanco);
 }
 .modalcontenido{
 padding: 1em;
@@ -1004,7 +1004,7 @@ overflow: auto;
 .circ-1{
   width:2em;
   height:2em;
-  background-color:#e9e9e9;
+  background-color:var(--gris1);
 }
 .circ-der{
   left:-2em;
@@ -1018,7 +1018,6 @@ overflow: auto;
 /*progress bar*/
 .progress,
 progress[value] {
-  width: 100%;
   border: none;
   margin: 5px 0;
   height: 5px;
@@ -1110,7 +1109,7 @@ progress[value]::-webkit-progress-value {
   align-items: center !important;
 }
 .flatpickr-days{
-  height: 90px;
+  /* height: 90px; */
   overflow: auto !important;
 }
 .flatpickr-day.selected{
@@ -1135,20 +1134,6 @@ progress[value]::-webkit-progress-value {
   left:20px;
   z-index:9999999999999999;
 }  
-/*BOLETA ADDS*/
-.circ-1{
-  width:2em;
-  height:2em;
-  background-color:#e9e9e9;
-}
-.circ-der{
-  left:-2em;
-  bottom:-1em;
-}
-.circ-izq{
-  right:-2em;
-  bottom:-1em;
-}
 /*BOLETA ADDS*/
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
