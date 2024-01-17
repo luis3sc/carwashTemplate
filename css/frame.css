@@ -344,6 +344,15 @@ width: fit-content;
 .w100cal-1_5{
   width: calc(100% - var(--sz1-5));
 }
+/*maxwidth-minwidth*/
+.parf1{
+  max-width: 170px;
+  min-width: 130px;
+}
+.parf2{
+  max-width: 140px;
+  min-width: 115px;
+}
 /*Maxwidths*/
 .mw1280{
   max-width: 1280px;
@@ -378,6 +387,15 @@ width: fit-content;
 .mw-120{
   max-width: 120px;
 }
+.mw-100{
+  max-width: 100px;
+}
+.mw-100p{
+  max-width: 100%;
+}
+.mw-90{
+  max-width: 90px;
+}
 /* maxwidth icon */
 
 .mw-img-7{
@@ -388,6 +406,12 @@ max-width: 7em;
 }
 .mw-img-3{
   max-width: 3em;
+}
+.mw-img-2{
+  max-width: 2em;
+}
+.mw-img-2_5{
+  max-width: 2.5em;
 }
 .mw-ico-1{
   min-width: 1.4em;
@@ -538,8 +562,12 @@ align-items: flex-start;
 .d-resp{
   display: block;
 }
+/* alter */
+.just-cont-start{
+  justify-content: start;
+}
 /*Grid*/
-.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-servicios-1{
+.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-servicios-1,.grid-col-hor{
   display: grid;
 }
 .grid {
@@ -566,7 +594,6 @@ grid-gap: .1em;
 }
 /*Desktop 4 col - Mob 2 col*/
 
-
 .grid-4-2,.grid-5-2 {
   grid-template-columns: repeat(auto-fill, minmax(min(22rem,45%), 1fr));
 }
@@ -577,6 +604,9 @@ grid-template-columns: repeat(auto-fill, minmax(min(22rem,100%), 1fr));
 .grid-servicios-1{
   grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+}
+.grid-col-hor{
+  grid-auto-flow: column;
 }
 /* grid tarjeta fid */
 .grid3icon {
@@ -665,6 +695,9 @@ place-items: center;
 }
 .mglft-1{
   margin-left: -1em;
+}
+.mgrg-1{
+  margin-right: 1em;
 }
 
 /* paddings */
@@ -758,14 +791,22 @@ place-items: center;
 .paddinghoresp{
   padding: 0.3em 1em;
 }
+.padlef1{
+  padding-left: var(--sz1);
+}
 .paddingespp{
-    padding-right: 80px
+padding-right: 80px
 }
 .paddingbot{
   padding-bottom: var(--sz1);
 }
 .pdnbtm2{
   padding-bottom: var(--sz2);
+}
+/*padding scroll*/
+.padding-scroll1{
+  padding-inline-start: var(--sz1);
+  padding-inline-end: var(--sz1);
 }
 /* Border radius */
 .border05{
@@ -799,7 +840,11 @@ place-items: center;
 }
 .abs{
   position: absolute;
-}  
+}
+.sticky{
+  position: sticky;
+  position: -webkit-sticky;
+}
 .lef0{
   left: 0px;
 }
@@ -814,6 +859,9 @@ place-items: center;
 }
 .top0{
   top: 0px;
+}
+.top-1px{
+  top: -1px;
 }
 .top0_5{
   top: .5em;
@@ -871,7 +919,7 @@ place-items: center;
   overflow-y: hidden;
 }
 .overhor{
-  overflow-x:auto;
+  overflow:auto hidden;
 }
 .oververt{
   overflow-y: auto;
@@ -912,6 +960,10 @@ place-items: center;
 }
 .brdrbtmdash{
   border-bottom: 2px dashed var(--gris2);
+}
+/*border left*/
+.borderleft1{
+  border-left: 1px solid;
 }
 /* BOX-SHADOW */
 .bx{
@@ -1013,6 +1065,15 @@ overflow: auto;
 .circ-izq{
   right:-2em;
   bottom:-1em;
+}
+.contain-paint{
+  contain: paint;
+}
+.overscroll-cont{
+  overscroll-behavior-inline:contain;
+}
+.scroll-snap-1{
+  scroll-snap-type: inline mandatory;
 }
 /* otros */
 /*progress bar*/
@@ -1135,6 +1196,11 @@ progress[value]::-webkit-progress-value {
   z-index:9999999999999999;
 }  
 /*BOLETA ADDS*/
+/* touch */
+.touch-a{
+  touch-action: pan-x pan-y pinch-zoom;
+}
+/* touch */
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{
