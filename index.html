@@ -10,7 +10,7 @@
     <!-- estrutctura general -->
     <header class="bg-b flex-spacebetween flex-a padhor-1">
         <div></div>
-        <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Registrate Ahora</a>
+        <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
     </header>
     <main class="bg-g2 overf">
         <div class="main-p">
@@ -148,9 +148,72 @@
         <div class="modal-content">
             <button class="closeModalBtn flex-centro zindex2 abs bordercircular clr-b bg-rojo top1 aspect-1 right1 top1 ftsz-1">X</button>
             <div class="modalcontenido bg-b">
-                <div class="flex-colum padsup-1_5 gap1">
-                    <h3>Reservar</h3> 
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                        <img class="w90 border20" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de la 15</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
+                        </div>
+                    </div>
                     
+                </div>
+                <div class="padding1 bg-b">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <p class="form-titulo f-bold">Tipo Documento</p>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <select name="cars" id="cars" class="border1px padding1 border05">
+                              <option value="volvo">DNI (Perú)</option>
+                              <option value="saab">Saab</option>
+                              <option value="opel">Opel</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <div class="flex border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
+                                <div class="padding1">
+                                    <div>Nombre</div>
+                                </div>
+                            </div>
+                            
+                            <small>
+                                Tu DNI será tu código único para acumular puntos.
+                            </small>
+                            <p></p>
+                        </div>
+                        
+                        
+                        <!-- 
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input placeholder="Nombres y Apellidos" class="border1px padding1 border05" type="text" id="nombre" name="nombre" required="">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 direc">
+                            <input placeholder="Distrito o Dirección" class="border1px padding1 border05" type="text" id="direc" name="direc" required="">
+                        </div>
+                         -->
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Correo electrónico" class="border1px padding1 border05" type="email" id="email" name="email" required="">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 mobile">
+                            <input placeholder="Celular" class="border1px padding1 border05" type="number" id="mobile" name="mobile" required="">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <label for="contrasena">Contraseña</label>
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" required="">
+                        </div>      
+                        <div class="form-input flex-colum flex-c gap5 confircontrasena">
+                            <label for="confircontrasena">Confirmar Contraseña</label>
+                            <input class="border1px padding1 border05" type="password" id="confircontrasena" name="confircontrasena" required="">
+                        </div>                       
+                        <div class="form-boton mgtp">
+                            <input class="crojo border20" id="btn" type="submit" value="Enviar">
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
                 </div>
             </div>
                

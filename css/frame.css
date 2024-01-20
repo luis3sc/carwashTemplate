@@ -401,6 +401,9 @@ width: fit-content;
 .mw-img-7{
 max-width: 7em;
 }
+.mw-img-6{
+  max-width: 6em;
+}
 .mw-img-4{
   max-width: 4em;
 }
@@ -1051,7 +1054,7 @@ bottom: 0px;
 padding: 10px;
 }
 .modalcontenido{
-padding: 1em;
+/* padding: 1em; */
 height: 95svh;
 overflow: auto;
 }
