@@ -1112,7 +1112,7 @@ progress[value]::-webkit-progress-value {
   height: 25px;
   right: -15px;
   border-radius: 40px;
-  z-index: 1;
+  z-index: 0;
   background-color: var(--gris1);
   width: 25px;
 }
@@ -1123,7 +1123,7 @@ progress[value]::-webkit-progress-value {
   height: 25px;
   left: -15px;
   border-radius: 40px;
-  z-index: 1;
+  z-index: 0;
   background-color: var(--gris1);
   width: 25px;
 }

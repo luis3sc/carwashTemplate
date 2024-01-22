@@ -102,47 +102,132 @@
     </div>
     <!-- navegador mobil -->
     <div id="myModal1" class="modal">
-        <div class="backdrop"></div>
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
         <div class="modal-content">
-            <button class="closeModalBtn">X</button>
-            <div class="modalcontenido bg-g1">
-                <div class="flex-colum padsup-1_5 gap1">
-                    <h3>Reservar</h3> 
-                    <div class="grid-3-1 gap1 border20">
-                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
-                            <a href="#" class="flex-centro aspect-1">
-                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
-                            </a>
-                            <div class="flex-colum gap-5 flex-c w-wka">
-                                <p class="f-bold txtlimit sinover">Encerado</p>
-                                <b>Sábado 12 de Noviembre</b> 
-                                <div class="padding03 wifc bg-verd" alt="confirmado">Confirmado</div>
-                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
-                            </div>
-                        </div>
-                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
-                            <a href="#" class="flex-centro aspect-1">
-                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
-                            </a>
-                            <div class="flex-colum gap-5 flex-c w-wka">
-                                <p class="f-bold txtlimit sinover">Encerado</p>
-                                <b>Sábado 12 de Noviembre</b> 
-                                <div class="padding03 wifc bg-ama" alt="porconfirmar">Por confirmar</div>
-                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
-                            </div>
-                        </div>
-                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
-                            <a href="#" class="flex-centro aspect-1">
-                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
-                            </a>
-                            <div class="flex-colum gap-5 flex-c w-wka">
-                                <p class="f-bold txtlimit sinover">Encerado</p>
-                                <b>Sábado 12 de Noviembre</b> 
-                                <div class="padding03 wifc bg-rojo" alt="rechazado">Rechazado</div>
-                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver Reserva</a>
-                            </div>
+            <div class="modalcontenido bg-b">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                        <img class="w90 border20" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de Muneco Auto Spa</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
                         </div>
                     </div>
+                    
+                </div>
+                <div class="padding1 bg-b">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <p class="form-titulo f-bold">Tipo Documento</p>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <select name="cars" id="cars" class="border1px padding1 border05">
+                              <option value="volvo">DNI (Perú)</option>
+                              <option value="saab">Saab</option>
+                              <option value="opel">Opel</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <div class="flex border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
+                                <div class="padding1">
+                                    <div>Nombre</div>
+                                </div>
+                            </div>
+                            
+                            <small>
+                                Tu DNI será tu código único para acumular puntos.
+                            </small>
+                            <p></p>
+                        </div>
+                        
+                        
+                        <!-- 
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input placeholder="Nombres y Apellidos" class="border1px padding1 border05" type="text" id="nombre" name="nombre" required="">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 direc">
+                            <input placeholder="Distrito o Dirección" class="border1px padding1 border05" type="text" id="direc" name="direc" required="">
+                        </div>
+                         -->
+                        <p class="form-titulo f-bold">Ciudad</p>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <select name="ciudad" id="ciudad" class="border1px padding1 border05">
+                              <option value="volvo">Lima</option>
+                              <option value="saab">Huancayo</option>
+                              <option value="opel">Arequipa</option>
+                              <option value="audi">Tacna</option>
+                            </select>
+                        </div> 
+                        
+                        <div class="form-input flex-colum flex-c gap5 mobile">
+                            <input placeholder="Nro Celular" class="border1px padding1 border05" type="number" id="mobile" name="mobile" required="">
+                        </div>
+                        <p class="form-titulo f-bold">para Iniciar Sesión</p>
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                        </div>      
+                        <div class="form-input flex-colum flex-c gap5 confircontrasena">
+                            <input class="border1px padding1 border05" type="password" id="confircontrasena" name="confircontrasena" placeholder="Repita la Contraseña" required="">
+                        </div>                       
+                        <div class="form-boton mgtp">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
+                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="f-bold" href="#" id="modalLogin">Ingresar</a></p>
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal9" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content">
+            <div class="modalcontenido bg-b">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                        <img class="w90 border20" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de la 15</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="padding1 bg-b">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <div class="">
+                            <h3 class="f-bold">Bienvenid@ a ClienteVIP</h3>
+                            <p class="form-titulo mgtp">Ingresa tu email y contraseña</p>
+                        </div>
+                            
+                        <p class="form-titulo f-bold">Email</p>
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                        </div>
+                        <p class="form-titulo f-bold">Contraseña</p>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                        </div>                     
+                        <div class="form-boton mgtp">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Ingresar</button>
+                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="f-bold" href="#" id="modalRegister">Regístrate aquí</a></p>
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
                 </div>
             </div>
                
@@ -193,10 +278,10 @@ function countDown(id, targetDate) {
 countDown('timer1', 'Jan 30, 2024 11:30:00');
 
 // Llamar a la función countDown para el segundo contador
-countDown('timer2', 'Jan 11, 2024 00:00:00');
+countDown('timer2', 'Jan 25, 2024 00:00:00');
 
 // Llamar a la función countDown para el segundo contador
-countDown('timer3', 'Jan 13, 2024 14:00:00');
+countDown('timer3', 'Jan 24, 2024 14:00:00');
 
 
     </script>
