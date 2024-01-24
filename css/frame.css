@@ -46,6 +46,7 @@
   /*medidas*/
   --sz2:2em; /*32px*/
   --sz1-5:1.5em; /*24px*/
+  --sz1-25:1.25em;
   --sz1: 1em; /*16px*/
   --sz0-75: .75em;
   --sz0-5: .5em; /*8px*/
@@ -71,7 +72,7 @@ border: none;
 text-decoration: none;
 outline: none;
 }
-button, a{
+button, a, summary{
 cursor: pointer;
 }
 ul,li{
@@ -178,6 +179,9 @@ main,.main-p{
 .clr-g3{
   color: var(--gris3);
 }
+.clr-g4{
+  color: var(--gris4);
+}
 .clr-verd{
   color: var(--verd);
 }
@@ -262,6 +266,9 @@ p{
 }
 .ftsz-1{
   font-size: var(--sz1);
+}
+.ftsz-1_25{
+  font-size: var(--sz1-25);
 }
 .ftsz-1_5{
   font-size: var(--sz1-5);
@@ -356,6 +363,9 @@ width: fit-content;
 /*Maxwidths*/
 .mw1280{
   max-width: 1280px;
+}
+.mw-700{
+  max-width: 700px;
 }
 .mw-600{
   max-width: 580px;
@@ -904,7 +914,7 @@ padding-right: 80px
   z-index: 99;
 }
 /*Display*/
-.hidden,.none-resp,.d-none-resp{
+.hidden,.none-resp,.d-none-resp,.control-icon-close, summary::-webkit-details-marker,details[open] .control-icon-expand{
   display: none;
 }
 .block{
@@ -1204,6 +1214,21 @@ progress[value]::-webkit-progress-value {
   left:20px;
   z-index:9999999999999999;
 }  
+/*ACCORDION SUMMARY*/
+details {
+  min-height: 5px;
+  transition: all .3s;
+}
+.control-icon {
+  transition: .3s ease;
+  pointer-events: none;
+}
+details[open] .control-icon-close {
+  display: initial;
+  transition: .3s ease;
+  transform: rotate(180deg);
+}
+/**/
 /*BOLETA ADDS*/
 /* touch */
 .touch-a{
