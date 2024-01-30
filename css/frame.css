@@ -300,12 +300,20 @@ font-size: var(--sz1-5);
   font-weight: var(--wg-bold);
 }
 /* Mayuscula, Minuscula*/
-.mayus{
-  text-transform: uppercase;
-}
+
 .minusc{
   text-transform: lowercase;
 }
+.capit{
+  text-transform: capitalize;
+}
+.mayus,.mayusprim::first-letter {
+  text-transform: uppercase;
+}
+.mayusprim{
+  text-transform: lowercase;
+}
+
 /*Parrafos*/
 .txt-centro{
   text-align: center;
@@ -422,6 +430,9 @@ max-width: 7em;
 }
 .mw-img-6{
   max-width: 6em;
+}
+.mw-img-5{
+  max-width: 5em;
 }
 .mw-img-4{
   max-width: 4em;
@@ -1005,6 +1016,12 @@ padding-right: 80px
 .scl1-5{
   transform: scale(1.5);
 }
+.scl1-9{
+  transform: scale(1.9);
+}
+.scl2-5{
+  transform: scale(2.5);
+}
 /*Filtros*/
 /*Blur gausiano*/
 .f-blur1{
@@ -1241,6 +1258,23 @@ details[open] .control-icon-close {
   touch-action: pan-x pan-y pinch-zoom;
 }
 /* touch */
+/*SCROLLBAR*/
+/* Track del scrollbar (la parte gris) */
+::-webkit-scrollbar-track {
+  background-color: var(--gris4); /* Color del fondo del track */
+}
+
+/* Handle del scrollbar (la parte que se puede arrastrar) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primario); /* Color del scrollbar */
+  border-radius: 10px; /* Borde redondeado del handle */
+  border: 1px solid var(--primario); /* Borde del handle */
+}
+
+/* Esquina entre el track y el handle */
+::-webkit-scrollbar-corner {
+  background-color: var(--gris4); /* Color de la esquina */
+}
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{
@@ -1263,7 +1297,7 @@ details[open] .control-icon-close {
       --navbarmobile:0vh;
   }
   main{
-      height: auto;
+      height: calc( var(--mobile) - var(--header)  );
   }
   .contenedor-lg{
       max-width: 100%;
@@ -1318,10 +1352,11 @@ details[open] .control-icon-close {
   .height-esp,.height-esp2{
     height: auto;
   }
-  ::-webkit-scrollbar {
-    width: 1px;
-    height: 4px;
-  }
+  /* Estilo del scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho del scrollbar */
+}
+
 }
 @media screen and (min-width: 1024px){
   .grid-4-2 {

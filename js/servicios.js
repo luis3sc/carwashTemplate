@@ -5,49 +5,56 @@ const services = {
             name: "Lavado Exterior",
             description: "Lavado exterior e interior",
             price: 25,
-            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg",
+            hour: 30,
         },
         {   
             codigo: 2,
             name: "Aspirado Interior ID",
             description: "Lavado con cera y pulido",
             price: 30,
-            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg",
+            hour: 40,
         },
         {
             codigo: 3,    
             name: "Encerado EN",
             description: "Lavado con cera y pulido y detallado",
             price: 35,
-            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg",
+            hour: 30,
         },
         {   
             codigo: 40,
             name: "Aspirado Interior ID",
             description: "Lavado con cera y pulido",
             price: 30,
-            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg",
+            hour: 30,
         },
         {
             codigo: 41,    
             name: "Encerado EN",
             description: "Lavado con cera y pulido y detallado",
             price: 35,
-            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg",
+            hour: 30,
         },
         {   
             codigo: 40,
             name: "Aspirado Interior ID",
             description: "Lavado con cera y pulido",
             price: 30,
-            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg",
+            hour: 30,
         },
         {
             codigo: 41,    
             name: "Encerado EN",
             description: "Lavado con cera y pulido y detallado",
             price: 35,
-            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg"
+            imageURL: "https://cuponassets.cuponatic-latam.com/backendCl/uploads/imagenes_descuentos/317501/c002826d87161791e4a22c287c0a1cf56ac41d81.XL.jpg",
+            hour: 30,
         }
     ],
     Suv: [
@@ -56,21 +63,24 @@ const services = {
             name: "Lavado Básico",
             description: "Lavado exterior e interior",
             price: 20,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 5,
             name: "Lavado Premium",
             description: "Lavado con cera y pulido",
             price: 30,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 6,
             name: "Lavado Ultra",
             description: "Lavado con cera y pulido y detallado",
             price: 50,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         }
     ],
     Hatchback: [
@@ -79,21 +89,24 @@ const services = {
             name: "Lavado Básico",
             description: "Lavado exterior e interior",
             price: 20,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 8,
             name: "Lavado Premium",
             description: "Lavado con cera y pulido",
             price: 30,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 9,
             name: "Lavado Ultra",
             description: "Lavado con cera y pulido y detallado",
             price: 50,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         }
     ],
     Pickup: [
@@ -102,21 +115,24 @@ const services = {
             name: "Lavado Básico",
             description: "Lavado exterior e interior",
             price: 20,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 11,
             name: "Lavado Premium",
             description: "Lavado con cera y pulido",
             price: 30,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 12,
             name: "Lavado Ultra",
             description: "Lavado con cera y pulido y detallado",
             price: 50,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         }
     ],
     Convertible: [
@@ -125,21 +141,24 @@ const services = {
             name: "Lavado Básico",
             description: "Lavado exterior e interior",
             price: 20,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 14,
             name: "Lavado Premium",
             description: "Lavado con cera y pulido",
             price: 30,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 15,
             name: "Lavado Ultra",
             description: "Lavado con cera y pulido y detallado",
             price: 50,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         }
     ],
     Motocicleta: [
@@ -148,21 +167,24 @@ const services = {
             name: "Lavado Estándar",
             description: "Lavado exterior",
             price: 15,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 17,
             name: "Lavado Detallado",
             description: "Lavado con atención a los detalles",
             price: 25,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         },
         {
             codigo: 18,
             name: "Lavado Rapido",
             description: "Lavado rápido",
             price: 10,
-            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp"
+            imageURL: "https://www.tortaza.com.pe/Assets/tienda/images/vitrina/lucuma.webp",
+            hour: 30,
         }
     ]
 };
