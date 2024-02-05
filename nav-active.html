@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.scratch-card {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #5a2ff5;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+h2 {
+  font-size: 64px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+  font-weight: 600;
+}
+
+button{
+  width: 300px;
+  height: 50px;
+  background-color: #5a2ff5;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  margin: 0 auto;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.scratch-container {
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scratch-canvas {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.code {
+  position: relative;
+  visibility: hidden;
+  margin: 0 auto;
+  text-align: center;
+  color: #5a2ff5;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.fade-out {
+  -webkit-animation: fade-out 0.8s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+
+    </style>
+</head>
+<body>
+  <div class="scratch-card">
+    <h2>Get 30% </h2>
+    <h3>On Your Next Purchase</h3>
+    <p>Scratch & Get Your Coupon Code</p>
+    <div id="scratch-container" class="scratch-container">
+      <canvas class="scratch-canvas" id="scratch-canvas" width="300" height="60"></canvas>
+      <p id="code" class="code">
+          SE345dEf67   
+      </p>
+    </div>
+    <button>Use Coupon</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/raspaygana.js"></script>
+</body>
+</html>
