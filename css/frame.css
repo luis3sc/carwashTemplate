@@ -350,6 +350,10 @@ width: fit-content;
 .w-maxc{
   width: max-content;
 }
+.w110{
+  width: 110%;
+  left: -5%;
+}
 .w100{
   width: 100%;
 }
@@ -600,7 +604,7 @@ align-items: flex-start;
   justify-content: start;
 }
 /*Grid*/
-.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-servicios-1,.grid-col-hor{
+.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-servicios-1,.grid-col-hor,.grid-flexrow{
   display: grid;
 }
 .grid {
@@ -868,7 +872,7 @@ padding-right: 80px
 .fxd,.fxd-resp,.fxdresp{
   position: fixed;
 }
-.rel{
+.rel,.sticky-rel{
   position: relative;
 }
 .abs{
@@ -1295,9 +1299,16 @@ details[open] .control-icon-close {
   :root{
       --mobile:100vh;
       --navbarmobile:0vh;
+      --p:  clamp(0.875rem, 0.6596rem + 0.5128vw, 1.375rem);
   }
   main{
       height: calc( var(--mobile) - var(--header)  );
+  }
+  .flex1{
+    flex: 1.5;
+  }
+  .flex2{
+    flex: 2;
   }
   .contenedor-lg{
       max-width: 100%;
@@ -1319,11 +1330,14 @@ details[open] .control-icon-close {
   .d-none-resp{
       display: block;
   }
-  .none-resp,.grid-flxc{
+  .none-resp,.grid-flxc,.grid-flexrow{
     display: flex;
   }
   .fxdresp{
     position: relative;
+  }
+  .sticky-rel{
+    position: sticky;
   }
   .botnav{
     bottom: 0;
@@ -1343,7 +1357,7 @@ details[open] .control-icon-close {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
   
-  .flex-c-resp{
+  .flex-c-resp,.grid-flexrow{
     flex-direction: row;
   }
   .checkout-container{
