@@ -6,9 +6,9 @@
     <title>premios</title>
     <link rel="stylesheet" href="./css/frame.css">
 </head>
-<body class="bg-g4">
+<body>
     <!-- estrutctura general -->
-    <header class="bg-b flex-spacebetween flex-a padhor-1">
+    <header class="bg-b flex-spacebetween flex-a padhor-1 bx borderbottom1 brdclr-g3">
         <div class="none-resp h100 gap1 padsup5px">
             <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="index.html">Inicio</a>
             <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="servicios.html">Servicios</a>
@@ -18,60 +18,62 @@
         </div>
         <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
     </header>
-    <main class="bg-g2 overf">
-        <section class="padhor-1 bg-g1 mgauto">
-            <div class="padsup-1 flex-colum gap1">
-                <div class="flex-spacebetween">
-                <h3>Mi Tarjeta de Lealtad</h3>
-                <a id="modalBtn2" href="#">Ver Historial</a>
-                </div>
-                <div class="card-vert gap1 clr-b flex-row bg-2 paddingprinc border20 rel">
-                    <div class="flex-colum flex-c w-wka gap1-5">
-                        <div class="flex-colum gap5">
-                            <p>Tus puntos</p>
-                            <h2>0001</h2>
-                        </div>
-                        <div class="flex-spacebetween">
-                            <div class="flex-colum gap5">
-                                <p>Armando Paredes</p>
-                                <h2>COD-USER-0000</h2>
-                            </div>
-                            <div class="flex-colum gap5">
-                                <p class="txtlimit sinover">Expira en </p>
-                                <h2>06/10/2023</h2>  
-                            </div>
-                        </div>
-                        
-                        
+    <main class="overf grid-flexrow rel">
+        <section class="padsup-1 flex1 sticky-rel lef0 top0 bg-b h-maxc">
+            <div class="padhor-1 mgauto flex-colum gap1">
+                <div class="flex-colum gap1">
+                    <div class="flex-spacebetween">
+                        <h3>Mi Tarjeta de Lealtad</h3>
+                        <a id="modalBtn2" href="#">Ver Historial</a>
                     </div>
-                    <a id="modalBtn3" class="padding05 bg-1 bordercircular flex-centro abs right1 top1">
-                        <img class="mw-ico-1 f-invcolor" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_info_outline_48px-512.png" alt="">
+                    <div class="card-vert gap1 clr-b flex-row bg-2 paddingprinc border20 rel">
+                        <div class="flex-colum flex-c w-wka gap1-5">
+                            <div class="flex-colum gap5">
+                                <p>Tus puntos</p>
+                                <h2>0001</h2>
+                            </div>
+                            <div class="flex-spacebetween">
+                                <div class="flex-colum gap5">
+                                    <p>Armando Paredes</p>
+                                    <h2>COD-USER-0000</h2>
+                                </div>
+                                <div class="flex-colum gap5">
+                                    <p class="txtlimit sinover">Expira en </p>
+                                    <h2>06/10/2023</h2>  
+                                </div>
+                            </div>
+                        </div>
+                        <a id="modalBtn3" class="padding05 bg-1 bordercircular flex-centro abs right1 top1">
+                            <img class="mw-ico-1 f-invcolor" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_info_outline_48px-512.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="gridbtn2 place-item gap1">
+                    <a id="modalBtn4" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+                        <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                        <p>Escanear Voucher</p>
+                    </a>
+                    <a id="modalBtn5" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
+                        <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                        <p>Mi Credencial</p>
                     </a>
                 </div>
             </div>
         </section>
-        <div class="gridbtn2 place-item padhor-1 gap1">
-            <a id="modalBtn4" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
-                <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                <p>Escanear Voucher</p>
-            </a>
-            <a id="modalBtn5" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05">
-                <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                <p>Mi Credencial</p>
-            </a>
-        </div>       
-        <div class="sticky top-1px mgtp padlef1 bg-b">
-            <div class="flex-row gap1" id="filter-premios">
-                <a class="filter padop1 brdactive" data-filter=".todo">Todo</a>
-                <a class="filter padop1" data-filter=".misiones">Misiones</a>
-                <a class="filter padop1" data-filter=".premios">Premios</a>
+        
+        <section class="flex-colum hfit flex2 rel w100">
+            <div class="rel-fixed padlef1 bg-b w100">
+                <div class="flex-row gap1" id="filter-premios">
+                    <a class="filter padop1 brdactive" data-filter=".todo">Todo</a>
+                    <a class="filter padop1" data-filter=".misiones">Misiones</a>
+                    <a class="filter padop1" data-filter=".premios">Premios</a>
+                </div>
             </div>
-        </div>
-        <section class="padhor-1 bg-g1 mgauto zindex99">
-            <div class="padsup-1_5 flex-colum gap1">
-                
-                <div class="grid-3-1 gap1">
-                    <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
+            <section class="padhor-1 bg-g1 mgauto mgtp-2-0-resp">
+                <div class="padsup-1_5 flex-colum gap1">
+
+                    <div class="grid-3-1 gap1">
+                        <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
                         <a href="#" class="flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://cdn1.iconfinder.com/data/icons/video-game-33/64/mission-complete-trophy-winner-award-512.png" alt="">
                         </a>
@@ -86,8 +88,8 @@
                             </div>
                             <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver misión</a>
                         </div>
-                    </div>
-                    <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
+                        </div>
+                        <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
                         <a href="#" class="flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
                         </a>
@@ -102,8 +104,8 @@
                             </div>
                             <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver misión</a>
                         </div>
-                    </div>
-                    <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
+                        </div>
+                        <div class="misiones todo card-vert gap1 flex-row bg-b padding1 border20">
                         <a href="#" class="flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://images.91wheels.com/assets/b_images/main/models/profile/profile1660726719.png" alt="">
                         </a>
@@ -118,8 +120,8 @@
                             </div>
                             <a id="modalBtn6" class="bg-n clr-b flex-centro w100 padding05 border05">Ver misión</a>
                         </div>
-                    </div>
-                    <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
+                        </div>
+                        <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
                         <a href="#" class="flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://images.91wheels.com/assets/b_images/main/models/profile/profile1660726719.png" alt="">
                         </a>
@@ -129,8 +131,8 @@
                             <b>100 pts</b>
                             <a id="modalBtn6" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Reclamar</a>
                         </div>
-                    </div>
-                    <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
+                        </div>
+                        <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
                         <a href="#" class="flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
                         </a>
@@ -140,8 +142,8 @@
                             <b>100 pts</b>
                             <a href="" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Reclamar</a>
                         </div>
-                    </div>
-                    <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
+                        </div>
+                        <div class="premios todo card-vert gap1 flex-row bg-b padding1 border20">
                         <a href="#" class="flex-centro flex-ini">
                             <img class="mw-img-7 border20" src="https://www.japanautos.com.pe/wp-content/uploads/2020/03/descuento-10.png" alt="">
                         </a>
@@ -151,17 +153,17 @@
                             <b>100 pts</b>
                             <a href="" class="brdclr-n border2px clr-n flex-centro w100 padding05 border05">Reclamar</a>
                         </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Columna 5 - 2 Columna -->
-        
-        <section class="padhor-1 bg-g1 clr-n mgauto bordertop1 brdclr-g3">
-            <div class="padsup-1 flex-row flex-c gap1 txt-centro">
-                <p>Desarrollado por</p>
-                <a class="f-bold" href="#">Vlink</a>
-            </div>
+            </section>
+            <!-- Columna 5 - 2 Columna -->
+            <section class="padhor-1 bg-g1 clr-n mgauto bordertop1 brdclr-g3 w100">
+                <div class="padsup-1 flex-row flex-c gap1 txt-centro">
+                    <p>Desarrollado por</p>
+                    <a class="f-bold" href="#">Vlink</a>
+                </div>
+            </section>
         </section>
     </main>
     <!-- estrutctura general -->
