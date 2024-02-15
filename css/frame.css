@@ -706,6 +706,9 @@ place-items: center;
 .mgauto,.mgn-a{
   margin: 0 auto;
 }
+.mgtp-2-0-resp{
+  margin-top: 0;
+}
 .mgtp05{
   margin-top: var(--sz0-5);
 }
@@ -872,7 +875,7 @@ padding-right: 80px
 .fxd,.fxd-resp,.fxdresp{
   position: fixed;
 }
-.rel,.sticky-rel{
+.rel,.sticky-rel,.rel-fixed{
   position: relative;
 }
 .abs{
@@ -1370,7 +1373,12 @@ details[open] .control-icon-close {
 ::-webkit-scrollbar {
   width: 12px; /* Ancho del scrollbar */
 }
-
+.rel-fixed{
+  position: fixed;
+}
+.mgtp-2-0-resp{
+  margin-top: 2em;
+}
 }
 @media screen and (min-width: 1024px){
   .grid-4-2 {
