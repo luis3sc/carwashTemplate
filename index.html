@@ -117,8 +117,8 @@
                 <div class="padsup-2 flex-colum gap1 txt-centro">
                     <p class=" mgauto">Trabajamos con los mejores productos</p>
                     <div class="flex-centro flex-row gap1">
-                            <img class="mw-img-5 w100" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/auto-premium.webp" alt="">
-                            <img class="mw-img-5 w100" src="https://mitarjetadigitalperu.com/vipcar/Assets/web/img/webp/sonax.webp" alt="">                  
+                            <img class="mw-img-4 w100" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/auto-premium.webp" alt="">
+                            <img class="mw-img-4 w100" src="https://mitarjetadigitalperu.com/vipcar/Assets/web/img/webp/sonax.webp" alt="">                  
                     </div>
                 </div>
             </section>
@@ -181,26 +181,24 @@
                 <div class="padding1 bg-b flex2 hfit overf">
                     <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
                         <p class="form-titulo f-bold">Tipo Documento</p>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
+                        <div class="form-input flex-colum flex-c gap5 tipodedocumentacion">
                             <select name="cars" id="cars" class="border1px padding1 border05">
                               <option value="volvo">DNI (Perú)</option>
-                              <option value="saab">Saab</option>
-                              <option value="opel">Opel</option>
-                              <option value="audi">Audi</option>
+                              <option value="saab">RUC</option>
+                              <option value="opel">CE o CPP</option>
                             </select>
                         </div>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
-                            <div class="flex border1px border05">
-                                <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
-                                <div class="padding1">
-                                    <div>Nombre</div>
-                                </div>
+                        <div class="form-input flex-colum flex-c gap5 numerodedocumento">
+                            <div class="w100 border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="w100 padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
                             </div>
-                            
                             <small>
                                 Tu DNI será tu código único para acumular puntos.
                             </small>
                             <p></p>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input class="w100 padding1 border1px border05" placeholder="Ingresa tu nombre" type="text" name="nombreusuario" id="nombreusuario">
                         </div>
                         
                         
@@ -1002,5 +1000,32 @@
     <script src="./js/modal.js"></script>
     <script src="./js/copiarboton.js"></script>
     <script src="./js/servicios.js"></script>
+    <script>
+    document.getElementById('cars').addEventListener('change', function() {
+        var selectedOption = this.value;
+        var placeholder = '';
+        var smallText = '';
+        
+        switch(selectedOption) {
+            case 'volvo':
+                placeholder = 'DNI / Documento de Identidad';
+                smallText = 'Tu DNI será tu código único para acumular puntos.';
+                break;
+            case 'saab':
+                placeholder = 'RUC';
+                smallText = 'Tu RUC será tu código único para acumular puntos.';
+                break;
+            case 'opel':
+                placeholder = 'CE / Carnet de extranjeria';
+                smallText = 'Tu Carnet de extranjero será tu código único para acumular puntos.';
+                break;
+            default:
+                break;
+        }
+        
+        document.getElementById('numdoc').setAttribute('placeholder', placeholder);
+        document.querySelector('.numerodedocumento small').textContent = smallText;
+    });
+    </script>
 </body>
 </html>
