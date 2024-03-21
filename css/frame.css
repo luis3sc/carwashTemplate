@@ -4,8 +4,8 @@
   /*Paleta de colores*/
   --primario: #d94704;
   --secundario: #192766;
-  --terciario: #edf2f4;
-  --cuaternario: #8d99ae;
+  --terciario: #058ec4;
+  --cuaternario: #0e1949;
   --quintenario: #2b2d42;
   /*Colores general*/
   --negro: #000;
@@ -93,6 +93,9 @@ header{
 }
 main,.main-p{
   height: calc( var(--mobile) - var(--navbarmobile) - var(--header)  );
+}
+.main-menu-mobile{
+  height: calc( var(--mobile) - var(--navbarmobile));
 }
 /*Layout*/
 .contenedor-lg{
@@ -191,6 +194,9 @@ main,.main-p{
 .clr-verd-2{
   color: #37bb02;
 }
+.clr-ama{
+  color: var(--amar);
+}
 .clr-yape-2{
   color: var(--yape2);
 }
@@ -285,6 +291,10 @@ font-size: .8em;
 }
 .fs-1-5{
 font-size: var(--sz1-5);
+}
+/*text decoration*/
+.subrayar{
+  text-decoration: underline;
 }
 /*font - weight / ancho de fuente */
 .f-delg{
@@ -381,6 +391,9 @@ width: fit-content;
 /*Maxwidths*/
 .mw1280{
   max-width: 1280px;
+}
+.mw-1080{
+  max-width: 1080px;
 }
 .mw-700{
   max-width: 700px;
@@ -604,11 +617,14 @@ align-items: flex-start;
   justify-content: start;
 }
 /*Grid*/
-.grid,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-servicios-1,.grid-col-hor,.grid-flexrow{
+.grid,.grid-2columnas,.grid2,.grid3,.grid3c,.grid3icon,.grid4icon,.grid2c,.grid2colum,.grid-flxc,.grid-3-1,.grid-4-2,.grid-5-2,.gridnav5,.gridbtn2,.grid-loyalty,.grid-boleta-1,.grid-historial-1,.grid-servicios-1,.grid-col-hor,.grid-flexrow{
   display: grid;
 }
 .grid {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.grid-2columnas{
+  grid-template-columns: 1fr;
 }
 .grid2 {
 grid-template-columns: repeat(auto-fit, minmax(45px, 60px));
@@ -636,7 +652,7 @@ grid-gap: .1em;
 }
 /*Mobil 1 columna*/
 .grid-3-1 {
-grid-template-columns: repeat(auto-fill, minmax(min(22rem,100%), 1fr));
+grid-template-columns: repeat(auto-fill, minmax(min(26rem,100%), 1fr));
 }
 .grid-servicios-1{
   grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
@@ -950,6 +966,9 @@ padding-right: 80px
 }
 .overin{
   overflow: inherit;
+}
+.overscroll{
+  overflow: scroll;
 }
 .overf{
   overflow-x: hidden;
@@ -1307,6 +1326,9 @@ details[open] .control-icon-close {
   main{
       height: calc( var(--mobile) - var(--header)  );
   }
+  .main-menu-mobile{
+    height: calc( var(--mobile) - var(--header));
+  }
   .flex1{
     flex: 1.5;
   }
@@ -1349,6 +1371,10 @@ details[open] .control-icon-close {
     display: none ;
   }
   /*GRID*/
+  /*2 columnas*/
+  .grid-2columnas{
+    grid-template-columns: 1fr 1fr;
+  }
   /*3columnas*/
   .grid-5-2 {
     grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
@@ -1386,7 +1412,6 @@ details[open] .control-icon-close {
   }
   
 }
-  
 @media screen and (min-width: 1280px) {
   .mw1280{
     max-width: 1180px;
@@ -1402,7 +1427,18 @@ details[open] .control-icon-close {
     grid-template-columns: repeat(auto-fill, minmax(min(16rem,45%), 1fr));
   }
 }
+@media screen and (min-width: 1365px) {
+  .mw-1080{
+    max-width: 1260px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  
+}
 @media screen and (min-width: 1536px) {
+  .mw-1080{
+    max-width: 1360px;
+  }
   .padsup{
     padding: 1.5em 0;
     }
@@ -1410,4 +1446,7 @@ details[open] .control-icon-close {
   .grid-4-2 {
       grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
   }
+}
+@media screen and (min-width: 1910px) {
+  
 }
