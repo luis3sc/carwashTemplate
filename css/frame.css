@@ -448,7 +448,7 @@ max-width: 7em;
 .mw-img-6{
   max-width: 6em;
 }
-.mw-img-5{
+.mw-img-5,.mw-img-5resp{
   max-width: 5em;
 }
 .mw-img-4{
@@ -783,7 +783,10 @@ place-items: center;
 .padlat0-5{
   padding: 0.5em 0.8em !important;
 }
- .padop1{
+.padop_25{
+  padding: .25em 1em;
+}
+.padop1{
   padding: .5em 1em;
 }
 /* paddings verticales */ 
@@ -1363,6 +1366,9 @@ details[open] .control-icon-close {
   }
   .pdngbtm-esp{
     padding-bottom: var(--spc1);
+  }
+  .mw-img-5resp{
+    max-width: 9em;
   }
   .mw-420{
     max-width: 370px;
