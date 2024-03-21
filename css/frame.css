@@ -1301,6 +1301,21 @@ details[open] .control-icon-close {
 ::-webkit-scrollbar-corner {
   background-color: var(--gris4); /* Color de la esquina */
 }
+/*FORMULARIO EMOJI*/
+.radio-emoji {
+  display: none;
+}
+.radio-emoji ~ span {
+  font-size: 3rem;
+  filter: grayscale(100);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio-emoji:checked ~ span {
+  filter: grayscale(0);
+  font-size: 3.5rem;
+}
 /*MEDIA QUERIES*/
 @media screen and (min-height: 800px) {
   .padsup{
