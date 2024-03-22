@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/frame.css">
+</head>
+<body class="bg-g4">
+    <!-- estrutctura general -->
+    <header class="none-resp bg-b w100  padhor-1 bx borderbottom1 brdclr-g3">
+        <div class="mw-1080 w100 flex-spacebetween flex-a mgauto">
+            <div class="none-resp h100 gap1 padsup5px">
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="index.html">Inicio</a>
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="nosotros.html">Nosotros</a>
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="servicios.html">Servicios</a>
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="promos.html">Promos</a>
+                <a class="clr-1 w-maxc padhor-1 h100 flex-centro" href="perfil.html">Perfil</a>
+            </div>
+            <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
+        </div>
+    </header>
+    <main class="main-menu-mobile bg-g2 overf">
+        <section class="padsup-1 w100 bg-ama">
+            <div class="mw-1080 w100 padhor-1 mgauto  flex-c-resp flex-centro gap-5 ">
+                <p class=" ">👋 Necesitamos que nos des tu opinión para mejorar nuestro servicio</p>
+                <a href="#" id="modalBtn1" class="bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Opinar aquí</a>
+            </div>
+        </section>
+        <section class="h100 w100 flex-centro bg-g3">
+            <p>Lo</p>
+        </section>
+        <!-- Columna 5 - 2 Columna -->
+        <section class="padhor-1 bg-g1 clr-n mgauto bordertop1 brdclr-g3">
+            <div class="padsup-1 flex-row flex-c gap1 txt-centro">
+                <p>Desarrollado por</p>
+                <a class="f-bold" href="#">mitarjetadigitalperu</a>
+            </div>
+        </section>
+    </main>
+    <!-- estrutctura general -->
+    <!-- navegador mobil -->
+    <div class="nav-mobile d-resp bg-b">
+        <div class="gridnav5 h100 place-item">
+            <a href="index.html" class="flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                <p class="fs-p-nav-1">Inicio</p>
+            </a>
+            <a href="nosotros.html" class="flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1" src="./img/iconos-menu/trophy.png" alt="">
+                <p class="fs-p-nav-1">Nosotros</p>
+            </a>
+            <a href="servicios.html" class="flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1 f-invcolor" src="./img/iconos-menu/servicios.png" alt="">
+                <p class="fs-p-nav-1">Servicios</p>
+            </a>
+            <a href="promos.html" class=" flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1 " src="https://cdn-icons-png.flaticon.com/512/3450/3450142.png" alt="">
+                <p class="fs-p-nav-1">Promos</p>
+            </a>
+            <a href="perfil.html" class="active flex-centro flex-colum w100 h100 gap5">
+                <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/2207/2207595.png" alt="">
+                <p class="fs-p-nav-1">Mi Perfil</p>
+            </a>
+        </div>
+    </div>
+    <!-- MODALS -->
+    <div id="myModal1" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content">
+            <div class="modalcontenido bg-b flex-c-resp rel">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1 sticky lef0 top0">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                        <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de Muneco Auto Spa</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="padding1 bg-b flex2 hfit overf">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <p class="form-titulo f-bold">Tipo Documento</p>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <select name="cars" id="cars" class="border1px padding1 border05">
+                              <option value="volvo">DNI (Perú)</option>
+                              <option value="saab">Saab</option>
+                              <option value="opel">Opel</option>
+                              <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <div class="flex border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
+                                <div class="padding1">
+                                    <div>Nombre</div>
+                                </div>
+                            </div>
+                            
+                            <small>
+                                Tu DNI será tu código único para acumular puntos.
+                            </small>
+                            <p></p>
+                        </div>
+                        
+                        
+                        <!-- 
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input placeholder="Nombres y Apellidos" class="border1px padding1 border05" type="text" id="nombre" name="nombre" required="">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 direc">
+                            <input placeholder="Distrito o Dirección" class="border1px padding1 border05" type="text" id="direc" name="direc" required="">
+                        </div>
+                         -->
+                        <p class="form-titulo f-bold">Ciudad</p>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <select name="ciudad" id="ciudad" class="border1px padding1 border05">
+                              <option value="volvo">Lima</option>
+                              <option value="saab">Huancayo</option>
+                              <option value="opel">Arequipa</option>
+                              <option value="audi">Tacna</option>
+                            </select>
+                        </div> 
+                        
+                        <div class="form-input flex-colum flex-c gap5 mobile">
+                            <input placeholder="Nro Celular" class="border1px padding1 border05" type="number" id="mobile" name="mobile" required="">
+                        </div>
+                        <p class="form-titulo f-bold">para Iniciar Sesión</p>
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                        </div>      
+                        <div class="form-input flex-colum flex-c gap5 confircontrasena">
+                            <input class="border1px padding1 border05" type="password" id="confircontrasena" name="confircontrasena" placeholder="Repita la Contraseña" required="">
+                        </div>                       
+                        <div class="form-boton mgtp">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
+                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="f-bold" href="#" id="modalLogin">Ingresar</a></p>
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content">
+            <div class="modalcontenido bg-b padsup-1 rel">
+                <div class="w100 mw-1080 mgauto bg-b padhor-1">
+                    <form class="form flex-colum gap2" id="formCalificacion">
+                        <h2>Califica nuestro servicio</h2>
+                        <div class="grid-2columnas gap1">
+                            <!-- pregunta 1 -->
+                            <div>
+                                <h4>¿Considera que el personal del carwash realiza un trabajo meticuloso en la limpieza de su vehículo?</h4>        
+                                <div class="flex">
+                                    <div class="item flex-centro">
+                                        <label for="limpieza0">
+                                            <input class="radio-emoji" type="radio" name="limpieza" id="limpieza0" value="0">
+                                            <span>🤬</span>
+                                        </label>
+                                    </div>
+                                    <div class="item flex-centro">
+                                        <label for="limpieza1">
+                                            <input class="radio-emoji" type="radio" name="limpieza" id="limpieza1" value="1">
+                                            <span>🙁</span>
+                                        </label>
+                                    </div>
+                                    <div class="item flex-centro">
+                                        <label for="limpieza2">
+                                        <input class="radio-emoji" type="radio" name="limpieza" id="limpieza2" value="2">
+                                        <span>😶</span>
+                                        </label>
+                                    </div>
+                                    <div class="item flex-centro">
+                                        <label for="limpieza3">
+                                        <input class="radio-emoji" type="radio" name="limpieza" id="limpieza3" value="3">
+                                        <span>😁</span>
+                                        </label>
+                                    </div>
+                                    <div class="item flex-centro">
+                                        <label for="limpieza4">
+                                        <input class="radio-emoji" type="radio" name="limpieza" id="limpieza4" value="4">
+                                        <span>😍</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pregunta 2 -->
+                            <div>
+                                <h4>¿El personal del carwash fue amable y servicial durante su experiencia?</h4>        
+                                <div class="flex">
+                                    <div class="item flex-centro">
+                                        <label for="comunicacion0">
+                                        <input class="radio-emoji" type="radio" name="comunicacion" id="comunicacion0" value="0">
+                                        <span>🤬</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="comunicacion1">
+                                        <input class="radio-emoji" type="radio" name="comunicacion" id="comunicacion1" value="1">
+                                        <span>🙁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="comunicacion2">
+                                        <input class="radio-emoji" type="radio" name="comunicacion" id="comunicacion2" value="2">
+                                        <span>😶</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="comunicacion3">
+                                        <input class="radio-emoji" type="radio" name="comunicacion" id="comunicacion3" value="3">
+                                        <span>😁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="comunicacion4">
+                                        <input class="radio-emoji" type="radio" name="comunicacion" id="comunicacion4" value="4">
+                                        <span>😍</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pregunta 3 -->
+                            <div>
+                                <h4>¿Ha tenido algún problema para encontrar el carwash o para acceder a él debido a su ubicación?</h4>        
+                                <div class="flex">
+                                    <div class="item flex-centro">
+                                        <label for="ubicacion0">
+                                        <input class="radio-emoji" type="radio" name="ubicacion" id="ubicacion0" value="0">
+                                        <span>🤬</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="ubicacion1">
+                                        <input class="radio-emoji" type="radio" name="ubicacion" id="ubicacion1" value="1">
+                                        <span>🙁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="ubicacion2">
+                                        <input class="radio-emoji" type="radio" name="ubicacion" id="ubicacion2" value="2">
+                                        <span>😶</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="ubicacion3">
+                                        <input class="radio-emoji" type="radio" name="ubicacion" id="ubicacion3" value="3">
+                                        <span>😁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="ubicacion4">
+                                        <input class="radio-emoji" type="radio" name="ubicacion" id="ubicacion4" value="4">
+                                        <span>😍</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pregunta 4 -->
+                            <div>
+                                <h4>¿Considera que nuestros precios son justos en comparación con la calidad del servicio ofrecido?</h4>        
+                                <div class="flex">
+                                    <div class="item flex-centro">
+                                        <label for="precio0">
+                                        <input class="radio-emoji" type="radio" name="precio" id="precio0" value="0">
+                                        <span>🤬</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="precio1">
+                                        <input class="radio-emoji" type="radio" name="precio" id="precio1" value="1">
+                                        <span>🙁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="precio2">
+                                        <input class="radio-emoji" type="radio" name="precio" id="precio2" value="2">
+                                        <span>😶</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="precio3">
+                                        <input class="radio-emoji" type="radio" name="precio" id="precio3" value="3">
+                                        <span>😁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="precio4">
+                                        <input class="radio-emoji" type="radio" name="precio" id="precio4" value="4">
+                                        <span>😍</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- pregunta 5 -->
+                            <div>
+                                <h4>¿Se tomó el personal del carwash medidas adecuadas para proteger su vehículo durante el proceso de lavado?</h4>        
+                                <div class="flex">
+                                    <div class="item flex-centro">
+                                        <label for="seguridad0">
+                                        <input class="radio-emoji" type="radio" name="seguridad" id="seguridad0" value="0">
+                                        <span>🤬</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="seguridad1">
+                                        <input class="radio-emoji" type="radio" name="seguridad" id="seguridad1" value="1">
+                                        <span>🙁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="seguridad2">
+                                        <input class="radio-emoji" type="radio" name="seguridad" id="seguridad2" value="2">
+                                        <span>😶</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="seguridad3">
+                                        <input class="radio-emoji" type="radio" name="seguridad" id="seguridad3" value="3">
+                                        <span>😁</span>
+                                        </label>
+                                    </div>
+                                
+                                    <div class="item flex-centro">
+                                        <label for="seguridad4">
+                                        <input class="radio-emoji" type="radio" name="seguridad" id="seguridad4" value="4">
+                                        <span>😍</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Inserta tu comentario</h4>
+                            <textarea class="w100 mgtp" placeholder="inserta tu comentario" name="comentario" id="comentario" cols="30" rows="5">
+                            </textarea>
+                        </div>
+                        <div class="form-boton">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mw-320" id="btn" type="submit">Enviar calificación</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal3" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-b">
+            <div class="modalcontenido bg-g1 padsup-1">
+                <div class="flex-colum mw-1080 w100 mgauto padhor-1 gap1">
+                    <h3>Historial de Reservas</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <div class="flex gap-5">
+                                    <p>Sábado 12 de Noviembre</p> 
+                                    <p>5:00 pm</p>
+                                </div> 
+                                <div class="padop_25 wifc bg-verd" alt="confirmado">Confirmado</div>
+                                <a id="modalBtn2" class="bg-n clr-b mw-250 flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <div class="flex gap-5">
+                                    <p>Sábado 12 de Noviembre</p> 
+                                    <p>5:00 pm</p>
+                                </div> 
+                                <div class="padop_25 wifc bg-ama" alt="porconfirmar">Por confirmar</div>
+                                <a id="modalBtn2" class="bg-n clr-b mw-250 flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                        <div class="card-vert gap1 flex-row bg-b padding1 border20">
+                            <a href="#" class="flex-centro aspect-1">
+                                <img class="mw-img-7 border20" src="https://cdn-icons-png.flaticon.com/512/5102/5102795.png" alt="">
+                            </a>
+                            <div class="flex-colum gap-5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Encerado</p>
+                                <div class="flex gap-5">
+                                    <p>Sábado 12 de Noviembre</p> 
+                                    <p>5:00 pm</p>
+                                </div> 
+                                <div class="padop_25 wifc bg-rojo" alt="rechazado">Rechazado</div>
+                                <a id="modalBtn2" class="bg-n clr-b mw-250 flex-centro w100 padding05 border05">Ver Reserva</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal4" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-b bg-1">
+            <div class="modalcontenido bg-g1 padhor-1">
+                <div class="flex-colum mw-1080 w100 mgauto flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                        <p>Tu Reserva fue Confirmada</p>
+                    </div>
+                    <div class="flex-colum w100 bg-b ">
+                        <div class="flex-c-resp w100 padhor-1">
+                            <div class="padsup-1 w100 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            <h3 class="txt-centro">Información General</h3>
+                            <table class="w100 padsup-1">
+                                <tbody class="flex-colum flex-a gap-5">
+                                    <tr>
+                                        <th>Pedido</th>
+                                        <td>00000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Numero de Documento</th>
+                                        <td>00000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <td>Nombre de Usuario</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Correo</th>
+                                        <td>Leakdjkkl</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Código de Usuario</th>
+                                        <td>00LDKFM123</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Medio de Pago</th>
+                                        <td>Yape - Plin</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pedido</th>
+                                        <td>00000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            <div class="padsup-1 w100 overvis rel mgtp brdrbtmdash">
+                                <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                                <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                                <h3 class="txt-centro">Información del Negocio</h3>
+                                <table class="w100 padsup-1">
+                                <tbody class="flex-colum flex-a gap-5">
+                                    <tr>
+                                        <th>Carwash:</th>
+                                        <td>Muneco Auto Spa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ubicación</th>
+                                        <td>00000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nro Contacto</th>
+                                        <td>975123645</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3 class="txt-centro">Detalle de Reserva</h3>
+                            <table class="w100 padsup-1">
+                                <thead>
+                                    <tr class="grid-boleta-1 place-item">
+                                        <th>Servicio</th>
+                                        <th>Precio</th>
+                                        <th>Cant.</th>
+                                        <th>Tot.</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="flex-colum gap-5">
+                                    <tr class="grid-boleta-1 place-item">
+                                        <td>Lavado Rápido</td>
+                                        <td>S/ 45.00</td>
+                                        <td>1</td>
+                                        <td>S/ 45.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="flex-colum flex-a gap-5 mgtp">
+                                    <tr class="flex-spacearound w100">
+                                        <th>Subtotal</th>
+                                        <th>S/ 45.00</th>
+                                    </tr>
+                                    <tr class="flex-spacearound w100">
+                                        <th>Envío</th>
+                                        <th>S/ 00.00</th>
+                                    </tr>
+                                    <tr class="flex-spacearound w100">
+                                        <th>Total</th>
+                                        <th>S/ 45.00</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal5" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-b bg-1">
+            
+            <div class="modalcontenido bg-g1 padhor-1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                        <p>Tu Reserva fue Confirmada</p>
+                    </div>
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            <h3>Información General</h3>
+                            <table class="w100 padsup-1">
+                                <tbody class="flex-colum gap-5">
+                                    <tr>
+                                        <th>Pedido</th>
+                                        <td>00000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Numero de Documento</th>
+                                        <td>00000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cliente</th>
+                                        <td>Nombre de Usuario</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Correo</th>
+                                        <td>Leakdjkkl</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Código de Usuario</th>
+                                        <td>00LDKFM123</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Medio de Pago</th>
+                                        <td>Yape - Plin</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pedido</th>
+                                        <td>00000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="padsup-1 overvis rel mgtp brdrbtmdash">
+                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+                            <h3>Información del Negocio</h3>
+                            <table class="w100 padsup-1">
+                                <tbody class="flex-colum gap-5">
+                                    <tr>
+                                        <th>Carwash:</th>
+                                        <td>Muneco Auto Spa</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ubicación</th>
+                                        <td>00000</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nro Contacto</th>
+                                        <td>975123645</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Detalle de Reserva</h3>
+                            <table class="w100 padsup-1">
+                                <thead>
+                                    <tr class="grid-boleta-1 place-item">
+                                        <th>Servicio</th>
+                                        <th>Precio</th>
+                                        <th>Cant.</th>
+                                        <th>Tot.</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="flex-colum gap-5">
+                                    <tr class="grid-boleta-1 place-item">
+                                        <td>Lavado Rápido</td>
+                                        <td>S/ 45.00</td>
+                                        <td>1</td>
+                                        <td>S/ 45.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="flex-colum flex-a gap-5 mgtp">
+                                    <tr class="flex-spacearound w100">
+                                        <th>Subtotal</th>
+                                        <th>S/ 45.00</th>
+                                    </tr>
+                                    <tr class="flex-spacearound w100">
+                                        <th>Envío</th>
+                                        <th>S/ 00.00</th>
+                                    </tr>
+                                    <tr class="flex-spacearound w100">
+                                        <th>Total</th>
+                                        <th>S/ 45.00</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        Detalles Adicionales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal6" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-g1">
+            <div class="modalcontenido mw-1080 mgauto padhor-1">
+                <div class="flex-colum padsup-1_5 gap1">
+                    <h3>Historial de Sellos</h3> 
+                    <div class="grid-3-1 gap1 border20">
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                    <p>Sábado 12 de Noviembre</p> 
+                                    <p>5:00 pm</p>
+                                <div class="padop_25 wifc bg-verd" alt="misioncompletada">Sello recivido</div>
+                            </div>
+                            <div class="puntos ftsz-1_25 clr-verd-2 f-bold txt-centro">
+                                +1 sello
+                            </div>
+                        </div>
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Gratis</p>
+                                <p>Sábado 12 de Noviembre</p> 
+                                    <p>5:00 pm</p>
+                                <div class="padop_25 wifc bg-1 clr-b" alt="premiocanjeado">Premio Canjeado</div>
+                            </div>
+                            <div class="puntos ftsz-1_25 clr-1 f-bold txt-centro">
+                                +1 canje
+                            </div>
+                        </div>
+                        <div class="card-vert gap-5 grid-historial-1 flex-a bg-b padding1 border20">
+                            <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                            </div>
+                            <div class="flex-colum gap5 flex-c w-wka">
+                                <p class="f-bold txtlimit sinover">Lavado Básico</p>
+                                <p>Sábado 12 de Noviembre</p> 
+                                    <p>5:00 pm</p>
+                                <div class="padop_25 wifc bg-ama" alt="puntosconfirmar">Puntos por Confirmar</div>
+                            </div>
+                            <div class="puntos ftsz-1_25 f-bold txt-centro">
+                                +1 sello
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+        </div>  
+    </div>
+    <div id="myModal7" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-b">
+           <div class="modalcontenido  padsup-1_5">
+                <div class="flex-colum flex-centro padhor-1 mgauto mw-1080  gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a w100 padding1">
+                        <h2>Mi Código de Usuario</h2>
+                        <div class="w100 padding1 mw-420 mgauto brdr2dash border5px bg-b">
+                            Código de Usuario
+                        </div>
+                    </div>
+                    
+                    <div class="bg-b border20 mw-280 padding1-5">
+                        <img class="w100" src="./img/yapefransa.webp" alt="">
+                    </div>
+                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
+                        <p>Presenta tu código de usuario o QR cada
+                            vez que realices una compra para obtener
+                            tu sello</p> 
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal8" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-1">
+            <div class="modalcontenido bg-2 padhor-1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 mw-1080 mgauto h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a clr-b">
+                        <div class="mw-profile flex-centro padding1 bg-b bordercircular">
+                            <img class="w100" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                        </div>
+                        <h2>Muneco Auto Spa</h2>
+                    </div>
+                    <div class="flex-colum flex-centro clr-b">
+                        <p>¡Obtén 7 sellos y</p>
+                        <b>Gana 1 Torta Gratis!</b> 
+                    </div>
+                    
+                    <div class="grid2 w100 mw-420 place-item place-content padding1-5 border20 gap-75 bg-b">
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex-colum gap-5 mw-420 w100 padding1 bg-b border20">
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Válido hasta el 20/11/2023</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal9" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-b">
+            <div class="modalcontenido">
+                <div class=" padsup-1_5">
+                    <div class="flex-c-resp padhor-1 gap1-5 mw-1080 w100 mgauto" id="cartasello">
+                        <div class="flex-colum gap1 w100 bg-b">
+                            <h3>Mis vehiculos</h3>
+                            <div class="grid-3-1 gap1">
+                                <div class="card-vert border1px brdclr-n gap-5 grid-historial-1 flex-a bg-b padding1 border05">
+                                    <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                                    </div>
+                                    <div class="flex-colum gap5 flex-c w-wka">
+                                        <p class="f-bold txtlimit sinover">Nombre Auto</p>
+                                        <b>Modelo auto</b> 
+                                        <p>Placa de Auto</p>
+                                    </div>
+                                </div>
+                                <div class="card-vert border1px brdclr-n gap-5 grid-historial-1 flex-a bg-b padding1 border05">
+                                    <div class="flex-centro aspect-1 bg-g2 bordercircular">
+                                    </div>
+                                    <div class="flex-colum gap5 flex-c w-wka">
+                                        <p class="f-bold txtlimit sinover">Nombre Auto</p>
+                                        <b>Modelo auto</b> 
+                                        <p>Placa de Auto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-colum gap1 w100 bg-b">
+                            <form class="form flex-colum colblan flex-c gap1" autocomplete="off" id="formRegistroAuto">
+                                <h3>Añadir Vehiculo</h3>
+                                <div class="form-input flex-colum flex-c gap5 email">
+                                    <input placeholder="Nro de placa del auto" class="border1px padding1 border05" type="number" id="placaauto" name="placaauto" required="" autocomplete="email">
+                                </div>
+                                <div class="form-input flex-colum flex-c gap5 email">
+                                    <input placeholder="Modelo del auto" class="border1px padding1 border05" type="text" id="modeloauto" name="modeloauto" required="" autocomplete="email">
+                                </div>
+                                <div class="form-input flex-colum flex-c gap5 email">
+                                    <input placeholder="Nombre de auto" class="border1px padding1 border05" type="text" id="nombreaut" name="nombreauto" required="" autocomplete="email">
+                                </div>
+                                <div class="form-boton">
+                                    <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Guardar Vehículo</button>
+                                </div>
+                            </form>
+                        </div>
+                    
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <div id="myModal10" class="modal">
+        <button class="backdrop closeModalBtn">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-b">
+            <div class="modalcontenido">
+                <div class="flex-colum padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a w100 padding1">
+                        <div class="w100 mw-1080 mgauto bg-b">
+                            <form class="form flex-colum colblan flex-c gap1" autocomplete="off" id="formRegistroAuto">
+                                <h3>Cambiar contraseña</h3>
+                                <div class="form-input flex-colum flex-c gap5 email">
+                                    <input placeholder="Nueva contraseña" class="border1px padding1 border05" type="password" id="nuevacontraseña" name="nuevacontraseña" required="">
+                                </div>
+                                <div class="form-input flex-colum flex-c gap5 email">
+                                    <input placeholder="Confirmar nueva contraseña" class="border1px padding1 border05" type="password" id="confirmarnuevacontraseña" name="confirmarnuevacontraseña" required="">
+                                </div>
+                                
+                                <div class="form-boton">
+                                    <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Cambiar contraseña</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal11" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn flex-centro zindex2 abs bordercircular clr-b bg-rojo top1 aspect-1 right1 top1 ftsz-1">X</button>
+            <div class="modalcontenido bg-g3">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a">
+                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
+                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
+                        </div>
+                        <h2>Tortaza</h2>
+                    </div>
+                    <div class="flex-colum flex-centro">
+                        <p>¡Obtén 7 sellos y</p>
+                        <b>Gana 1 Torta Gratis!</b> 
+                    </div>
+                    
+                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Válido hasta el 20/11/2023</p>
+                        </div> 
+                    </div>
+                    <div class="flex-a">
+                        <a id="modalBtn11" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
+                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                            <p>Mostrar QR</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal12" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn flex-centro zindex2 abs bordercircular clr-b bg-rojo top1 aspect-1 right1 top1 ftsz-1">X</button>
+            <div class="modalcontenido bg-g3">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a">
+                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
+                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
+                        </div>
+                        <h2>AEA MANO</h2>
+                    </div>
+                    <div class="flex-colum flex-centro">
+                        <p>¡Obtén 7 sellos y</p>
+                        <b>Gana 1 Torta Gratis!</b> 
+                    </div>
+                    
+                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Válido hasta el 20/11/2023</p>
+                        </div> 
+                    </div>
+                    <div class="flex-a">
+                        <a id="modalBtn8" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
+                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                            <p>Mostrar QR</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="myModal13" class="modal">
+        <div class="backdrop"></div>
+        <div class="modal-content bg-1">
+            <button class="closeModalBtn flex-centro zindex2 abs bordercircular clr-b bg-rojo top1 aspect-1 right1 top1 ftsz-1">X</button>
+            <div class="modalcontenido bg-g3">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a">
+                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
+                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
+                        </div>
+                        <h2>AEA MANO</h2>
+                    </div>
+                    <div class="flex-colum flex-centro">
+                        <p>¡Obtén 7 sellos y</p>
+                        <b>Gana 1 Torta Gratis!</b> 
+                    </div>
+                    
+                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Válido hasta el 20/11/2023</p>
+                        </div> 
+                    </div>
+                    <div class="flex-a">
+                        <a id="modalBtn8" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
+                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
+                            <p>Mostrar QR</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
+</body>
+</html>

@@ -378,11 +378,8 @@ function pagoResumen(){
                             <div class="f-bold clr-yape-2 ftsz-1_5">s/. ${total}</div>
                         </div>
                     </div> 
-
-                    <p class="normal txt-centro">
-                        Ingresa a Yape desde tu celular y </br>escanéa este código QR
-                    </p>
                     `;
+                    document.querySelector("#txt-qr").innerHTML="Ingresa a Yape desde tu celular y </br>escanéa este código QR";
 					document.querySelector("#numeropago").innerHTML =  `<p class="normal tac">ó ingresa este número</p>`;
 					document.querySelector("#numpago").innerHTML = "980852322";
 				}else if(pagoType == 'plin'){
@@ -474,44 +471,46 @@ function pagoFinalizar(){
 		    <p class="mgauto mw-250 ftsubh"> <b>${nombre}</b> A,Gracias por reservar en <b>${nombreNegocio}</b>, Tu reserva se ha enviado y estamos felices por confirmar tu asistencia</p>
 		</div>
     </div>
-    <div class="padsup-1 mgtp brdrbtmdash rel overvis">
-        <label class="f-bold">Información del Negocio</label>
-        <div class="w100 padsup-1 flex-colum gap-25">
-            <p>- Carwash: <b>${nombreNegocio}</b></p>
-            <p>- Ubicacion: <b>${ubicacionNegocio}</b></p>
-            <p>- Numero : <b>${numeroNegocio}</b></p>    
-        </div>
-        <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
-        <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
-    </div>
-    <div class="padsup-1 mgtp brdrbtmdash rel overvis">
-        <label class="f-bold">Detalles de tu Reserva</label>
-        <div class="w100 padsup-1 flex-colum gap-25">
-            <p>- Nro pedido: <b>000050</b></p>
-            <p>- Vehículo: <b>${vehicleType}</b></p>
-            <p>- Servicio: <b>${servicioSelect}</b></p>
-            <p>- Fecha y Hora : <b>${datosReserva.fechaReserva} - ${horaReserva}</b></p>    
-        </div>
-        <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
-        <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
-    </div>
-    <div class="padsup-1 mgtp"> 
-        <label class="f-bold">Resumen del Servicio</label>
-        <div class="w100 padsup-1 flex-colum gap-25">
-            <div class="flex-spacebetween">
-                <p>${servicioSelect}</p>
-                <b>s/. ${subtotal}</b>
+    <div class="grid2colum gap1">
+        <div class="padsup-1 mgtp brdrbtmdash rel overvis">
+            <label class="f-bold">Información del Negocio</label>
+            <div class="w100 padsup-1 flex-colum gap-25">
+                <p>- Carwash: <b>${nombreNegocio}</b></p>
+                <p>- Ubicacion: <b>${ubicacionNegocio}</b></p>
+                <p>- Numero : <b>${numeroNegocio}</b></p>    
             </div>
-            <div class="flex-spacebetween">
-                <p>Comisión + IGV</p>
-                <b>s/. ${dcomision}</b>
-            </div> 
-            <div class="flex-spacebetween flex-a">
-                <p>Total a Pagar</p>
-                <b class="sf-bold">s/. ${total}</b>
-            </div>    
-        </div>   
-        
+            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+        </div>
+        <div class="padsup-1 mgtp brdrbtmdash rel overvis">
+            <label class="f-bold">Detalles de tu Reserva</label>
+            <div class="w100 padsup-1 flex-colum gap-25">
+                <p>- Nro pedido: <b>000050</b></p>
+                <p>- Vehículo: <b>${vehicleType}</b></p>
+                <p>- Servicio: <b>${servicioSelect}</b></p>
+                <p>- Fecha y Hora : <b>${datosReserva.fechaReserva} - ${horaReserva}</b></p>    
+            </div>
+            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
+            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
+        </div>
+        <div class="padsup-1 mgtp"> 
+            <label class="f-bold">Resumen del Servicio</label>
+            <div class="w100 padsup-1 flex-colum gap-25">
+                <div class="flex-spacebetween">
+                    <p>${servicioSelect}</p>
+                    <b>s/. ${subtotal}</b>
+                </div>
+                <div class="flex-spacebetween">
+                    <p>Comisión + IGV</p>
+                    <b>s/. ${dcomision}</b>
+                </div> 
+                <div class="flex-spacebetween flex-a">
+                    <p>Total a Pagar</p>
+                    <b class="sf-bold">s/. ${total}</b>
+                </div>    
+            </div>   
+
+        </div>
     </div>
         `;    
 }
