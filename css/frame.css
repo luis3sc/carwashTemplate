@@ -1042,6 +1042,9 @@ padding-right: 80px
   transform: rotate(180px);
 }
 /*escalar imagen*/
+.scl1_25,.scl-1_25resp{
+  transform: scale(1.25);
+}
 .scl1-5{
   transform: scale(1.5);
 }
@@ -1425,6 +1428,9 @@ details[open] .control-icon-close {
 }
 .mgtp-2-0-resp{
   margin-top: 2em;
+}
+.scl-1_25resp{
+  transform: scale(1);
 }
 }
 @media screen and (min-width: 1024px){
