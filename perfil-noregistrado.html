@@ -11,24 +11,32 @@
     <header class="none-resp bg-b w100  padhor-1 bx borderbottom1 brdclr-g3">
         <div class="mw-1080 w100 flex-spacebetween flex-a mgauto">
             <div class="none-resp h100 gap1 padsup5px">
-                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="index.html">Inicio</a>
-                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="nosotros.html">Nosotros</a>
-                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="servicios.html">Servicios</a>
-                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="promos.html">Promos</a>
-                <a class="clr-1 w-maxc padhor-1 h100 flex-centro" href="perfil.html">Perfil</a>
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="index-noregistrado.html">Inicio</a>
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="nosotros-noregistrado.html">Nosotros</a>
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="servicios-noregistrado.html">Servicios</a>
+                <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="promos-noregistrado.html">Promos</a>
+                <a class="clr-1 w-maxc padhor-1 h100 flex-centro" href="perfil-noregistrado.html">Perfil</a>
             </div>
-            <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
+            <a data-target="registro" class="modal-btn bg-1 padding05 clr-b border05">Ingreso</a>
         </div>
     </header>
     <main class="main-menu-mobile bg-g2 overf">
-        <section class="padsup-1 w100 bg-ama">
-            <div class="mw-1080 w100 padhor-1 mgauto  flex-c-resp flex-centro gap-5 ">
-                <p class=" ">👋 Necesitamos que nos des tu opinión para mejorar nuestro servicio</p>
-                <a href="#" id="modalBtn1" class="bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Opinar aquí</a>
-            </div>
-        </section>
-        <section class="h100 w100 flex-centro bg-g3">
-            <p>Lo</p>
+        <section class="h100 w100 bg-g3">
+                <div class="h100 grid2colum gap1 txt-centro place-item">
+                    <img class="w100" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                    <div class="flex-colum gap-5 padsup-2 w100 h100 flex-centro">
+                        <h3>Bienvenido a MunecoAutoSpa</h3>
+                        <p>Disfrutas de nuestros beneficios:</p>
+                        <ul>
+                            <li>- Promociones exclusivas</li>
+                            <li>- Acumula sellos por consumo</li>
+                            <li>- Ahorra tiempo reservando en línea</li>
+                            <li>- Protegemos completamente tus datos</li>
+                        </ul>
+                        <a data-target="registro" class="modal-btn bg-1 padding05 clr-b border05">Registrate Ahora</a>
+                    </div>
+                    
+                </div>
         </section>
         <!-- Columna 5 - 2 Columna -->
         <section class="padhor-1 bg-g1 clr-n mgauto bordertop1 brdclr-g3">
@@ -42,31 +50,32 @@
     <!-- navegador mobil -->
     <div class="nav-mobile d-resp bg-b">
         <div class="gridnav5 h100 place-item">
-            <a href="index.html" class="flex-centro flex-colum w100 h100 gap5">
+            <a href="index-noregistrado.html" class="flex-centro flex-colum w100 h100 gap5">
                 <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
                 <p class="fs-p-nav-1">Inicio</p>
             </a>
-            <a href="nosotros.html" class="flex-centro flex-colum w100 h100 gap5">
+            <a href="nosotros-noregistrado.html" class="flex-centro flex-colum w100 h100 gap5">
                 <img class="mw-ico-1" src="./img/iconos-menu/trophy.png" alt="">
                 <p class="fs-p-nav-1">Nosotros</p>
             </a>
-            <a href="servicios.html" class="flex-centro flex-colum w100 h100 gap5">
+            <a href="servicios-noregistrado.html" class="flex-centro flex-colum w100 h100 gap5">
                 <img class="mw-ico-1 f-invcolor" src="./img/iconos-menu/servicios.png" alt="">
                 <p class="fs-p-nav-1">Servicios</p>
             </a>
-            <a href="promos.html" class=" flex-centro flex-colum w100 h100 gap5">
+            <a href="promos-noregistrado.html" class=" flex-centro flex-colum w100 h100 gap5">
                 <img class="mw-ico-1 " src="https://cdn-icons-png.flaticon.com/512/3450/3450142.png" alt="">
                 <p class="fs-p-nav-1">Promos</p>
             </a>
-            <a href="perfil.html" class="active flex-centro flex-colum w100 h100 gap5">
+            <a href="perfil-noregistrado.html" class="active flex-centro flex-colum w100 h100 gap5">
                 <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/2207/2207595.png" alt="">
                 <p class="fs-p-nav-1">Mi Perfil</p>
             </a>
         </div>
     </div>
     <!-- MODALS -->
-    <div id="myModal1" class="modal">
-        <button class="backdrop closeModalBtn">
+    <!-- MODALS -->
+    <div id="registro" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -74,7 +83,7 @@
                 <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1 sticky lef0 top0">
                     <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
                     <!-- class="none-resp" -->
-                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                    <div class="flex-centro flex-colum gap1 none-resp"> 
                         <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
                         <div class="clr-b txt-centro">
                             <h3>Únete al Club de Muneco Auto Spa</h3>
@@ -87,26 +96,24 @@
                 <div class="padding1 bg-b flex2 hfit overf">
                     <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
                         <p class="form-titulo f-bold">Tipo Documento</p>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
+                        <div class="form-input flex-colum flex-c gap5 tipodedocumentacion">
                             <select name="cars" id="cars" class="border1px padding1 border05">
                               <option value="volvo">DNI (Perú)</option>
-                              <option value="saab">Saab</option>
-                              <option value="opel">Opel</option>
-                              <option value="audi">Audi</option>
+                              <option value="saab">RUC</option>
+                              <option value="opel">CE o CPP</option>
                             </select>
                         </div>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
-                            <div class="flex border1px border05">
-                                <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
-                                <div class="padding1">
-                                    <div>Nombre</div>
-                                </div>
+                        <div class="form-input flex-colum flex-c gap5 numerodedocumento">
+                            <div class="w100 border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="w100 padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
                             </div>
-                            
                             <small>
                                 Tu DNI será tu código único para acumular puntos.
                             </small>
                             <p></p>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input class="w100 padding1 border1px border05" placeholder="Ingresa tu nombre" type="text" name="nombreusuario" id="nombreusuario">
                         </div>
                         
                         
@@ -143,7 +150,7 @@
                         </div>                       
                         <div class="form-boton mgtp">
                             <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
-                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="f-bold" href="#" id="modalLogin">Ingresar</a></p>
+                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="modal-btn f-bold" data-target="login">Ingresar</a></p>
                         </div>
                         <p class="mensajeCorrecto"></p>
                     </form>
@@ -152,8 +159,53 @@
                
         </div>
     </div>
-    <div id="myModal2" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="login" class="modal">
+        <button class="close backdrop ">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content">
+            <div class="modalcontenido bg-b flex-c-resp">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro flex-colum gap1 none-resp"> 
+                        <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de la 15</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="padding1 bg-b flex2">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <div class="">
+                            <h3 class="f-bold">Bienvenid@ a ClienteVIP</h3>
+                            <p class="form-titulo mgtp">Ingresa tu email y contraseña</p>
+                        </div>
+                            
+                        <p class="form-titulo f-bold">Email</p>
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                        </div>
+                        <p class="form-titulo f-bold">Contraseña</p>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                        </div>                     
+                        <div class="form-boton mgtp">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Ingresar</button>
+                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="modal-btn f-bold" data-target="registro">Regístrate aquí</a></p>
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="feedback" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -373,8 +425,8 @@
                
         </div>
     </div>
-    <div id="myModal3" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="historialdereservas" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b">
@@ -407,7 +459,7 @@
                                     <p>5:00 pm</p>
                                 </div> 
                                 <div class="padop_25 wifc bg-ama" alt="porconfirmar">Por confirmar</div>
-                                <a id="modalBtn2" class="bg-n clr-b mw-250 flex-centro w100 padding05 border05">Ver Reserva</a>
+                                <a data-target="verreserva" class="modal-btn bg-n clr-b mw-250 flex-centro w100 padding05 border05">Ver Reserva</a>
                             </div>
                         </div>
                         <div class="card-vert gap1 flex-row bg-b padding1 border20">
@@ -430,123 +482,396 @@
                
         </div>
     </div>
-    <div id="myModal4" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="reserva" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
-        <div class="modal-content bg-b bg-1">
-            <div class="modalcontenido bg-g1 padhor-1">
-                <div class="flex-colum mw-1080 w100 mgauto flex-centro padsup-1_5 gap1">
-                    <div class="txt-centro">
-                        <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                        <p>Tu Reserva fue Confirmada</p>
-                    </div>
-                    <div class="flex-colum w100 bg-b ">
-                        <div class="flex-c-resp w100 padhor-1">
-                            <div class="padsup-1 w100 mgtp rel overvis brdrbtmdash">
-                            <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
-                            <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
-                            <h3 class="txt-centro">Información General</h3>
-                            <table class="w100 padsup-1">
-                                <tbody class="flex-colum flex-a gap-5">
-                                    <tr>
-                                        <th>Pedido</th>
-                                        <td>00000</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Numero de Documento</th>
-                                        <td>00000</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Cliente</th>
-                                        <td>Nombre de Usuario</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Correo</th>
-                                        <td>Leakdjkkl</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Código de Usuario</th>
-                                        <td>00LDKFM123</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Medio de Pago</th>
-                                        <td>Yape - Plin</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Pedido</th>
-                                        <td>00000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+        <div class="modal-content">
+            <div class="modalcontenido bg-g1 padsup-1">
+                <div class="form-container h100 mw-1080 mgauto padhor-1">
+                    <div id="step1" class="form-step rel h100">
+                        <h2>Elige el Tipo de Vehículo</h2>
+                        <div class="h85 overf mgtp ">
+                            <div class="padding1 bg-b clr-n flex-row gap1 w100 border05">
+                                <img class="mw-img-3 w100" src="https://cdn-icons-png.flaticon.com/512/4682/4682932.png" alt="">
+                                <div>
+                                    <span class="clr-2 f-bold">¡impresionante! ¡empecemos!</span>
+                                    <p>¿Qué tipo de vehículo deseas lavar?</p>
+                                </div>
                             </div>
-                            <div class="padsup-1 w100 overvis rel mgtp brdrbtmdash">
-                                <div class="abs circ-1 bordercircular bgprinc circ-der"></div>
-                                <div class="abs circ-1 bordercircular bgprinc circ-izq"></div>
-                                <h3 class="txt-centro">Información del Negocio</h3>
-                                <table class="w100 padsup-1">
-                                <tbody class="flex-colum flex-a gap-5">
-                                    <tr>
-                                        <th>Carwash:</th>
-                                        <td>Muneco Auto Spa</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Ubicación</th>
-                                        <td>00000</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Nro Contacto</th>
-                                        <td>975123645</td>
-                                    </tr>
-                                </tbody>
-                                </table>
+                        <!-- OPCIONES DE TIPOS DE VEHICULO -->
+                            <div class="grid2colum gap1 mgtp">
+                            <div class="radio-item">
+                                <input type="radio" name="vehicleType" value="Sedan" id="sedan"> 
+                                <label for="sedan" class="padop1">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/7281/7281752.png" alt="">
+                                        <div>
+                                            <b>Sedan</b> 
+                                            <!-- <p>coupé, sport, mini o similar</p> -->
+                                        </div>
+                                    </div>
+                                </label> 
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="Suv" id="suv">
+                                <label class="padop1" for="suv">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/2736/2736781.png" alt="">
+                                        <div>
+                                            <b>SUV</b> 
+                                            <!-- <p>Tu auto listo para la aventura.</p> -->
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="Hatchback" id="hatchback"> 
+                                <label class="padop1" for="hatchback">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/7455/7455453.png" alt="">
+                                        <div>
+                                            <b>Hatchback</b> 
+                                            <!-- <p>Maximiza tu espacio, minimiza la suciedad.</p> -->
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="Pickup" id="pickup">
+                                <label class="padop1" for="pickup">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/5814/5814855.png" alt="">
+                                        <div>
+                                            <b>Pickup</b> 
+                                            <!-- <p>Tu aliado para el trabajo.</p> -->
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="Convertible" id="convertible">
+                                <label class="padop1" for="convertible">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/2736/2736840.png" alt="">
+                                        <div>
+                                            <b>Convertible</b> 
+                                            <!-- <p>El lujo al aire libre</p> -->
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input class="" type="radio" name="vehicleType" value="Motocicleta" id="motorcycle"> 
+                                <label class="padop1" for="motorcycle">
+                                    <div class="flex-row flex-a gap1">
+                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/5125/5125679.png" alt="">
+                                        <div>
+                                            <b>Motocicleta</b> 
+                                            <!-- <p>Tu libertad, limpia.</p> -->
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
                             </div>
                         </div>
-                        <div class="padsup-1 mgtp">
-                            <h3 class="txt-centro">Detalle de Reserva</h3>
-                            <table class="w100 padsup-1">
-                                <thead>
-                                    <tr class="grid-boleta-1 place-item">
-                                        <th>Servicio</th>
-                                        <th>Precio</th>
-                                        <th>Cant.</th>
-                                        <th>Tot.</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="flex-colum gap-5">
-                                    <tr class="grid-boleta-1 place-item">
-                                        <td>Lavado Rápido</td>
-                                        <td>S/ 45.00</td>
-                                        <td>1</td>
-                                        <td>S/ 45.00</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot class="flex-colum flex-a gap-5 mgtp">
-                                    <tr class="flex-spacearound w100">
-                                        <th>Subtotal</th>
-                                        <th>S/ 45.00</th>
-                                    </tr>
-                                    <tr class="flex-spacearound w100">
-                                        <th>Envío</th>
-                                        <th>S/ 00.00</th>
-                                    </tr>
-                                    <tr class="flex-spacearound w100">
-                                        <th>Total</th>
-                                        <th>S/ 45.00</th>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                        
+                        <button class="bg-1 padding05 clr-b border05 mw-320 mgtp w100 h-btn abs bot0" onclick="nextStep(2)">Siguiente</button>
                     </div>
-                    <div>
-                        Detalles Adicionales
+                    <!-- PASO2 -->
+                    <div id="step2" class="form-step rel h100 hidden">
+                        <h2>Opciones de Servicio</h2>
+                        <div id="services" class="grid-servicios-1 gap1 mgtp h85 overf">
+                            <!-- Las opciones de servicio se llenarán dinámicamente aquí -->
+                        </div>
+                        <button class="bg-1 padding05 clr-b border05 mgtp mw-320 w100 h-btn abs bot0" onclick="nextStep(3)">Siguiente</button>
+                    </div>
+                    <div id="step3" class="form-step rel h100 hidden">
+                        <h2>Selecciona la Fecha y Hora</h2>
+                        <div class="mgtp h85 flex-c-resp gap1 overf">
+                            <div class="padding1 bg-b overvis hfit w100">
+                                <label for="fechaSeleccionada" class="f-bold">Elige la fecha</label>
+                                <div id="datepicker"></div>
+                                <input type="text" id="fechaSeleccionada" class="border1px padding1 border05 brdclr-g3 mgtp ftsz-1 w100" readonly>
+                            </div>
+                            <!-- <label for="reservationDate">Selecciona la fecha de la reserva:</label>
+                        <input type="date" id="reservationDate" name="reservationDate"><br>
+                        <div class="mgtp">
+                            <label for="reservationTime" class="mgtp">Selecciona la hora de la reserva:</label>
+                            <input type="time" id="reservationTime" name="reservationTime">
+                        </div> -->
+                            <div class="flex-colum padding1 bg-b overvis hfit w100">
+                            <h3>Selecciona el Turno</h3>
+                            <div class="grid3icon gap-5 mgtp">
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="9am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            9AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="9:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            9:30AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="10am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            10AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="10:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            10:30AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="11am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            11AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="11:30am"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            11:30AM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="12pm">
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            12PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="12:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            12:30PM
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="2pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            2PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="2:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            2:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="3pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            3PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="3:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            3:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="4pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            4PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="4:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            4:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="5pm">
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            5PM
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="time-item">
+                                    <label>
+                                        <input type="radio" name="time" value="5:30pm"> 
+                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
+                                            5:30PM
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            </div>
+                        </div>     
+                        <button class="bg-1 mw-320 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(4); updateSummary()">Siguiente</button>
+                    </div>
+                    <div id="step4" class="form-step rel h100 hidden">
+                        <h2>Método de Pago</h2>
+                        <div class="rel h85 flex-c-resp gap1 overf mgtp">
+                            <div class="padding1 bg-b border05 overvis hfit w100">
+                                <label class="f-bold">Selecciona el tipo de pago:</label>
+                                <div class="flex-colum gap-5 mgtp">
+                                    <div class="pago-item">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="yape" id="yape"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r border05" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/yape.webp" alt="">
+                                            <p>Pagar con Yape</p>
+                                        </div>
+                                    </label>
+                                    </div>
+                                    <div class="pago-item">
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="plin" id="plin"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/plin.webp" alt="">
+                                            <p>Pagar con Plin</p>
+                                        </div>
+                                    </label>
+                                    </div>
+                                    <div class="pago-item">    
+                                    <label>
+                                        <input type="radio" name="paymentMethod" value="transferencia" id="transferencia"> 
+                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
+                                            <img class="mw-ico-r" src="https://cdn-icons-png.flaticon.com/512/1019/1019607.png" alt="">
+                                            <p>Pagar Transferencia vía depósito</p>
+                                        </div>
+                                    </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w100 padhor-1 flex-colum border05 sinover w100 overvis hfit bg-b" id="summary">
+                                <!-- Los detalles de la reserva se mostrarán aquí -->
+                            </div>
+                        </div>
+                        <button class="bg-1 mw-320 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(5)">Siguiente</button>
+                    </div>
+                    <div id="step5" class="form-step rel h100 hidden">
+                        <h2>Detalles del Pago</h2>
+                        <div class="w100 rel padsup-1 h85 mgtp overf" id="fondocambio">
+
+                            <div class="h100 w100 flex-c-resp flex-a gap1 padhor-1 overf">
+                                <!-- div de pago -->
+                                <div class="flex-centro w100 overvis gap1 flex-colum clr-b" id="pagoconqr">
+                                    <div class="flex-colum flex-a w100 gap1" id="metodopago">
+                                    </div>
+                                    <div class="flex-c-resp gap1 flex-a">
+                                        <div class="flex-colum flex-centro gap1">
+                                        <!-- img qr -->
+                                        <div>
+                                            <p class="normal txt-centro" id="txt-qr"></p>
+                                        </div>
+                                        <img class="mw-200" src="" id="qrimage" alt="">
+                                        <!-- img qr -->
+                                        </div>
+                                        <div class="flex-colum gap1">
+                                        <div class="flex-colum flex-a w100" id="numeropago">
+                                        </div>
+                                        <!-- copiar numero -->
+                                        <div class="padhor-1 flex tac borderdash brdclr-b flex-centro border05">
+                                        <div id="numpago" class="num padding05 flex-centro clr-b copy"></div>
+                                        <a class="icon-copy padding05 clr-yape-2" id="copia">
+                                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png" alt="">
+                                        </a>
+                                        </div>
+                                        </div>
+                                        <!-- copiar numero -->
+                                    </div>
+                                </div>
+                                <!-- div de pago -->
+                                <div class="confirmation abs">
+                                    <span class="icon-checkmark"></span> Copied to clipboard
+                                </div>
+                                <!-- aviso -->
+                                <div class="padding1 overvis bg-b clr-n flex-row gap1 mgauto w90 border05 hfit">
+                                    <img class="mw-img-4 w100 hfit" src="https://cdn.iconscout.com/icon/free/png-256/free-screenshot-1851023-1569010.png" alt="">
+                                    <div>
+                                        <span class="clr-yape-2">Recomendaciones</span>
+                                        <p>No te olvides de tomar captura de pantalla de tu pago y enviar tu comprobnate de pago</p>
+                                    </div>
+                                </div>
+                                <!-- aviso -->
+                            </div>
+                        </div>
+                        
+                        <button class="bg-1 padding05 mw-320 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(6)">Siguiente</button>
+                    </div>
+                    <div id="step6" class="form-step rel h100 hidden">
+                        <h2>Confirmación de Reserva</h2>
+                        <div class="w100 rel padsup-1 flex-ini h85 mgtp overf">
+                            <div class="padding1 bg-b clr-n flex-row gap1 w100 border05">
+                                <div class="mw-img-3 w100 padding05 hfit">
+                                    <img class="w100" src="https://cdn-icons-png.flaticon.com/512/607/607870.png" alt="">
+                                </div>
+                                <div>
+                                    <span class="clr-yape-2">Recomendaciones</span>
+                                    <p>Recuerda que la reserva es aceptada siempre y cuando, se confirme y validel el pago realizado. Una vez validado se procede a confirmar su reserva</p>
+                                </div>
+                            </div>
+                            <div class="w100 padhor-1 grid2colum gap1 bg-b border05 sinover mgtp" id="confirmPago"></div>
+                            
+                        </div>
+                        <button class="bg-1 padding05 mw-320 clr-b border05 mgtp w100 h-btn abs bot0" onclick="submitForm()">Confirmar Reserva y Pago</button>
                     </div>
                 </div>
+                
+                <div id="congratulations" class="hidden h100 w100 mw-1080 mgauto rel padhor-1">
+                    <img class="w100 abs" src="https://p.productioncrate.com/stock-hd/effects/FootageCrate-4K_Confetti_Falling_Multiple_Color_Shapes_4-prev-full.png" alt="">
+                    <h2>¡Felicidades!</h2>
+                    <div class="w100 rel padsup-1 h85 mgtp overf">
+                        <div class="w100 padhor-1 flex-colum bg-b border05 sinover" id="finalizar"></div>
+                        <!-- aviso -->
+                        <div class="padding1 bg-b clr-n flex-row gap1 w100 border05 mgtp">
+                            <div class="mw-img-3 w100 padding05 hfit">
+                                <img class="w100" src="https://cdn3.iconfinder.com/data/icons/flaticons-1/24/flaticon_clock1-512.png" alt="">
+                            </div>
+                            <div>
+                                <span class="clr-2 f-bold">¡impresionante! ¡empecemos!</span>
+                                <p>Para evitar retrasos y garantizar que podamos brindar un servicio de lavado de autos oportuno a todos los clientes, llegue a tiempo a su cita programada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="padding1 w100 bg-wsp border20 clr-b f-bold text-centro  h-btn abs bot0 mw-350" type="button" id="send-whatsapp" data-modal-id="myModal1">Enviar por WhatsApp</button>
+                    <!-- Mostrar detalles de la reserva aquí -->
+                </div>
             </div>
+               
         </div>
     </div>
-    <div id="myModal5" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="verreserva" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b bg-1">
@@ -659,8 +984,8 @@
             </div>
         </div>
     </div>
-    <div id="myModal6" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="historialdesellos" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-g1">
@@ -713,16 +1038,16 @@
                
         </div>  
     </div>
-    <div id="myModal7" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="usuarioqr" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b">
-           <div class="modalcontenido  padsup-1_5">
-                <div class="flex-colum flex-centro padhor-1 mgauto mw-1080  gap1-5 h100" id="cartasello">
+            <div class="modalcontenido padhor-1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
                     <div class="flex-colum gap-5 flex-a w100 padding1">
                         <h2>Mi Código de Usuario</h2>
-                        <div class="w100 padding1 mw-420 mgauto brdr2dash border5px bg-b">
+                        <div class="w100 padding1 brdr2dash border5px bg-b">
                             Código de Usuario
                         </div>
                     </div>
@@ -734,14 +1059,14 @@
                         <p>Presenta tu código de usuario o QR cada
                             vez que realices una compra para obtener
                             tu sello</p> 
+                            <a data-target="cartilladesellos" class="modal-btn bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Ver cartilla de Sellos</a>
                     </div>
                 </div>
             </div>
-               
         </div>
     </div>
-    <div id="myModal8" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="cartilladesellos" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-1">
@@ -786,9 +1111,9 @@
             </div>
                
         </div>
-    </div>
-    <div id="myModal9" class="modal">
-        <button class="backdrop closeModalBtn">
+    </div>  
+    <div id="misvehiculos" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b">
@@ -842,8 +1167,8 @@
             </div>
         </div>
     </div>
-    <div id="myModal10" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="cambiarcontrasena" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b">
@@ -872,162 +1197,8 @@
                
         </div>
     </div>
-    <div id="myModal11" class="modal">
-        <div class="backdrop"></div>
-        <div class="modal-content bg-1">
-            <button class="closeModalBtn flex-centro zindex2 abs bordercircular clr-b bg-rojo top1 aspect-1 right1 top1 ftsz-1">X</button>
-            <div class="modalcontenido bg-g3">
-                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a">
-                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
-                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
-                        </div>
-                        <h2>Tortaza</h2>
-                    </div>
-                    <div class="flex-colum flex-centro">
-                        <p>¡Obtén 7 sellos y</p>
-                        <b>Gana 1 Torta Gratis!</b> 
-                    </div>
-                    
-                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                    </div>
-                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
-                        <div class="flex-row flex-ini gap-5">
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
-                        </div>
-                        <div class="flex-row flex-ini gap-5">   
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Válido hasta el 20/11/2023</p>
-                        </div> 
-                    </div>
-                    <div class="flex-a">
-                        <a id="modalBtn11" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
-                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                            <p>Mostrar QR</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-               
-        </div>
-    </div>
-    <div id="myModal12" class="modal">
-        <div class="backdrop"></div>
-        <div class="modal-content bg-1">
-            <button class="closeModalBtn flex-centro zindex2 abs bordercircular clr-b bg-rojo top1 aspect-1 right1 top1 ftsz-1">X</button>
-            <div class="modalcontenido bg-g3">
-                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a">
-                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
-                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
-                        </div>
-                        <h2>AEA MANO</h2>
-                    </div>
-                    <div class="flex-colum flex-centro">
-                        <p>¡Obtén 7 sellos y</p>
-                        <b>Gana 1 Torta Gratis!</b> 
-                    </div>
-                    
-                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                    </div>
-                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
-                        <div class="flex-row flex-ini gap-5">
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
-                        </div>
-                        <div class="flex-row flex-ini gap-5">   
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Válido hasta el 20/11/2023</p>
-                        </div> 
-                    </div>
-                    <div class="flex-a">
-                        <a id="modalBtn8" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
-                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                            <p>Mostrar QR</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-               
-        </div>
-    </div>
-    <div id="myModal13" class="modal">
-        <div class="backdrop"></div>
-        <div class="modal-content bg-1">
-            <button class="closeModalBtn flex-centro zindex2 abs bordercircular clr-b bg-rojo top1 aspect-1 right1 top1 ftsz-1">X</button>
-            <div class="modalcontenido bg-g3">
-                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a">
-                        <div class="mw-profile flex-centro padding1 bg-g2 bordercircular">
-                            <img class="w100" src="https://tortaza.com.pe/Assets/tienda/images/webp/logo_tortaza.webp" alt="">
-                        </div>
-                        <h2>AEA MANO</h2>
-                    </div>
-                    <div class="flex-colum flex-centro">
-                        <p>¡Obtén 7 sellos y</p>
-                        <b>Gana 1 Torta Gratis!</b> 
-                    </div>
-                    
-                    <div class="grid2 w100 place-item place-content padding1-5 border20 gap-75 bg-b">
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                    </div>
-                    <div class="flex-colum gap-5 w100 padding1 bg-b border20">
-                        <div class="flex-row flex-ini gap-5">
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
-                        </div>
-                        <div class="flex-row flex-ini gap-5">   
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Válido hasta el 20/11/2023</p>
-                        </div> 
-                    </div>
-                    <div class="flex-a">
-                        <a id="modalBtn8" class="clr-b bg-1 flex gap1 h-btn w100 flex-centro border05 padding1">
-                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="">
-                            <p>Mostrar QR</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-               
-        </div>
-    </div>
+    <!-- modals -->
+    <!-- scripts -->
     <script src="./js/modal.js"></script>
 </body>
 </html>

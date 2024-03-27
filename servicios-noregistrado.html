@@ -17,7 +17,7 @@
                     <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="promos-noregistrado.html">Promos</a>
                     <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="perfil-noregistrado.html">Perfil</a>
                 </div>
-                <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
+                <a data-target="registro" class="modal-btn bg-1 padding05 clr-b border05">Ingreso</a>
             </div>
         </div>
     </header>
@@ -25,7 +25,7 @@
         <section class="padsup-1 w100 bg-ama">
             <div class="mw-1080 w100 padhor-1 mgauto  flex-c-resp flex-centro gap-5 ">
                 <p class=" ">Reserva en línea y accede a nuestros beneficios</p>
-                <a href="#" id="modalBtn1" class="bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Registrate Ahora</a>
+                <a data-target="registro" class="modal-btn bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Registrate Ahora</a>
             </div>
         </section>
         <section class="w100 bg-g1">
@@ -630,7 +630,141 @@
         </div>
     </div>
     <!-- navegador mobil -->
+    <!-- modals -->
+    <div id="registro" class="modal">
+        <button class="close backdrop">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content">
+            <div class="modalcontenido bg-b flex-c-resp rel">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1 sticky lef0 top0">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                        <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de Muneco Auto Spa</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="padding1 bg-b flex2 hfit overf">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <p class="form-titulo f-bold">Tipo Documento</p>
+                        <div class="form-input flex-colum flex-c gap5 tipodedocumentacion">
+                            <select name="cars" id="cars" class="border1px padding1 border05">
+                              <option value="volvo">DNI (Perú)</option>
+                              <option value="saab">RUC</option>
+                              <option value="opel">CE o CPP</option>
+                            </select>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 numerodedocumento">
+                            <div class="w100 border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="w100 padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
+                            </div>
+                            <small>
+                                Tu DNI será tu código único para acumular puntos.
+                            </small>
+                            <p></p>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input class="w100 padding1 border1px border05" placeholder="Ingresa tu nombre" type="text" name="nombreusuario" id="nombreusuario">
+                        </div>
+                        
+                        
+                        <!-- 
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input placeholder="Nombres y Apellidos" class="border1px padding1 border05" type="text" id="nombre" name="nombre" required="">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 direc">
+                            <input placeholder="Distrito o Dirección" class="border1px padding1 border05" type="text" id="direc" name="direc" required="">
+                        </div>
+                         -->
+                        <p class="form-titulo f-bold">Ciudad</p>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <select name="ciudad" id="ciudad" class="border1px padding1 border05">
+                              <option value="volvo">Lima</option>
+                              <option value="saab">Huancayo</option>
+                              <option value="opel">Arequipa</option>
+                              <option value="audi">Tacna</option>
+                            </select>
+                        </div> 
+                        
+                        <div class="form-input flex-colum flex-c gap5 mobile">
+                            <input placeholder="Nro Celular" class="border1px padding1 border05" type="number" id="mobile" name="mobile" required="">
+                        </div>
+                        <p class="form-titulo f-bold">para Iniciar Sesión</p>
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                        </div>      
+                        <div class="form-input flex-colum flex-c gap5 confircontrasena">
+                            <input class="border1px padding1 border05" type="password" id="confircontrasena" name="confircontrasena" placeholder="Repita la Contraseña" required="">
+                        </div>                       
+                        <div class="form-boton mgtp">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
+                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="modal-btn f-bold" data-target="login">Ingresar</a></p>
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="login" class="modal">
+        <button class="close backdrop ">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content">
+            <div class="modalcontenido bg-b flex-c-resp">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                        <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de la 15</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="padding1 bg-b flex2">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <div class="">
+                            <h3 class="f-bold">Bienvenid@ a ClienteVIP</h3>
+                            <p class="form-titulo mgtp">Ingresa tu email y contraseña</p>
+                        </div>
+                            
+                        <p class="form-titulo f-bold">Email</p>
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                        </div>
+                        <p class="form-titulo f-bold">Contraseña</p>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                        </div>                     
+                        <div class="form-boton mgtp">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Ingresar</button>
+                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="modal-btn f-bold" data-target="registro">Regístrate aquí</a></p>
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <!-- modals -->
+    
     <div style="visibility: hidden;display: none; position: absolute; width: 0px; height: 0px;">
+        
         <svg xmlns="http://www.w3.org/2000/svg">
           <symbol viewBox="0 0 24 24" id="expand-more">
             <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
@@ -639,6 +773,10 @@
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
           </symbol>
         </svg>
-      </div>
+    </div>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/modal.js"></script>  
+    <!-- scripts -->
 </body>
 </html>

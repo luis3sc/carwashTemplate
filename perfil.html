@@ -192,7 +192,7 @@
                 <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1 sticky lef0 top0">
                     <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
                     <!-- class="none-resp" -->
-                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                    <div class="flex-centro flex-colum gap1 none-resp"> 
                         <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
                         <div class="clr-b txt-centro">
                             <h3>Únete al Club de Muneco Auto Spa</h3>
@@ -277,7 +277,7 @@
                 <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1">
                     <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
                     <!-- class="none-resp" -->
-                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                    <div class="flex-centro flex-colum gap1 none-resp"> 
                         <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
                         <div class="clr-b txt-centro">
                             <h3>Únete al Club de la 15</h3>
@@ -568,7 +568,7 @@
                                     <p>5:00 pm</p>
                                 </div> 
                                 <div class="padop_25 wifc bg-ama" alt="porconfirmar">Por confirmar</div>
-                                <a id="modalBtn2" class="bg-n clr-b mw-250 flex-centro w100 padding05 border05">Ver Reserva</a>
+                                <a data-target="verreserva" class="modal-btn bg-n clr-b mw-250 flex-centro w100 padding05 border05">Ver Reserva</a>
                             </div>
                         </div>
                         <div class="card-vert gap1 flex-row bg-b padding1 border20">
@@ -1148,23 +1148,22 @@
         </div>  
     </div>
     <div id="usuarioqr" class="modal">
-        <button class="close backdrop">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b">
             <div class="modalcontenido padhor-1">
                 <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a w100 padding1">
+                    <div class="flex-colum gap-5 flex-a w100 padhor-1">
                         <h2>Mi Código de Usuario</h2>
                         <div class="w100 padding1 brdr2dash border5px bg-b">
                             Código de Usuario
                         </div>
                     </div>
-                    
-                    <div class="bg-b border20 mw-280 padding1-5">
+                    <div class="bg-b border20 mw-280 padhor-1">
                         <img class="w100" src="./img/yapefransa.webp" alt="">
                     </div>
-                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
+                    <div class="flex-colum flex-centro padhor-1 gap1 bg-b txt-centro">
                         <p>Presenta tu código de usuario o QR cada
                             vez que realices una compra para obtener
                             tu sello</p> 
@@ -1251,7 +1250,22 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <a data-target="agregarvehiculo" class="modal-btn bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Añadir vehiculo</a>
+                        </div>                    
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <div id="agregarvehiculo" class="modal">
+        <button class="close backdrop">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content bg-b">
+            <div class="modalcontenido">
+                <div class=" padsup-1_5">
+                    <div class="flex-c-resp padhor-1 gap1-5 mw-1080 w100 mgauto" id="cartasello">
                         <div class="flex-colum gap1 w100 bg-b">
                             <form class="form flex-colum colblan flex-c gap1" autocomplete="off" id="formRegistroAuto">
                                 <h3>Añadir Vehiculo</h3>

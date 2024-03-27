@@ -20,7 +20,7 @@
             <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="promos-noregistrado.html">Promos</a>
             <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="perfil-noregistrado.html">Perfil</a>
         </div>
-        <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
+        <a data-target="registro" class="modal-btn bg-1 padding05 clr-b border05">Ingreso</a>
         </div>
     </header>
     <main class="main-menu-mobile bg-g2 overf grid-flexrow rel">
@@ -42,7 +42,7 @@
                     <div class="flex-colum gap-75 padsup-1">
                         <div class="flex-a gap-5">
                             <img class="mw-ico-1" src="./img/iconos-menu/marcador-de-posicion.png" alt="">
-                            <p>Av. Larcomar Jiron 982 - Surquillo - mas direcciones para completar <a id="modalBtn2" href="#" class="clr-ama subrayar">mostrar en el mapa</a></p>
+                            <p>Av. Larcomar Jiron 982 - Surquillo - mas direcciones para completar <a data-target="ubicacion" class="modal-btn clr-ama subrayar">mostrar en el mapa</a></p>
                         </div>
                         <div class="flex-a gap-5">
                             <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/88/88036.png" alt="">
@@ -58,16 +58,16 @@
                         </div>
                         <div class="flex-a gap-5">
                             <img class="mw-ico-1 f-invcolor" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-empty-icon.png" alt="">
-                            <p>4.5 Agradable servicio <a id="modalBtn2" href="#" class="clr-ama subrayar">Ver comentarios</a></p>
+                            <p>4.5 Agradable servicio <a data-target="comentarios" class="modal-btn clr-ama subrayar">Ver comentarios</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="gridbtn2 place-item padhor-1 gap1">
-                    <a id="modalBtn1" href="#" name="btnRegistrar" class="clr-b bg-1 flex gap-5 h-btn w100 flex-centro border05">
+                    <a data-target="registro" name="btnRegistrar" class="modal-btn clr-b bg-1 flex gap-5 h-btn w100 flex-centro border05">
                         <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1212/1212158.png" alt="">
                         <p>Registrar Ahora</p>
                     </a>
-                    <a id="modalBtn1" href="#" name="btnIngresar" class="clr-b bg-1 flex gap-5 h-btn w100 flex-centro border05">
+                    <a data-target="login" name="btnIngresar" class="modal-btn clr-b bg-1 flex gap-5 h-btn w100 flex-centro border05">
                         <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/2636/2636428.png" alt="">
                         <p>Ingresar Ahora</p>
                     </a>
@@ -159,8 +159,8 @@
     </div>
     <!-- navegador mobil -->
     <!-- modals Registro-->
-    <div id="myModal1" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="registro" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -168,7 +168,7 @@
                 <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1 sticky lef0 top0">
                     <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
                     <!-- class="none-resp" -->
-                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                    <div class="flex-centro flex-colum gap1 none-resp"> 
                         <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
                         <div class="clr-b txt-centro">
                             <h3>Únete al Club de Muneco Auto Spa</h3>
@@ -201,6 +201,15 @@
                             <input class="w100 padding1 border1px border05" placeholder="Ingresa tu nombre" type="text" name="nombreusuario" id="nombreusuario">
                         </div>
                         
+                        
+                        <!-- 
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input placeholder="Nombres y Apellidos" class="border1px padding1 border05" type="text" id="nombre" name="nombre" required="">
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 direc">
+                            <input placeholder="Distrito o Dirección" class="border1px padding1 border05" type="text" id="direc" name="direc" required="">
+                        </div>
+                         -->
                         <p class="form-titulo f-bold">Ciudad</p>
                         <div class="form-input flex-colum flex-c gap5 nombre">
                             <select name="ciudad" id="ciudad" class="border1px padding1 border05">
@@ -226,7 +235,7 @@
                         </div>                       
                         <div class="form-boton mgtp">
                             <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
-                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="f-bold" href="#" id="modalLogin">Ingresar</a></p>
+                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="modal-btn f-bold" data-target="login">Ingresar</a></p>
                         </div>
                         <p class="mensajeCorrecto"></p>
                     </form>
@@ -235,8 +244,8 @@
                
         </div>
     </div>
-    <div id="myModal2" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="ubicacion" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -271,8 +280,8 @@
                
         </div>
     </div>
-    <div id="myModal3" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="comentarios" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b">
@@ -480,35 +489,34 @@
             </div>
         </div>
     </div>
-    <div id="myModal4" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="usuarioqr" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-b">
             <div class="modalcontenido padhor-1">
                 <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a w100 padding1">
+                    <div class="flex-colum gap-5 flex-a w100 padhor-1">
                         <h2>Mi Código de Usuario</h2>
                         <div class="w100 padding1 brdr2dash border5px bg-b">
                             Código de Usuario
                         </div>
                     </div>
-                    
-                    <div class="bg-b border20 mw-280 padding1-5">
+                    <div class="bg-b border20 mw-280 padhor-1">
                         <img class="w100" src="./img/yapefransa.webp" alt="">
                     </div>
-                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
+                    <div class="flex-colum flex-centro padhor-1 gap1 bg-b txt-centro">
                         <p>Presenta tu código de usuario o QR cada
                             vez que realices una compra para obtener
                             tu sello</p> 
+                            <a data-target="cartilladesellos" class="modal-btn bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Ver cartilla de Sellos</a>
                     </div>
                 </div>
             </div>
-               
         </div>
     </div>
-    <div id="myModal5" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="reserva" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -895,73 +903,55 @@
                
         </div>
     </div>
-    <div id="myModal6" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="cartilladesellos" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-1">
-            <div class="modalcontenido bg-g1">
-                <div class="flex-colum flex-centro padsup-1_5 gap1">
-                    <div class="txt-centro">
-                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/trophy-4069157-3364095@0.png" alt="">
-                        
+            <div class="modalcontenido bg-2 padhor-1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1-5 mw-1080 mgauto h100" id="cartasello">
+                    <div class="flex-colum gap-5 flex-a clr-b">
+                        <div class="mw-profile flex-centro padding1 bg-b bordercircular">
+                            <img class="w100" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                        </div>
+                        <h2>Muneco Auto Spa</h2>
                     </div>
-                    <div class="flex-colum w100 bg-b padhor-1">
-                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
-                            <h2>Misión del Explorador Limpio</h2>
-                            <div class="w100 padsup-1">
-                                Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.
-                            </div>
-                            
-                            <div class="flex gap1">
-                                <progress class="progress" max="100" value="0">
-                                </progress>
-                                <p>0/1</p>
-                            </div>
+                    <div class="flex-colum flex-centro clr-b">
+                        <p>¡Obtén 7 sellos y</p>
+                        <b>Gana 1 Torta Gratis!</b> 
+                    </div>
+                    
+                    <div class="grid2 w100 mw-420 place-item place-content padding1-5 border20 gap-75 bg-b">
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
+                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
                         </div>
-                        <div class="padsup-1 rel overvis brdrbtmdash">
-                            <div class="flex-spacebetween">
-                                <h3>Recompensa</h3>
-                                <b>+100 pts</b>  
-                            </div>
-                            <div class="w100 padsup-1">
-                                Descuento exclusivo en el próximo lavado y una insignia de "Explorador Limpio".
-                            </div>
-                            <div class="w100 bg-b">
-                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Reclamar premio</a>
-                            </div>
-                        </div>
-                        <div class="padsup-1 mgtp">
-                            <h3>Términos y Condiciones</h3>
-                            <div class="w100 padsup-1 flex-colum gap-5">
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
-                                </div>
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
-                                </div>
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
-                                </div>
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>Sujeto a disponibilidad.</p>    
-                                </div>
-                            </div>
+                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
+                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
                         </div>
                     </div>
-                    <div>
-                        Detalles Adicionales
+                    <div class="flex-colum gap-5 mw-420 w100 padding1 bg-b border20">
+                        <div class="flex-row flex-ini gap-5">
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
+                        </div>
+                        <div class="flex-row flex-ini gap-5">   
+                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
+                            <p>Válido hasta el 20/11/2023</p>
+                        </div> 
                     </div>
                 </div>
             </div>
+               
         </div>
     </div>
-    <div id="myModal9" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="login" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -969,7 +959,7 @@
                 <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1">
                     <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
                     <!-- class="none-resp" -->
-                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                    <div class="flex-centro flex-colum gap1 none-resp"> 
                         <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
                         <div class="clr-b txt-centro">
                             <h3>Únete al Club de la 15</h3>
@@ -996,7 +986,7 @@
                         </div>                     
                         <div class="form-boton mgtp">
                             <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Ingresar</button>
-                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="f-bold" href="#" id="modalRegister">Regístrate aquí</a></p>
+                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="modal-btn f-bold" data-target="registro">Regístrate aquí</a></p>
                         </div>
                         <p class="mensajeCorrecto"></p>
                     </form>
