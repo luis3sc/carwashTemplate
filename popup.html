@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/frame.css">
+    <style>
+        /* Estilos para modales */
+
+
+
+    </style>
+</head>
+<body>
+    <a data-target="ubicacion" class="modal-btn">Enlace 1</a>
+    <a data-target="datoscontacto" class="modal-btn">Enlace 2</a>
+    <a href="#modal3" class="modal-btn">Enlace 3</a>
+    <a href="#modal4" class="modal-btn">Enlace 4</a>
+    <a href="#modal5" class="modal-btn">Enlace 5</a>
+    <a class="modal-btn" data-target="ubicacion">Botón 1</a>
+
+<!-- Modales -->
+<div id="ubicacion" class="modal">
+    <span class="close backdrop">
+        <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+    </span>
+    <div class="modal-content">
+        <div class="modalcontenido bg-b flex-c-resp rel">
+            <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1 sticky lef0 top0">
+                <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                <!-- class="none-resp" -->
+                <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                    <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                    <div class="clr-b txt-centro">
+                        <h3>Únete al Club de Muneco Auto Spa</h3>
+                        <p> Disfruta de promociones y recompensas
+                            en cada visita solo para nuestros usuarios.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="padding1 bg-b flex2 hfit overf">
+                <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                    <p class="form-titulo f-bold">Tipo Documento</p>
+                    <div class="form-input flex-colum flex-c gap5 nombre">
+                        <select name="cars" id="cars" class="border1px padding1 border05">
+                          <option value="volvo">DNI (Perú)</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="form-input flex-colum flex-c gap5 nombre">
+                        <div class="flex border1px border05">
+                            <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
+                            <div class="padding1">
+                                <div>Nombre</div>
+                            </div>
+                        </div>
+                        
+                        <small>
+                            Tu DNI será tu código único para acumular puntos.
+                        </small>
+                        <p></p>
+                    </div>
+                    
+                    
+                    <!-- 
+                    <div class="form-input flex-colum flex-c gap5 nombre">
+                        <input placeholder="Nombres y Apellidos" class="border1px padding1 border05" type="text" id="nombre" name="nombre" required="">
+                    </div>
+                    <div class="form-input flex-colum flex-c gap5 direc">
+                        <input placeholder="Distrito o Dirección" class="border1px padding1 border05" type="text" id="direc" name="direc" required="">
+                    </div>
+                     -->
+                    <p class="form-titulo f-bold">Ciudad</p>
+                    <div class="form-input flex-colum flex-c gap5 nombre">
+                        <select name="ciudad" id="ciudad" class="border1px padding1 border05">
+                          <option value="volvo">Lima</option>
+                          <option value="saab">Huancayo</option>
+                          <option value="opel">Arequipa</option>
+                          <option value="audi">Tacna</option>
+                        </select>
+                    </div> 
+                    
+                    <div class="form-input flex-colum flex-c gap5 mobile">
+                        <input placeholder="Nro Celular" class="border1px padding1 border05" type="number" id="mobile" name="mobile" required="">
+                    </div>
+                    <p class="form-titulo f-bold">para Iniciar Sesión</p>
+                    <div class="form-input flex-colum flex-c gap5 email">
+                        <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                    </div>
+                    <div class="form-input flex-colum flex-c gap5 contrasena">
+                        <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                    </div>      
+                    <div class="form-input flex-colum flex-c gap5 confircontrasena">
+                        <input class="border1px padding1 border05" type="password" id="confircontrasena" name="confircontrasena" placeholder="Repita la Contraseña" required="">
+                    </div>                       
+                    <div class="form-boton mgtp">
+                        <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
+                        <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="modal-btn f-bold" data-target="datoscontacto" id="modalLogin">Ingresar</a></p>
+                    </div>
+                    
+                    <p class="mensajeCorrecto"></p>
+                </form>
+            </div>
+        </div>
+           
+    </div>
+</div>
+
+<div id="datoscontacto" class="modal">
+    <span class="close backdrop">
+        <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+    </span>
+    <div class="modal-content bg-b">
+        <div>
+            <p>Contenido del modal 2, Datos de contacto</p>
+            <a class="modal-btn" data-target="ubicacion">Siguiente</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Contenido del modal 3</p>
+  </div>
+</div>
+
+
+    <script>
+    // JavaScript para manejar los modales
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalBtns = document.querySelectorAll('.modal-btn');
+        modalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetModalId = btn.getAttribute('data-target');
+            const targetModal = document.getElementById(targetModalId);
+            
+            // Cerrar todos los modales abiertos
+            const openModals = document.querySelectorAll('.modal');
+            openModals.forEach(modal => {
+            modal.classList.remove('show-modal');
+            });
+            
+            // Abrir el modal deseado
+            targetModal.classList.add('show-modal');
+        });
+        });
+        
+        const closeBtns = document.querySelectorAll('.close');
+        closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modal = btn.closest('.modal');
+            modal.classList.remove('show-modal');
+        });
+        });
+    });
+
+    </script>
+</body>
+</html>

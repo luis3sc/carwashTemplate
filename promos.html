@@ -17,7 +17,7 @@
                 <a class="clr-1 w-maxc padhor-1 h100 flex-centro" href="promos.html">Promos</a>
                 <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="perfil.html">Perfil</a>
             </div>
-            <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
+            <a data-target="registro" class="modal-btn bg-1 padding05 clr-b border05">Ingreso</a>
         </div>
     </header>
     <main class="main-menu-mobile bg-g1 overf">
@@ -37,7 +37,7 @@
                             <span id="timer1" class="block">
                                 
                             </span>
-                            <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Ver promo</a>
+                            <a data-target="promo1" class="modal-btn bg-n clr-b flex-centro w100 padding05 border05">Ver promo</a>
                         </div>
                     </div>
                     <div class="card-vert card rel flex-ini gap1 flex-row bg-b padding1 border20">
@@ -109,17 +109,18 @@
         </div>
     </div>
     <!-- navegador mobil -->
-    <div id="myModal1" class="modal">
-        <button class="backdrop closeModalBtn">
+    <!-- modals -->
+    <div id="registro" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
-            <div class="modalcontenido bg-b">
-                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1">
+            <div class="modalcontenido bg-b flex-c-resp rel">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1 sticky lef0 top0">
                     <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
                     <!-- class="none-resp" -->
                     <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
-                        <img class="w90 border20" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
                         <div class="clr-b txt-centro">
                             <h3>Únete al Club de Muneco Auto Spa</h3>
                             <p> Disfruta de promociones y recompensas
@@ -128,29 +129,27 @@
                     </div>
                     
                 </div>
-                <div class="padding1 bg-b">
+                <div class="padding1 bg-b flex2 hfit overf">
                     <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
                         <p class="form-titulo f-bold">Tipo Documento</p>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
+                        <div class="form-input flex-colum flex-c gap5 tipodedocumentacion">
                             <select name="cars" id="cars" class="border1px padding1 border05">
                               <option value="volvo">DNI (Perú)</option>
-                              <option value="saab">Saab</option>
-                              <option value="opel">Opel</option>
-                              <option value="audi">Audi</option>
+                              <option value="saab">RUC</option>
+                              <option value="opel">CE o CPP</option>
                             </select>
                         </div>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
-                            <div class="flex border1px border05">
-                                <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
-                                <div class="padding1">
-                                    <div>Nombre</div>
-                                </div>
+                        <div class="form-input flex-colum flex-c gap5 numerodedocumento">
+                            <div class="w100 border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="w100 padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
                             </div>
-                            
                             <small>
                                 Tu DNI será tu código único para acumular puntos.
                             </small>
                             <p></p>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input class="w100 padding1 border1px border05" placeholder="Ingresa tu nombre" type="text" name="nombreusuario" id="nombreusuario">
                         </div>
                         
                         
@@ -187,7 +186,7 @@
                         </div>                       
                         <div class="form-boton mgtp">
                             <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
-                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="f-bold" href="#" id="modalLogin">Ingresar</a></p>
+                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="modal-btn f-bold" data-target="login">Ingresar</a></p>
                         </div>
                         <p class="mensajeCorrecto"></p>
                     </form>
@@ -196,8 +195,53 @@
                
         </div>
     </div>
-    <div id="myModal2" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="login" class="modal">
+        <button class="close backdrop ">
+            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
+        </button>
+        <div class="modal-content">
+            <div class="modalcontenido bg-b flex-c-resp">
+                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1 flex1">
+                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
+                    <!-- class="none-resp" -->
+                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
+                        <img class="w90 border20 mw-280 aspect-1" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
+                        <div class="clr-b txt-centro">
+                            <h3>Únete al Club de la 15</h3>
+                            <p> Disfruta de promociones y recompensas
+                                en cada visita solo para nuestros usuarios.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="padding1 bg-b flex2">
+                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
+                        <div class="">
+                            <h3 class="f-bold">Bienvenid@ a ClienteVIP</h3>
+                            <p class="form-titulo mgtp">Ingresa tu email y contraseña</p>
+                        </div>
+                            
+                        <p class="form-titulo f-bold">Email</p>
+                        <div class="form-input flex-colum flex-c gap5 email">
+                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
+                        </div>
+                        <p class="form-titulo f-bold">Contraseña</p>
+                        <div class="form-input flex-colum flex-c gap5 contrasena">
+                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
+                        </div>                     
+                        <div class="form-boton mgtp">
+                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Ingresar</button>
+                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="modal-btn f-bold" data-target="registro">Regístrate aquí</a></p>
+                        </div>
+                        <p class="mensajeCorrecto"></p>
+                    </form>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+    <div id="promo1" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-1">
@@ -264,102 +308,58 @@
             </div>
         </div>
     </div>
-    <div id="myModal9" class="modal">
-        <button class="backdrop closeModalBtn">
-            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
-        </button>
-        <div class="modal-content">
-            <div class="modalcontenido bg-b">
-                <div class="w100 bg-2 padding1 flex-colum flex-centro gap1">
-                    <img class="mw-img-6 padsup-1" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
-                    <!-- class="none-resp" -->
-                    <div class="flex-centro padsup-1 flex-colum gap1 none-resp"> 
-                        <img class="w90 border20" src="https://mitarjetadigitalperu.com/cevicheriala15/Assets/web/img/webp/club.webp" alt="">
-                        <div class="clr-b txt-centro">
-                            <h3>Únete al Club de la 15</h3>
-                            <p> Disfruta de promociones y recompensas
-                                en cada visita solo para nuestros usuarios.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="padding1 bg-b">
-                    <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
-                        <div class="">
-                            <h3 class="f-bold">Bienvenid@ a ClienteVIP</h3>
-                            <p class="form-titulo mgtp">Ingresa tu email y contraseña</p>
-                        </div>
-                            
-                        <p class="form-titulo f-bold">Email</p>
-                        <div class="form-input flex-colum flex-c gap5 email">
-                            <input placeholder="Email" class="border1px padding1 border05" type="email" id="email" name="email" required="" autocomplete="email">
-                        </div>
-                        <p class="form-titulo f-bold">Contraseña</p>
-                        <div class="form-input flex-colum flex-c gap5 contrasena">
-                            <input class="border1px padding1 border05" type="password" id="contrasena" name="contrasena" placeholder="Nueva Contraseña" required="">
-                        </div>                     
-                        <div class="form-boton mgtp">
-                            <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Ingresar</button>
-                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="f-bold" href="#" id="modalRegister">Regístrate aquí</a></p>
-                        </div>
-                        <p class="mensajeCorrecto"></p>
-                    </form>
-                </div>
-            </div>
-               
-        </div>
-    </div>
+    <!-- modals -->
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/modal.js"></script>
     <script>
         // CAMBIAR MOBILE X DESKTOP
-function countDown(id, targetDate) {
-    // Set the date we're counting down to
-    var countDownDate = new Date(targetDate).getTime();
+    function countDown(id, targetDate) {
+        // Set the date we're counting down to
+        var countDownDate = new Date(targetDate).getTime();
 
-    // Función para actualizar el contador
-    function updateCountdown() {
-        // Get today's date and time
-        var now = new Date().getTime();
+        // Función para actualizar el contador
+        function updateCountdown() {
+            // Get today's date and time
+            var now = new Date().getTime();
 
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with the specified ID
-        document.getElementById(id).innerHTML =
-            days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
+            // Output the result in an element with the specified ID
+            document.getElementById(id).innerHTML =
+                days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's ';
 
-        // If the count down is over, write some text
-        if (distance < 0) {
-            clearInterval(intervalId);
-            document.getElementById(id).innerHTML = 'Expirado';
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(intervalId);
+                document.getElementById(id).innerHTML = 'Expirado';
+            }
         }
+
+        // Llamar a la función una vez al inicio
+        updateCountdown();
+
+        // Actualizar el contador cada 1 segundo
+        var intervalId = setInterval(updateCountdown, 1000);
     }
 
-    // Llamar a la función una vez al inicio
-    updateCountdown();
+    // Llamar a la función countDown para el primer contador
+    countDown('timer1', 'Jan 30, 2024 11:30:00');
 
-    // Actualizar el contador cada 1 segundo
-    var intervalId = setInterval(updateCountdown, 1000);
-}
+    // Llamar a la función countDown para el segundo contador
+    countDown('timer2', 'Jan 25, 2024 00:00:00');
 
-// Llamar a la función countDown para el primer contador
-countDown('timer1', 'Jan 30, 2024 11:30:00');
-
-// Llamar a la función countDown para el segundo contador
-countDown('timer2', 'Jan 25, 2024 00:00:00');
-
-// Llamar a la función countDown para el segundo contador
-countDown('timer3', 'Jan 24, 2024 14:00:00');
-
-
+    // Llamar a la función countDown para el segundo contador
+    countDown('timer3', 'Jan 24, 2024 14:00:00');
     </script>
 </body>
 </html>

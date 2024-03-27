@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/frame.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="./js/flatpickr-fecha.js"></script>
 </head>
 <body class="bg-g4">
     <!-- estrutctura general -->
@@ -20,7 +17,7 @@
                 <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="promos.html">Promos</a>
                 <a class="clr-g4 w-maxc padhor-1 h100 flex-centro" href="perfil.html">Perfil</a>
             </div>
-            <a id="modalBtn1" href="#" class="bg-1 padding05 clr-b border05">Ingreso</a>
+            <a data-target="registro" class="modal-btn bg-1 padding05 clr-b border05">Ingreso</a>
         </div>
     </header>
     <main class="main-menu-mobile bg-2 overf rel">
@@ -93,8 +90,8 @@
     </div>
     <!-- navegador mobil -->
     <!-- modals -->
-    <div id="myModal1" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="registro" class="modal">
+        <button class="close backdrop">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -115,26 +112,24 @@
                 <div class="padding1 bg-b flex2 hfit overf">
                     <form class="form flex-colum colblan flex-c gap-5" autocomplete="off" id="formRegistroCliente">
                         <p class="form-titulo f-bold">Tipo Documento</p>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
+                        <div class="form-input flex-colum flex-c gap5 tipodedocumentacion">
                             <select name="cars" id="cars" class="border1px padding1 border05">
                               <option value="volvo">DNI (Perú)</option>
-                              <option value="saab">Saab</option>
-                              <option value="opel">Opel</option>
-                              <option value="audi">Audi</option>
+                              <option value="saab">RUC</option>
+                              <option value="opel">CE o CPP</option>
                             </select>
                         </div>
-                        <div class="form-input flex-colum flex-c gap5 nombre">
-                            <div class="flex border1px border05">
-                                <input placeholder="DNI/Documento de Identidad" class="padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
-                                <div class="padding1">
-                                    <div>Nombre</div>
-                                </div>
+                        <div class="form-input flex-colum flex-c gap5 numerodedocumento">
+                            <div class="w100 border1px border05">
+                                <input placeholder="DNI/Documento de Identidad" class="w100 padding1 border1px border05" type="number" id="numdoc" name="numdoc" required="">
                             </div>
-                            
                             <small>
                                 Tu DNI será tu código único para acumular puntos.
                             </small>
                             <p></p>
+                        </div>
+                        <div class="form-input flex-colum flex-c gap5 nombre">
+                            <input class="w100 padding1 border1px border05" placeholder="Ingresa tu nombre" type="text" name="nombreusuario" id="nombreusuario">
                         </div>
                         
                         
@@ -171,7 +166,7 @@
                         </div>                       
                         <div class="form-boton mgtp">
                             <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Registrarme</button>
-                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="f-bold" href="#" id="modalLogin">Ingresar</a></p>
+                            <p class="mgtp1-5">¿Ya tienes una cuenta? <a class="modal-btn f-bold" data-target="login">Ingresar</a></p>
                         </div>
                         <p class="mensajeCorrecto"></p>
                     </form>
@@ -180,696 +175,8 @@
                
         </div>
     </div>
-    <div id="myModal2" class="modal">
-        <button class="backdrop closeModalBtn">
-            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
-        </button>
-        <div class="modal-content">
-            <div class="modalcontenido bg-b padhor-1">
-                <div class="flex-colum padsup-1_5 h-hka gap1">
-                    <h3>Ubicación</h3> 
-                    <div class="flex-a gap-5">
-                        <img class="mw-ico-1 f-invcolor" src="./img/iconos-menu/marcador-de-posicion.png" alt="">
-                        <p>Av. Larcomar Jiron 982 - Surquillo - mas direcciones para completar</p>
-                    </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.858134381993!2d-77.11543020070431!3d-11.99937014467788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cd3fc348fd23%3A0x27860fe0d30eb925!2sMu%C3%B1eco%20Auto%20Spa!5e0!3m2!1ses-419!2spe!4v1689020855239!5m2!1ses-419!2spe" class="h-hka w100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-               
-        </div>
-    </div>
-    <div id="myModal3" class="modal">
-        <button class="backdrop closeModalBtn">
-            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
-        </button>
-        <div class="modal-content bg-b">
-            <div class="modalcontenido">
-                <div class="flex-colum padsup-1_5 gap1-5" id="cartasello">
-                    <div alt="resumen-general" class="">
-                        <!-- <div class="flex-a gap-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-ico-2_5">
-                                <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                            </svg>
-                            <div class="ftsz-1_5">
-                                4.78
-                            </div>
-                        </div> -->
-                        <div alt="resena-header" class="flex-row gap-5 flex-a padhor-1">
-                            <div class="mw-ico-3 bg-2 border05 clr-b flex-centro">
-                                <span>4</span>
-                            </div>
-                            <div>
-                                <p class="f-bold">Muy Bien</p>
-                                <p class="clr-g3">18 comentarios</p>
-                            </div>
-                        </div>
-                        <div alt="status-gen" class="mgtp padsup-1 just-cont-start grid-col-hor overhor padding-scroll1 brdclr-g3 bordertop1 borderbottom1 touch-a contain-paint overscroll-cont scroll-snap-1">
-                            <div class="flex-colum mgrg-1 parf1">
-                                <p class="f-bold">Valoracion General</p>
-                                <div>
-                                    <div class="flex gap-5">
-                                        <p class="overvis">5</p>
-                                        <div class="flex-a" alt="barra de progreso">
-                                            <progress class="progress mw-100p" max="100" value="60">
-                                            </progress>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-5">
-                                        <p class="overvis">4</p>
-                                        <div class="flex-a" alt="barra de progreso">
-                                            <progress class="progress mw-100p" max="100" value="80">
-                                            </progress>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-5">
-                                        <p class="overvis">3</p>
-                                        <div class="flex-a" alt="barra de progreso">
-                                            <progress class="progress mw-100p" max="100" value="40">
-                                            </progress>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-5">
-                                        <p class="overvis">2</p>
-                                        <div class="flex-a" alt="barra de progreso">
-                                            <progress class="progress mw-100p" max="100" value="20">
-                                            </progress>
-                                        </div>
-                                    </div>
-                                    <div class="flex gap-5">
-                                        <p class="overvis">1</p>
-                                        <div class="flex-a" alt="barra de progreso">
-                                            <progress class="progress mw-100p" max="100" value="00">
-                                            </progress>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex-colum flex-spacebetween padhor-1 borderleft1 parf2">
-                                <div>
-                                    <p class="f-bold">Limpieza</p>
-                                    <p>5.8</p>
-                                </div>
-                                
-                                <div>
-                                    <img class="mw-img-2" src="https://cdn-icons-png.flaticon.com/512/4645/4645331.png" alt="">
-                                </div>
-                            </div>
-                            <div class="flex-colum flex-spacebetween padhor-1 borderleft1 parf2">
-                                <div>
-                                    <p class="f-bold">Comunicación</p>
-                                    <p>5.8</p>
-                                </div>
-                                
-                                <div>
-                                    <img class="mw-img-2 f-invcolor" src="./img/iconos-menu/contactar.png" alt="">
-                                </div>
-                            </div>
-                            <div class="flex-colum flex-spacebetween padhor-1 borderleft1 parf2">
-                                <div>
-                                    <p class="f-bold">Ubicación</p>
-                                    <p>5.8</p>
-                                </div>
-                                <div>
-                                    <img class="mw-img-2 f-invcolor" src="./img/iconos-menu/marcador-de-posicion.png" alt="">
-                                </div>
-                            </div>
-                            <div class="flex-colum flex-spacebetween padhor-1 borderleft1 parf2">
-                                <div>
-                                    <p class="f-bold">Precio</p>
-                                    <p>5.8</p>
-                                </div>
-                                
-                                <div>
-                                    <img class="mw-img-2" src="./img/iconos-menu/entradas.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="padhor-1">
-                        <h2>18 Reseñas</h2>
-                        <div class="flex-colum gap1 w100 bg-b mgtp">
-                        <div class="flex-colum gap-5 border1px padding1" alt="comentario-card">
-                            <div class="flex-colum gap1" alt="comentario-header">
-                                <div alt="comentario-user-header" class="flex-row gap-5 flex-spacebetween flex-a">
-                                    <div class="flex-row gap-5">
-                                        <div class="mw-ico-2_5 bordercircular" alt="comentario-user-photo">
-                                            <img class="w100" src="https://cdn.icon-icons.com/icons2/2643/PNG/512/avatar_female_woman_person_people_white_tone_icon_159360.png" alt="">
-                                        </div>
-                                        <div alt="comentario-user-header-info">
-                                            <div class="f-bold" alt="comentario-user-nombre">Nombre</div>
-                                            <div alt="comentario-user-nivel">Nuevo usuario</div>
-                                        </div>
-                                    </div>
-                                    <div class="mw-ico-3 bg-2 border05 clr-b flex-centro">
-                                        <span>4</span>
-                                    </div>
-                                </div>
-                                <div class="flex-row gap1 comentario-header-r">
-                                    <div alt="cometario-rating">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars fill-g1">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                    </div>
-                                    <div alt="comentario-fecha">Hace 6 días</div>
-                                </div>
-                            </div>
-                            <div alt="comentario-content">Buena atención, rápida y seguro. Me Encanto!</div>
-                        </div>
-                        <div class="flex-colum gap-5 border1px padding1" alt="comentario-card">
-                            <div class="flex-colum gap1" alt="comentario-header">
-                                <div alt="comentario-user-header" class="flex-row gap-5 flex-spacebetween flex-a">
-                                    <div class="flex-row gap-5">
-                                        <div class="mw-ico-2_5 bordercircular" alt="comentario-user-photo">
-                                            <img class="w100" src="https://cdn.icon-icons.com/icons2/2643/PNG/512/avatar_female_woman_person_people_white_tone_icon_159360.png" alt="">
-                                        </div>
-                                        <div alt="comentario-user-header-info">
-                                            <div class="f-bold" alt="comentario-user-nombre">Nombre</div>
-                                            <div alt="comentario-user-nivel">Nuevo usuario</div>
-                                        </div>
-                                    </div>
-                                    <div class="mw-ico-3 bg-2 border05 clr-b flex-centro">
-                                        <span>4</span>
-                                    </div>
-                                </div>
-                                <div class="flex-row gap1 comentario-header-r">
-                                    <div alt="cometario-rating">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" class="mw-stars fill-g1">
-                                            <path d="m15.1 1.58-4.13 8.88-9.86 1.27a1 1 0 0 0-.54 1.74l7.3 6.57-1.97 9.85a1 1 0 0 0 1.48 1.06l8.62-5 8.63 5a1 1 0 0 0 1.48-1.06l-1.97-9.85 7.3-6.57a1 1 0 0 0-.55-1.73l-9.86-1.28-4.12-8.88a1 1 0 0 0-1.82 0z" ></path>
-                                        </svg>
-                                    </div>
-                                    <div alt="comentario-fecha">Hace 6 días</div>
-                                </div>
-                            </div>
-                            <div alt="comentario-content">Buena atención, rápida y seguro. Me Encanto!</div>
-                        </div>
-                        <div class="flex-colum gap-5 border1px padding1" alt="comentario-card">
-                            <div class="flex-colum gap1" alt="comentario-header">
-                                <div alt="comentario-user-header" class="flex-row gap1 flex-a">
-                                    <div class="mw-ico-3 bordercircular bg-2" alt="comentario-user-photo"></div>
-                                    <div alt="comentario-user-header-info">
-                                        <div alt="comentario-user-nombre">Nombre</div>
-                                        <div alt="comentario-user-nivel">Nuevo usuario</div>
-                                    </div>
-                                </div>
-                                <div class="flex-row gap1 comentario-header-r">
-                                    <div alt="comentario-fecha">Comento en: 27 octubre 2023</div>
-                                </div>
-                            </div>
-                            <div alt="comentario-content">Buena atención, rápida y seguro. Me Encanto!</div>
-                        </div>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="myModal4" class="modal">
-        <button class="backdrop closeModalBtn">
-            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
-        </button>
-        <div class="modal-content bg-b">
-            <div class="modalcontenido padhor-1">
-                <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a w100 padding1">
-                        <h2>Mi Código de Usuario</h2>
-                        <div class="w100 padding1 brdr2dash border5px bg-b">
-                            Código de Usuario
-                        </div>
-                    </div>
-                    
-                    <div class="bg-b border20 mw-280 padding1-5">
-                        <img class="w100" src="./img/yapefransa.webp" alt="">
-                    </div>
-                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
-                        <p>Presenta tu código de usuario o QR cada
-                            vez que realices una compra para obtener
-                            tu sello</p> 
-                    </div>
-                </div>
-            </div>
-               
-        </div>
-    </div>
-    <div id="myModal5" class="modal">
-        <button class="backdrop closeModalBtn">
-            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
-        </button>
-        <div class="modal-content">
-            <div class="modalcontenido bg-g1 padsup-1">
-                <div class="form-container h100 padhor-1">
-                    <div id="step1" class="form-step rel h100">
-                        <h2>Elige el Tipo de Vehículo</h2>
-                        <div class="h85 overf mgtp ">
-                            <div class="padding1 bg-b clr-n flex-row gap1 w100 border05">
-                                <img class="mw-img-3 w100" src="https://cdn-icons-png.flaticon.com/512/4682/4682932.png" alt="">
-                                <div>
-                                    <span class="clr-2 f-bold">¡impresionante! ¡empecemos!</span>
-                                    <p>¿Qué tipo de vehículo deseas lavar?</p>
-                                </div>
-                            </div>
-                        <!-- OPCIONES DE TIPOS DE VEHICULO -->
-                        <div class="grid gap1 mgtp">
-                            <div class="radio-item">
-                                <input type="radio" name="vehicleType" value="Sedan" id="sedan"> 
-                                <label for="sedan" class="padop1">
-                                    <div class="flex-row flex-a gap1">
-                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/7281/7281752.png" alt="">
-                                        <div>
-                                            <b>Sedan</b> 
-                                            <!-- <p>coupé, sport, mini o similar</p> -->
-                                        </div>
-                                    </div>
-                                </label> 
-                            </div>
-                            <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="Suv" id="suv">
-                                <label class="padop1" for="suv">
-                                    <div class="flex-row flex-a gap1">
-                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/2736/2736781.png" alt="">
-                                        <div>
-                                            <b>SUV</b> 
-                                            <!-- <p>Tu auto listo para la aventura.</p> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="Hatchback" id="hatchback"> 
-                                <label class="padop1" for="hatchback">
-                                    <div class="flex-row flex-a gap1">
-                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/7455/7455453.png" alt="">
-                                        <div>
-                                            <b>Hatchback</b> 
-                                            <!-- <p>Maximiza tu espacio, minimiza la suciedad.</p> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="Pickup" id="pickup">
-                                <label class="padop1" for="pickup">
-                                    <div class="flex-row flex-a gap1">
-                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/5814/5814855.png" alt="">
-                                        <div>
-                                            <b>Pickup</b> 
-                                            <!-- <p>Tu aliado para el trabajo.</p> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="Convertible" id="convertible">
-                                <label class="padop1" for="convertible">
-                                    <div class="flex-row flex-a gap1">
-                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/2736/2736840.png" alt="">
-                                        <div>
-                                            <b>Convertible</b> 
-                                            <!-- <p>El lujo al aire libre</p> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="radio-item">
-                                <input class="" type="radio" name="vehicleType" value="Motocicleta" id="motorcycle"> 
-                                <label class="padop1" for="motorcycle">
-                                    <div class="flex-row flex-a gap1">
-                                        <img class="mw-img-3" src="https://cdn-icons-png.flaticon.com/512/5125/5125679.png" alt="">
-                                        <div>
-                                            <b>Motocicleta</b> 
-                                            <!-- <p>Tu libertad, limpia.</p> -->
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        </div>
-                        
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(2)">Siguiente</button>
-                    </div>
-                    <!-- PASO2 -->
-                    <div id="step2" class="form-step rel h100 hidden">
-                        <h2>Opciones de Servicio</h2>
-                        <div id="services" class="grid-servicios-1 gap1 mgtp h85 overf">
-                            <!-- Las opciones de servicio se llenarán dinámicamente aquí -->
-                        </div>
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(3)">Siguiente</button>
-                    </div>
-                    <div id="step3" class="form-step rel h100 hidden">
-                        <h2>Selecciona la Fecha y Hora</h2>
-                        <div class="mgtp h85 overf">
-                            <div class="padding1 bg-b">
-                            <label for="fechaSeleccionada" class="f-bold">Elige la fecha</label>
-                            <div id="datepicker"></div>
-                            <input type="text" id="fechaSeleccionada" class="border1px padding1 border05 brdclr-g3 mgtp ftsz-1 w100" readonly>
-                            </div>
-                            <!-- <label for="reservationDate">Selecciona la fecha de la reserva:</label>
-                        <input type="date" id="reservationDate" name="reservationDate"><br>
-                        <div class="mgtp">
-                            <label for="reservationTime" class="mgtp">Selecciona la hora de la reserva:</label>
-                            <input type="time" id="reservationTime" name="reservationTime">
-                        </div> -->
-                            <div class="flex-colum padding1 bg-b mgtp">
-                            <h3>Selecciona el Turno</h3>
-                            <div class="grid3icon gap-5 mgtp">
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="9am"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            9AM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="9:30am"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            9:30AM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="10am"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            10AM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="10:30am"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            10:30AM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="11am"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            11AM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="11:30am"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            11:30AM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="12pm">
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            12PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="12:30pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            12:30PM
-                                        </div>
-                                    </label>
-                                </div>
-
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="2pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            2PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="2:30pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            2:30PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="3pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            3PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="3:30pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            3:30PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="4pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            4PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="4:30pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            4:30PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="5pm">
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            5PM
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="time-item">
-                                    <label>
-                                        <input type="radio" name="time" value="5:30pm"> 
-                                        <div class="padsup-0_5 w100 border05 brdr-g3 txt-centro">
-                                            5:30PM
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            </div>
-                        </div>     
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(4); updateSummary()">Siguiente</button>
-                    </div>
-                    <div id="step4" class="form-step rel h100 hidden">
-                        <h2>Método de Pago</h2>
-                        <div class="rel h85 overf mgtp">
-                            <div class="padding1 bg-b border05">
-                            <label class="f-bold">Selecciona el tipo de pago:</label>
-                            <div class="flex-colum gap-5 mgtp">
-                                <div class="pago-item">
-                                    <label>
-                                        <input type="radio" name="paymentMethod" value="yape" id="yape"> 
-                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
-                                            <img class="mw-ico-r border05" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/yape.webp" alt="">
-                                            <p>Pagar con Yape</p>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="pago-item">
-                                    <label>
-                                        <input type="radio" name="paymentMethod" value="plin" id="plin"> 
-                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
-                                            <img class="mw-ico-r" src="https://www.tortaza.com.pe/Assets/tienda/images/webp/plin.webp" alt="">
-                                            <p>Pagar con Plin</p>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="pago-item">    
-                                    <label>
-                                        <input type="radio" name="paymentMethod" value="transferencia" id="transferencia"> 
-                                        <div class="flex-row flex-a gap1 padding1 w100 border20 brdr-g3">
-                                            <img class="mw-ico-r" src="https://cdn-icons-png.flaticon.com/512/1019/1019607.png" alt="">
-                                            <p>Pagar Transferencia vía depósito</p>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="w100 padhor-1 flex-colum bg-b mgtp border05 sinover" id="summary">
-                                <!-- Los detalles de la reserva se mostrarán aquí -->
-                            </div>
-                        </div>
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(5)">Siguiente</button>
-                    </div>
-                    <div id="step5" class="form-step rel h100 hidden">
-                        <h2>Detalles del Pago</h2>
-                        <div class="mw-420 w100 rel padsup-1 h85 mgtp" id="fondocambio">
-                            <div class="h100 w100 overf padsup-0_5">
-                                <div class="flex-centro w100 gap1 flex-colum clr-b" id="pagoconqr">
-                                    <div class="flex-colum flex-a w100 gap1" id="metodopago">
-                                    </div>
-                                    <img class="mw-200" src="" id="qrimage" alt="">
-                                    <div class="flex-colum flex-a w100" id="numeropago">
-                                    </div>
-                                    <div class="padhor-1 flex tac borderdash brdclr-b flex-centro border05">
-                                        <div id="numpago" class="num padding05 flex-centro clr-b copy"></div>
-                                        <a class="icon-copy padding05 clr-yape-2" id="copia">
-                                            <img class="mw-ico-1 f-invcolor" src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="confirmation abs">
-                                    <span class="icon-checkmark"></span> Copied to clipboard
-                                </div>
-                                <div class="padding1 bg-b clr-n flex-row gap1 mgauto mgtp2 w90 border05">
-                                    <img class="mw-img-4 w100" src="https://cdn.iconscout.com/icon/free/png-256/free-screenshot-1851023-1569010.png" alt="">
-                                    <div>
-                                        <span class="clr-yape-2">Recomendaciones</span>
-                                        <p>No te olvides de tomar captura de pantalla de tu pago y enviar tu comprobnate de pago</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="nextStep(6)">Siguiente</button>
-                    </div>
-                    <div id="step6" class="form-step rel h100 hidden">
-                        <h2>Confirmación de Reserva</h2>
-                        <div class="mw-420 w100 rel padsup-1 flex-ini h85 mgtp overf">
-                            <div class="padding1 bg-b clr-n flex-row gap1 w100 border05">
-                                <div class="mw-img-3 w100 padding05 hfit">
-                                    <img class="w100" src="https://cdn-icons-png.flaticon.com/512/607/607870.png" alt="">
-                                </div>
-                                <div>
-                                    <span class="clr-yape-2">Recomendaciones</span>
-                                    <p>Recuerda que la reserva es aceptada siempre y cuando, se confirme y validel el pago realizado. Una vez validado se procede a confirmar su reserva</p>
-                                </div>
-                            </div>
-                            <div class="w100 padhor-1 flex-colum bg-b border05 sinover mgtp" id="confirmPago"></div>
-                            
-                        </div>
-                        <button class="bg-1 padding05 clr-b border05 mgtp w100 h-btn abs bot0" onclick="submitForm()">Confirmar Reserva y Pago</button>
-                    </div>
-                </div>
-                
-                <div id="congratulations" class="hidden h100 rel padhor-1">
-                    <img class="w100 abs" src="https://p.productioncrate.com/stock-hd/effects/FootageCrate-4K_Confetti_Falling_Multiple_Color_Shapes_4-prev-full.png" alt="">
-                    <h2>¡Felicidades!</h2>
-                    <div class="mw-420 w100 rel padsup#f7f7f7-1 h85 mgtp overf">
-                        <div class="w100 padhor-1 flex-colum bg-b border05 sinover" id="finalizar"></div>
-                        <div class="padding1 bg-b clr-n flex-row gap1 w100 border05 mgtp">
-                            <div class="mw-img-3 w100 padding05 hfit">
-                                <img class="w100" src="https://cdn3.iconfinder.com/data/icons/flaticons-1/24/flaticon_clock1-512.png" alt="">
-                            </div>
-                            <div>
-                                <span class="clr-2 f-bold">¡impresionante! ¡empecemos!</span>
-                                <p>Para evitar retrasos y garantizar que podamos brindar un servicio de lavado de autos oportuno a todos los clientes, llegue a tiempo a su cita programada.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="padding1 w100 bg-wsp border20 clr-b f-bold text-centro  h-btn abs bot0 mw-350" type="button" id="send-whatsapp" data-modal-id="myModal1">Enviar por WhatsApp</button>
-                    <!-- Mostrar detalles de la reserva aquí -->
-                </div>
-            </div>
-               
-        </div>
-    </div>
-    <div id="myModal6" class="modal">
-        <button class="backdrop closeModalBtn">
-            <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
-        </button>
-        <div class="modal-content bg-1">
-            <div class="modalcontenido bg-g1">
-                <div class="flex-colum flex-centro padsup-1_5 gap1">
-                    <div class="txt-centro">
-                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/trophy-4069157-3364095@0.png" alt="">
-                        
-                    </div>
-                    <div class="flex-colum w100 bg-b padhor-1">
-                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
-                            <h2>Misión del Explorador Limpio</h2>
-                            <div class="w100 padsup-1">
-                                Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.
-                            </div>
-                            
-                            <div class="flex gap1">
-                                <progress class="progress" max="100" value="0">
-                                </progress>
-                                <p>0/1</p>
-                            </div>
-                        </div>
-                        <div class="padsup-1 rel overvis brdrbtmdash">
-                            <div class="flex-spacebetween">
-                                <h3>Recompensa</h3>
-                                <b>+100 pts</b>  
-                            </div>
-                            <div class="w100 padsup-1">
-                                Descuento exclusivo en el próximo lavado y una insignia de "Explorador Limpio".
-                            </div>
-                            <div class="w100 bg-b">
-                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Reclamar premio</a>
-                            </div>
-                        </div>
-                        <div class="padsup-1 mgtp">
-                            <h3>Términos y Condiciones</h3>
-                            <div class="w100 padsup-1 flex-colum gap-5">
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
-                                </div>
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
-                                </div>
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
-                                </div>
-                                <div class="flex-row flex-ini gap-5">
-                                    <p>-</p>
-                                    <p>Sujeto a disponibilidad.</p>    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        Detalles Adicionales
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="myModal9" class="modal">
-        <button class="backdrop closeModalBtn">
+    <div id="login" class="modal">
+        <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content">
@@ -904,7 +211,7 @@
                         </div>                     
                         <div class="form-boton mgtp">
                             <button class="bg-1 padding05 clr-b border05 w100 h-btn mayus" id="btn" type="submit">Ingresar</button>
-                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="f-bold" href="#" id="modalRegister">Regístrate aquí</a></p>
+                            <p class="mgtp1-5">¿Aun no tienes cuenta? <a class="modal-btn f-bold" data-target="registro">Regístrate aquí</a></p>
                         </div>
                         <p class="mensajeCorrecto"></p>
                     </form>
@@ -916,7 +223,6 @@
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/copiarboton.js"></script>
-    <script src="./js/servicios.js"></script>
+    
 </body>
 </html>

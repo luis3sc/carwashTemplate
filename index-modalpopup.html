@@ -122,6 +122,7 @@
                     </div>
                 </div>
             </section>
+            
             <section class=" w100 padhor-1 bg-g1 clr-n mgauto bordertop1 brdclr-g3">
                 <div class="padsup-1 flex-row flex-centro gap1 txt-centro">
                     <p class="w-maxc">Desarrollado por</p>
@@ -130,7 +131,6 @@
             </section>
         </div>
     </main>
-
     <!-- estrutctura general -->
     <!-- navegador mobil -->
     <div class="nav-mobile d-resp bg-b">
@@ -496,23 +496,24 @@
         <div class="modal-content bg-b">
             <div class="modalcontenido padhor-1">
                 <div class="flex-colum flex-centro padsup-1_5 gap1-5 h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a w100 padhor-1">
+                    <div class="flex-colum gap-5 flex-a w100 padding1">
                         <h2>Mi Código de Usuario</h2>
                         <div class="w100 padding1 brdr2dash border5px bg-b">
                             Código de Usuario
                         </div>
                     </div>
-                    <div class="bg-b border20 mw-280 padhor-1">
+                    
+                    <div class="bg-b border20 mw-280 padding1-5">
                         <img class="w100" src="./img/yapefransa.webp" alt="">
                     </div>
-                    <div class="flex-colum flex-centro padhor-1 gap1 bg-b txt-centro">
+                    <div class="flex-colum flex-centro padding1 bg-b txt-centro">
                         <p>Presenta tu código de usuario o QR cada
                             vez que realices una compra para obtener
                             tu sello</p> 
-                            <a data-target="cartilladesellos" class="modal-btn bg-1 clr-b flex-centro mw-250 w100 padding05 border05">Ver cartilla de Sellos</a>
                     </div>
                 </div>
             </div>
+               
         </div>
     </div>
     <div id="reserva" class="modal">
@@ -903,51 +904,69 @@
                
         </div>
     </div>
-    <div id="cartilladesellos" class="modal">
+    <div id="compartir" class="modal">
         <button class="close backdrop ">
             <div class="zindex2 abs clr-b right1 top5px ftsz-1_5">X</div>
         </button>
         <div class="modal-content bg-1">
-            <div class="modalcontenido bg-2 padhor-1">
-                <div class="flex-colum flex-centro padsup-1_5 gap1-5 mw-1080 mgauto h100" id="cartasello">
-                    <div class="flex-colum gap-5 flex-a clr-b">
-                        <div class="mw-profile flex-centro padding1 bg-b bordercircular">
-                            <img class="w100" src="https://mitarjetadigitalperu.com/munecoautospa/Assets/web/img/webp/logo.png" alt="">
-                        </div>
-                        <h2>Muneco Auto Spa</h2>
+            <div class="modalcontenido bg-g1">
+                <div class="flex-colum flex-centro padsup-1_5 gap1">
+                    <div class="txt-centro">
+                        <img class="mw-img-7" src="https://cdn3d.iconscout.com/3d/premium/thumb/trophy-4069157-3364095@0.png" alt="">
+                        
                     </div>
-                    <div class="flex-colum flex-centro clr-b">
-                        <p>¡Obtén 7 sellos y</p>
-                        <b>Gana 1 Torta Gratis!</b> 
+                    <div class="flex-colum w100 bg-b padhor-1">
+                        <div class="padsup-1 mgtp rel overvis brdrbtmdash">
+                            <h2>Misión del Explorador Limpio</h2>
+                            <div class="w100 padsup-1">
+                                Desafía a los usuarios a visitar todas tus ubicaciones de lavado en un mes.
+                            </div>
+                            
+                            <div class="flex gap1">
+                                <progress class="progress" max="100" value="0">
+                                </progress>
+                                <p>0/1</p>
+                            </div>
+                        </div>
+                        <div class="padsup-1 rel overvis brdrbtmdash">
+                            <div class="flex-spacebetween">
+                                <h3>Recompensa</h3>
+                                <b>+100 pts</b>  
+                            </div>
+                            <div class="w100 padsup-1">
+                                Descuento exclusivo en el próximo lavado y una insignia de "Explorador Limpio".
+                            </div>
+                            <div class="w100 bg-b">
+                                <a id="modalBtn2" class="bg-n clr-b flex-centro w100 padding05 border05">Reclamar premio</a>
+                            </div>
+                        </div>
+                        <div class="padsup-1 mgtp">
+                            <h3>Términos y Condiciones</h3>
+                            <div class="w100 padsup-1 flex-colum gap-5">
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Solo disponible en servicios de carawsh como (lavado básico o lavado premium).</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Cupón valido hasta el Sábado 23/05/2023.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>No se puede combinar con otras ofertas o promociones.</p>    
+                                </div>
+                                <div class="flex-row flex-ini gap-5">
+                                    <p>-</p>
+                                    <p>Sujeto a disponibilidad.</p>    
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="grid2 w100 mw-420 place-item place-content padding1-5 border20 gap-75 bg-b">
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="sellado">1</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">2</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">3</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">4</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">5</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="nosellado">6</div>
-                        <div class="aspect-1 flex-centro w100 bg-b border1px bordercircular" id="premionosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                        <div class="aspect-1 flex-centro w100 bg-1 border1px bordercircular" id="premiosellado">
-                            <img class="w100cal-1_5" src="./img/iconos-menu/gift.png" alt="">
-                        </div>
-                    </div>
-                    <div class="flex-colum gap-5 mw-420 w100 padding1 bg-b border20">
-                        <div class="flex-row flex-ini gap-5">
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Para obtener 1 sello el consumo mínimo es de s/ 10.00</p>    
-                        </div>
-                        <div class="flex-row flex-ini gap-5">   
-                            <img class="mw-ico-1" src="https://cdn-icons-png.flaticon.com/256/5610/5610944.png" alt="">
-                            <p>Válido hasta el 20/11/2023</p>
-                        </div> 
+                    <div>
+                        Detalles Adicionales
                     </div>
                 </div>
             </div>
-               
         </div>
     </div>
     <div id="login" class="modal">
