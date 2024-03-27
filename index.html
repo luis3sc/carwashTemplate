@@ -1000,32 +1000,6 @@
     <script src="./js/modal.js"></script>
     <script src="./js/copiarboton.js"></script>
     <script src="./js/servicios.js"></script>
-    <script>
-    document.getElementById('cars').addEventListener('change', function() {
-        var selectedOption = this.value;
-        var placeholder = '';
-        var smallText = '';
-        
-        switch(selectedOption) {
-            case 'volvo':
-                placeholder = 'DNI / Documento de Identidad';
-                smallText = 'Tu DNI será tu código único para acumular puntos.';
-                break;
-            case 'saab':
-                placeholder = 'RUC';
-                smallText = 'Tu RUC será tu código único para acumular puntos.';
-                break;
-            case 'opel':
-                placeholder = 'CE / Carnet de extranjeria';
-                smallText = 'Tu Carnet de extranjero será tu código único para acumular puntos.';
-                break;
-            default:
-                break;
-        }
-        
-        document.getElementById('numdoc').setAttribute('placeholder', placeholder);
-        document.querySelector('.numerodedocumento small').textContent = smallText;
-    });
-    </script>
+    <script src="./js/registro-form.js"></script>
 </body>
 </html>
